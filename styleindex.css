@@ -10,17 +10,7 @@ body {
 
 /*-------------------------*/
 /*   BARRA DE NAVEGAÇÃO      */
-/*-------------------------
-.navbar-centering {
-    width: 95%;
-    margin: 10px auto;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.logonav{
-    width: 2.05%;
-}*/
+/*-------------------------*/
 
 .nav {
     width: 100%;
@@ -542,7 +532,7 @@ h1 {
         content: "";
         display: block;
         position: absolute;
-        bottom: 3px;
+        bottom: 9px;
         left: 0;
         height: 3px;
         width: 100%;
