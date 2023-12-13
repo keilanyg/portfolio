@@ -8,6 +8,11 @@ body {
     font-family: 'Fira Sans Condensed', sans-serif;
 }
 
+hr{
+    border-top: 2px solid #000;
+    margin: 0;
+}
+
 /*-------------------------*/
 /*   BARRA DE NAVEGAÇÃO      */
 /*-------------------------*/
@@ -82,7 +87,6 @@ a:hover {
 .sections {
     width: 100%;
     background-attachment: fixed;
-    background-position: center;
     padding: 20px;
     background-size: 100% auto;
 }
@@ -92,25 +96,26 @@ a:hover {
 /*-------------------------*/
 #section1 {
     padding: 40px;
-    background-image: url("Imagens/Banner.png");
+    background-image: url("Imagens/banner.jpg");
 }
 
 .apresentacao {
     position: relative;
     top: 80px;
     width: 80%;
-    margin: auto auto 150px auto;
+    margin: auto auto 100px auto;
     padding: 10px;
     z-index: 10;
-    color: #FFF;
+    color: #000;
+    text-shadow: white 0.1em 0.1em 0.1em;
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 70px;
 }
 
 #desenvolvedora {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 #section1,
@@ -128,7 +133,7 @@ h1 {
 /*        SOBRE MIM        */
 /*-------------------------*/
 #section2 {
-    background-image: url("Imagens/Banner.png");
+    background-image: url("Imagens/banner.jpg");
     background-color: black;
     z-index: 10;
     position: relative;
@@ -149,20 +154,19 @@ h1 {
 #about-me {
     display: flex;
     align-items: center;
-    margin: 10px 200px;
+    justify-content: center;
+    margin: 0 300px;
 }
 
 #foto {
-    height: 40%;
-    width: 40%;
-    align-items: center;
-
+    height: 50%;
+    width: 50%;
 }
 
 .profile-picture {
     object-fit: cover;
-    border-radius: 20px;
-    width: 70%;
+    border-radius: 500px;
+    width: 80%;
 }
 
 
@@ -172,7 +176,7 @@ h1 {
 
 #section3 {
     color: white;
-    background-image: url("Imagens/Capa\ \(1\).jpg");
+    background-image: url("Imagens/Capa.png");
 }
 
 #section3 * {
@@ -216,9 +220,6 @@ h1 {
     color: white;
 }
 
-.row {
-    margin-top: 15px;
-}
 
 .conhecimentos {
     display: flex;
@@ -348,6 +349,28 @@ h1 {
     font-size: 12px;
 }
 
+.titulojornada {
+    text-align: center;
+    margin: 0;
+  }
+.jornada {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 70px;
+    text-align: start;
+    color: #000;
+  }
+
+.cards {
+    flex: 1;
+    min-width: 290px;
+    max-width: 290px;
+    margin: 1px 8px;
+    border: none;
+    text-align: center;
+  }
+
 
 /*-------------------------*/
 /*      MEDIA QUERIES      */
@@ -377,19 +400,21 @@ h1 {
     #about-me {
         flex-direction: column;
         margin: 0;
+        padding: 10px;
         text-align: center;
     }
 
     .profile-picture {
-        width: 60%;
-        height: 60%;
+        width: 50%;
+        height: 50%;
     }
 
     #section1,
     #section2 {
-        background-image: url("Imagens/Banner.png");
-        background-position: 6%;
+        background-image: url("Imagens/banner.jpg");
+        background-position: 30%;
     }
+    
 
     h1 {
         font-size: 50px;
@@ -397,10 +422,11 @@ h1 {
 
     #desenvolvedora {
         font-size: 15px;
+        font-weight:bold;
     }
 
     .apresentacao {
-        top: 30px;
+        top: 10px;
         margin: auto auto 100px auto;
     }
 
@@ -559,6 +585,9 @@ h1 {
         width: 120px;
         height: 120px;
     }
+    .sections {
+        padding: 0px;
+    }
     
 }
 
@@ -571,3 +600,9 @@ h1 {
         display: flex;
     }
 }
+@media screen and (max-width: 600px) {
+    .cards {
+      min-width: 100%;
+      max-width: 100%;
+    }
+  }
