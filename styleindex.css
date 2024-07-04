@@ -8,7 +8,7 @@ body {
     font-family: 'Fira Sans Condensed', sans-serif;
 }
 
-hr{
+hr {
     border-top: 2px solid #000;
     margin: 0;
 }
@@ -308,6 +308,7 @@ h1 {
     text-align: center;
     margin: 0;
 }
+
 .jornada {
     display: flex;
     flex-wrap: wrap;
@@ -322,7 +323,7 @@ h1 {
     min-width: 290px;
     margin: 10px 8px;
     border: none;
-    text-align:left;
+    text-align: left;
     justify-content: center;
     align-items: center;
 }
@@ -333,10 +334,12 @@ h1 {
 /*-------------------------*/
 
 @media (max-width: 900px) {
-    *{
+    * {
         max-width: 100%;
-        font-family: 'Fira Sans Condensed', sans-serif; /* Manter a mesma fonte para consistência */
+        font-family: 'Fira Sans Condensed', sans-serif;
+        /* Manter a mesma fonte para consistência */
     }
+
     .footer {
         height: 80px;
     }
@@ -382,7 +385,7 @@ h1 {
 
     #desenvolvedora {
         font-size: 15px;
-        font-weight:bold;
+        font-weight: bold;
     }
 
     .apresentacao {
@@ -541,16 +544,22 @@ h1 {
         width: 120px;
         height: 120px;
     }
+
     .sections {
         padding: 0px;
+    }
+
+    .divconhecimento .card:hover .face.face.face1 {
+        box-shadow: none;
     }
 
 }
 
 @media screen and (min-width: 1281px) {
-    *{
+    * {
         font-family: 'Fira Sans Condensed', sans-serif;
     }
+
     .filtro .search-bar {
         width: 50%;
     }
@@ -561,9 +570,10 @@ h1 {
 }
 
 @media screen and (max-width: 600px) {
-    *{
-        font-family: 'Fira Sans Condensed', sans-serif; 
+    * {
+        font-family: 'Fira Sans Condensed', sans-serif;
     }
+
     .cards {
         min-width: 100%;
         max-width: 100%;
