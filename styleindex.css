@@ -334,7 +334,7 @@ h1 {
 
 @media (max-width: 900px) {
     *{
-        overflow-x: hidden;
+        overflow-x: auto;
         font-family: 'Fira Sans Condensed', sans-serif; /* Manter a mesma fonte para consistência */
     }
     .footer {
@@ -562,7 +562,7 @@ h1 {
 
 @media screen and (max-width: 600px) {
     *{
-        overflow-x: hidden;
+        overflow-x: auto;
         font-family: 'Fira Sans Condensed', sans-serif; 
     }
     .cards {
