@@ -184,6 +184,7 @@ a {
     background-color: black;
 }
 
+
 .social-icons {
     list-style: none;
     display: table;
@@ -194,10 +195,6 @@ a {
     display: inline-block;
     padding: 0;
     margin-right: 5px;
-}
-
-.social-icons li:last-child {
-    margin-right: 0;
 }
 
 .social-icons li a {
@@ -214,43 +211,12 @@ a {
     margin: 0 20px;
 }
 
-.social-icons li a:hover {
-    background: #222;
-    color: #FFF;
-}
-
-.social-icons li a i {
-    line-height: 40px !important;
-}
-
-.social-icons.vertical {
-    width: 40px;
-}
-
-.social-icons.vertical li {
-    margin-bottom: 5px;
-}
-
-.social-icons.vertical li:last-child {
-    margin-right: 0;
-}
-
-.social-icons.vertical li a {
-    background: #444;
-    color: #DDD;
-}
-
-.social-icons.vertical li a:hover {
-    background: #222;
-    color: #FFF;
-}
-
 
 #frase {
     width: 100%;
     margin-top: 5px;
     text-align: center;
-    font-size: 12px;
+    font-size: 11px;
     margin-bottom: 6px;
 }
 

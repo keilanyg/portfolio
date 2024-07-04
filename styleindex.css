@@ -92,7 +92,7 @@ a:hover {
 }
 
 /*-------------------------*/
-/*      APRESENTAÇÃO       */
+/*      Assinatura         */
 /*-------------------------*/
 #section1 {
     padding: 40px;
@@ -155,7 +155,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 300px;
+    margin: 0 200px;
 }
 
 #foto {
@@ -293,10 +293,6 @@ h1 {
     margin-right: 5px;
 }
 
-.social-icons li:last-child {
-    margin-right: 0;
-}
-
 .social-icons li a {
     font-size: 20px;
     display: block;
@@ -309,37 +305,6 @@ h1 {
     color: #222;
     transition: 0.3s;
     margin: 0 20px;
-}
-
-.social-icons li a:hover {
-    background: #222;
-    color: #FFF;
-}
-
-.social-icons li a i {
-    line-height: 40px !important;
-}
-
-.social-icons.vertical {
-    width: 40px;
-}
-
-.social-icons.vertical li {
-    margin-bottom: 5px;
-}
-
-.social-icons.vertical li:last-child {
-    margin-right: 0;
-}
-
-.social-icons.vertical li a {
-    background: #444;
-    color: #DDD;
-}
-
-.social-icons.vertical li a:hover {
-    background: #222;
-    color: #FFF;
 }
 
 #frase {
@@ -357,18 +322,19 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 0 70px;
+    margin: 10px 40px;
     text-align: start;
     color: #000;
   }
 
 .cards {
-    flex: 1;
+    display: flex;
     min-width: 290px;
-    max-width: 290px;
-    margin: 1px 8px;
+    margin: 10px 8px;
     border: none;
-    text-align: center;
+    text-align:left;
+    justify-content: center;
+    align-items: center;
   }
 
 
@@ -489,7 +455,7 @@ h1 {
     .nav__link {
         margin: 0;
         color: #fff;
-        font-size: 23px;
+        font-size: 15px;
     }
 
     .nav-open {
