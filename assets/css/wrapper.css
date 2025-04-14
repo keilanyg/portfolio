@@ -15,7 +15,7 @@
 	-webkit-transition: opacity 0.5s ease, visibility 0.5s;
 	-ms-transition: opacity 0.5s ease, visibility 0.5s;
 	transition: opacity 0.5s ease, visibility 0.5s;
-	background: rgba(36, 38, 41, 0.5);
+	background: rgba(23, 24, 26, 0.5);
 	content: '';
 	display: block;
 	height: 100%;
@@ -29,14 +29,14 @@
 }
 
 body.ie #wrapper:after {
-	background: rgba(36, 38, 41, 0.8);
+	background: rgba(23, 24, 26, 0.5);
 }
 
 body.modal-active #wrapper {
-	-moz-filter: blur(8px);
-	-webkit-filter: blur(8px);
-	-ms-filter: blur(8px);
-	filter: blur(8px);
+	-moz-filter: blur(6px);
+	-webkit-filter: blur(6px);
+	-ms-filter: blur(6px);
+	filter: blur(6px);
 }
 
 body.modal-active #wrapper:after {
@@ -45,6 +45,25 @@ body.modal-active #wrapper:after {
 	visibility: visible;
 	z-index: 10003;
 }
+
+body.modal-active {
+    overflow: hidden; /* Bloqueia a rolagem da página */
+}
+
+body.modal-active #wrapper {
+    -moz-filter: blur(6px);
+    -webkit-filter: blur(6px);
+    -ms-filter: blur(6px);
+    filter: blur(6px);
+}
+
+body.modal-active #wrapper:after {
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
+    z-index: 10003;
+}
+
 
 #wrapper:before {
 	-moz-animation: spinner 1s infinite linear !important;
@@ -98,4 +117,5 @@ body.is-preload #wrapper:before {
 	color: #fff;
 	font-size: 2rem;
 	margin-bottom: 40px;
-  }
+}
+
