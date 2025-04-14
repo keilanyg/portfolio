@@ -1,20 +1,18 @@
-
 .carousel-inner {
-    position: relative;
-  }
-  
-  .carousel-item {
-    position: relative;
-  }
-  
+  position: relative;
+}
 
-  .owl-carousel img {
-    max-width: 65%;
-    height: auto;
-    margin: 0 auto;
-  }
-  
-.fh5co-about-us .owl-carousel1 .owl-dots .active span{
+.carousel-item {
+  position: relative;
+}
+
+.owl-carousel img {
+  max-width: 65%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.fh5co-about-us .owl-carousel1 .owl-dots .active span {
   background-image: -moz-linear-gradient(0deg, #ff5c00e5 0%, #ff5c00e5 100%);
   background-image: -webkit-linear-gradient(0deg, #ff5c00e5 0%, #ff5c00e5 100%);
   background-image: -ms-linear-gradient(0deg, #ff5c00e5 0%, #ff5c00e5 100%);
@@ -22,56 +20,208 @@
 }
 
 .fh5co-about-us .owl-carousel1 {
-    margin-left: 40px;
-    margin-top: -40px;
-    width: 460px;
-  }
-  
-  .fh5co-about-us .owl-carousel1 img {
-    border-radius: 10px;
-    width: 100%;
-  }
-  
-  .fh5co-about-us .owl-carousel1 .owl-nav {
-    display: none;
-  }
-  
-  .fh5co-about-us .owl-carousel1 .owl-dots {
-    text-align: left;
-    margin-left: 100px;
-    margin-top: -60px;
-    border: transparent !important;
-  
-  }
-  
+  margin-left: 40px;
+  margin-top: -40px;
+  width: 460px;
+}
+
+.fh5co-about-us .owl-carousel1 img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.fh5co-about-us .owl-carousel1 .owl-nav {
+  display: none;
+}
+
+.fh5co-about-us .owl-carousel1 .owl-dots {
+  text-align: left;
+  margin-left: 100px;
+  margin-top: -60px;
+  border: transparent !important;
+}
 
 .fh5co-about-us .owl-carousel1 .owl-dots span {
-    position: relative;
-    height: 16px;
-    width: 16px;
-    border-radius: 10px;
-    display: block;
-    background: #ff5c00e5;
-    margin: 0 5px;
-    border: none !important;
-  
+  position: relative;
+  height: 16px;
+  width: 16px;
+  border-radius: 10px;
+  display: block;
+  background: #ff5c00e5;
+  margin: 0 5px;
+  border: none !important;
+}
+
+button.owl-dot,
+button.owl-dot.active {
+  border: 2px solid transparent !important;
+}
+
+.fh5co-about-us .owl-carousel1 .owl-dots .active {
+  box-shadow: none;
+  border: none !important;
+}
+
+.fh5co-about-us .owl-carousel1 .owl-dots .active span {
+  box-shadow: none;
+  border: none !important;
+}
+
+/* Estilo padrão */
+.back-bg {
+  position: absolute;
+  width: 100%;
+  height: 430px;
+  border-radius: 10px;
+}
+
+#sobremim {
+  margin-top: 100px;
+}
+
+.about-us-content {
+  position: relative;
+  background: #f8f9fa;
+  color: #212529;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* RESPONSIVIDADE */
+
+/* Extra Large (≥1200px) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Large (≥992px and <1200px) */
+@media (max-width: 1199.98px) {
+  .back-bg {
+    height: 150px;
+    margin-bottom: 100px;
+  }
+}
+
+/* Medium (≥768px and <992px) */
+@media (max-width: 991.98px) {
+  .fh5co-about-us .row {
+    flex-direction: column;
+    align-items: center;
   }
 
-  button.owl-dot,
-  button.owl-dot.active {
-    border: 2px solid transparent !important;
+  .fh5co-about-us .col-lg-4 {
+    width: 80%;
+    margin-bottom: 100px;
   }
-  
-  
-  .fh5co-about-us .owl-carousel1 .owl-dots .active {
-    box-shadow: none;
-    border: none !important;
-  
+
+  .about-us-content {
+    width: 100%;
+    padding: 20px;
   }
-  
-  .fh5co-about-us .owl-carousel1 .owl-dots .active span {
-    box-shadow: none;
-    border: none !important;
+}
+
+/* Estilo geral mantido */
+.back-bg {
+  position: absolute;
+  width: 100%;
+  height: 430px;
+  border-radius: 10px;
+}
+
+.about-us-content {
+  position: relative;
+  background: #f8f9fa;
+  color: #212529;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 800px) {
+  .fh5co-about-us .row {
+    flex-direction: column;
+    align-items: center;
   }
-      
-  
+
+  .fh5co-about-us .col-lg-4,
+  .fh5co-about-us .col-lg-7 {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .back-bg {
+    height: 260px;
+    top: 0;
+  }
+
+  .fh5co-about-us .owl-carousel1 {
+    padding-top: 30px;
+    margin-top: -60px;
+  }
+
+  .fh5co-about-us .owl-carousel1 img {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .about-us-content {
+    padding: 20px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 500px){
+  .fh5co-about-us .owl-carousel1 {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .fh5co-about-us .owl-carousel1 img {
+    max-width: 60%;
+    display: block;
+  }
+
+  .fh5co-about-us .owl-dots {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .fh5co-about-us .owl-dots span {
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+  }
+
+  .about-us-content {
+    font-size: 0.85rem;
+  }
+
+  .back-bg {
+    height: 400px;
+  }
+
+  .about-us-content h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+}
