@@ -1,0 +1,77 @@
+
+.carousel-inner {
+    position: relative;
+  }
+  
+  .carousel-item {
+    position: relative;
+  }
+  
+
+  .owl-carousel img {
+    max-width: 65%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+.fh5co-about-us .owl-carousel1 .owl-dots .active span{
+  background-image: -moz-linear-gradient(0deg, #ff5c00e5 0%, #ff5c00e5 100%);
+  background-image: -webkit-linear-gradient(0deg, #ff5c00e5 0%, #ff5c00e5 100%);
+  background-image: -ms-linear-gradient(0deg, #ff5c00e5 0%, #ff5c00e5 100%);
+  border: none !important;
+}
+
+.fh5co-about-us .owl-carousel1 {
+    margin-left: 40px;
+    margin-top: -40px;
+    width: 460px;
+  }
+  
+  .fh5co-about-us .owl-carousel1 img {
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  .fh5co-about-us .owl-carousel1 .owl-nav {
+    display: none;
+  }
+  
+  .fh5co-about-us .owl-carousel1 .owl-dots {
+    text-align: left;
+    margin-left: 100px;
+    margin-top: -60px;
+    border: transparent !important;
+  
+  }
+  
+
+.fh5co-about-us .owl-carousel1 .owl-dots span {
+    position: relative;
+    height: 16px;
+    width: 16px;
+    border-radius: 10px;
+    display: block;
+    background: #ff5c00e5;
+    margin: 0 5px;
+    border: none !important;
+  
+  }
+
+  button.owl-dot,
+  button.owl-dot.active {
+    border: 2px solid transparent !important;
+  }
+  
+  
+  .fh5co-about-us .owl-carousel1 .owl-dots .active {
+    box-shadow: none;
+    border: none !important;
+  
+  }
+  
+  .fh5co-about-us .owl-carousel1 .owl-dots .active span {
+    box-shadow: none;
+    border: none !important;
+  }
+      
+  

@@ -1,0 +1,70 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo do footer */
+.footer {
+  text-align: center;
+  color: white;
+  padding: 2rem 0;
+  background-color: #212529; /* Adiciona fundo para ver contraste */
+}
+
+/* Botões de redes sociais */
+.btn-social {
+  font-size: 1.2rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  border: 2px solid white; /* Borda branca visível */
+  background-color: none; /* Garante fundo transparente */
+  color: white; /* Cor do ícone */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  text-decoration: none; /* Remove sublinhado se for link */
+}
+
+/* Hover animado */
+.btn-social:hover {
+  background-color: #ff5c00e5;
+  border-color: #ff5c00e5; /* Opcional: borda acompanha o hover */
+  color: white;
+}
+/* Ícones */
+.btn-social i {
+  font-size: 1.2rem;
+}
+
+/* Responsivo para tablets */
+@media (max-width: 768px) {
+  .btn-social {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    margin: 0.4rem;
+  }
+
+  .btn-social i {
+    font-size: 1rem;
+  }
+}
+
+/* Responsivo para celulares pequenos */
+@media (max-width: 480px) {
+  .btn-social {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+    margin: 0.3rem;
+  }
+
+  .btn-social i {
+    font-size: 0.9rem;
+  }
+}

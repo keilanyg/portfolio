@@ -1,0 +1,294 @@
+* { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  display: inline-block;
+  color: white;
+}
+
+textarea {
+  resize: vertical;
+}
+
+#submitButton {
+  background-color: #ff5c00;
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#submitButton:hover {
+  background-color: #e65300;
+  color: white;
+}
+
+/* Form */
+
+form {
+  margin: 0 0 2em 0;
+}
+
+form> :last-child {
+  margin-bottom: 0;
+}
+
+form>.fields {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+}
+
+form>.fields>.field {
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 1.5em 0 0 1.5em;
+  width: 100%;
+}
+
+form>.fields>.field.half {
+  width: 50%;
+}
+
+form>.fields>.field.third {
+  width: 33.33%;
+}
+
+form>.fields>.field.quarter {
+  width: 25%;
+}
+
+/* Estilo base da seção de contato */
+section#contato {
+  background-color: #212529;
+  background-image: url("../../images/Capa.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 60px 15px;
+}
+
+/* Título da seção */
+section#contato .section-heading {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* Estilo geral dos grupos de formulário */
+section#contato form#contatoForm .form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Estilo dos inputs e textareas */
+section#contato form#contatoForm .form-group input,
+section#contato form#contatoForm .form-group textarea {
+  background-color: white;
+  padding: 1.25rem;
+  border-radius: 0.375rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+/* Altura dos inputs */
+section#contato form#contatoForm .form-group input.form-control {
+  height: auto;
+}
+
+/* Estilo da área de texto */
+section#contato form#contatoForm .form-group-textarea {
+  height: 100%;
+}
+
+section#contato form#contatoForm .form-group-textarea textarea {
+  height: 90%;
+  min-height: 10rem;
+}
+
+/* Foco do campo */
+section#contato form#contatoForm .form-control:focus {
+  border-color: #ff5c00;
+  box-shadow: none;
+}
+
+/* Botão de envio */
+section#contato form#contatoForm button#submitButton {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.375rem;
+}
+
+/* Feedback de erro */
+section#contato form#contatoForm .invalid-feedback {
+  color: #ff5c00;
+  font-size: 0.875rem;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 1024px) {
+  section#contato .row {
+    flex-direction: column;
+  }
+
+  section#contato form#contatoForm .form-group,
+  section#contato form#contatoForm .form-group-textarea {
+    margin-bottom: 1rem;
+  }
+
+  section#contato form#contatoForm .form-control,
+  section#contato form#contatoForm textarea {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  section#contato .text-center h2 {
+    font-size: 1.5rem;
+  }
+
+  section#contato form#contatoForm button#submitButton {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+}
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+  section#contato .row {
+    flex-direction: column;
+  }
+
+  section#contato form#contatoForm .form-group,
+  section#contato form#contatoForm .form-group-textarea {
+    margin-bottom: 1rem;
+  }
+
+  section#contato form#contatoForm .form-control,
+  section#contato form#contatoForm textarea {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  section#contato .text-center h2 {
+    font-size: 1.5rem;
+  }
+
+  section#contato form#contatoForm button#submitButton {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+}
+
+/* Responsividade para telas muito pequenas (como smartphones) */
+@media (max-width: 480px) {
+  section#contato {
+    padding: 30px 10px;
+  }
+
+  section#contato .section-heading {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  form>.fields>.field {
+    padding: 1.5em 0 0 1.5em;
+    width: 100%;
+  }
+
+  form>.fields>.field.half {
+    width: 100%;
+  }
+
+  form>.fields>.field.third {
+    width: 100%;
+  }
+
+  form>.fields>.field.quarter {
+    width: 100%;
+  }
+
+  section#contato form#contatoForm button#submitButton {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+}
+
+/* Ajuste para a funcionalidade de preferências de animação reduzida */
+@media (prefers-reduced-motion: reduce) {
+  .form-control {
+    transition: none;
+  }
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #ffe480;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(255, 200, 0, 0.25);
+}
+
+.form-control-plaintext {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+  color: #212529;
+  background-color: transparent;
+  border: solid transparent;
+  border-width: 1px 0;
+}
+
+.form-control-plaintext:focus {
+  outline: 0;
+}
+
+.form-control-sm {
+  min-height: calc(1.5em + 0.5rem + 2px);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.form-control-lg {
+  min-height: calc(1.5em + 1rem + 2px);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+textarea.form-control {
+  min-height: calc(1.5em + 0.75rem + 2px);
+}
+
+textarea.form-control-sm {
+  min-height: calc(1.5em + 0.5rem + 2px);
+}
+
+textarea.form-control-lg {
+  min-height: calc(1.5em + 1rem + 2px);
+}
