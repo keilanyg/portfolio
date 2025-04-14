@@ -186,42 +186,56 @@ button.owl-dot.active {
   }
 }
 
-@media (max-width: 500px){
-  .fh5co-about-us .owl-carousel1 {
+@media (max-width: 450px) {
+  .fh5co-about-us .row {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  .fh5co-about-us .col-lg-4,
+  .fh5co-about-us .col-lg-7 {
     width: 100%;
+    padding: 0 10px;
+    margin-bottom: 30px;
+  }
+
+  .fh5co-about-us .owl-carousel1 {
     margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
+    padding: 0;
   }
 
   .fh5co-about-us .owl-carousel1 img {
-    max-width: 60%;
+    max-width: 100%;
+    margin: 0 auto;
     display: block;
   }
 
-  .fh5co-about-us .owl-dots {
+  .fh5co-about-us .owl-carousel1 .owl-dots {
     text-align: center;
     margin-left: 0;
-  }
-
-  .fh5co-about-us .owl-dots span {
-    width: 10px;
-    height: 10px;
-    margin: 0 3px;
-  }
-
-  .about-us-content {
-    font-size: 0.85rem;
+    margin-top: 10px;
   }
 
   .back-bg {
-    height: 400px;
+    height: 180px;
+    border-radius: 10px;
+    top: 0;
   }
 
-  .about-us-content h3 {
-    font-size: 1rem;
+  #sobremim {
+    margin-top: 60px;
   }
 
-  p {
-    font-size: 0.85rem;
-    line-height: 1.3;
+  .about-us-content {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  .owl-carousel img {
+    max-width: 100%;
   }
 }
