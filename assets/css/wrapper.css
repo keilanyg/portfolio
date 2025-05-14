@@ -86,14 +86,18 @@ body.modal-active #wrapper:after {
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	background-color: #212529b7;
-	/* fundo opaco */
+	background-color: #212529b7; 
 	opacity: 0;
 	visibility: hidden;
 	z-index: 10000;
-	/* acima do #wrapper */
 	transition: opacity 0.5s ease, visibility 0.5s ease;
 }
+
+body.modal-active #modal-overlay {
+	opacity: 1;
+	visibility: visible;
+}
+
 
 body.modal-active #modal-overlay {
 	opacity: 1;
