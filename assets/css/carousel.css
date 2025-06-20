@@ -79,6 +79,19 @@ button.owl-dot.active {
   margin-top: 100px;
 }
 
+#btn-laranja {
+  background-color: #ff5c00;
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
 .about-us-content {
   position: relative;
   background: #f8f9fa;
