@@ -1,4 +1,4 @@
-* { 
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -70,7 +70,7 @@ form>.fields>.field.quarter {
 /* Estilo base da seção de contato */
 section#contato {
   background-color: #212529;
-  background-image: url("../../images/Capa.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../images/Capa.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
