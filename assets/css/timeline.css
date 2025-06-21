@@ -19,7 +19,7 @@
     width: 2px;
     margin-left: -1.5px;
     content: "";
-    background-color: #ff5c00;
+    background-color: #f04e00	;
 }
 
 .timeline>li {
@@ -71,7 +71,7 @@
     margin-left: 0;
     text-align: center;
     color: white;
-    border: 7px solid #ff5c00;
+    border: 7px solid #f04e00	;
     border-radius: 100%;
     background-color: #212529;
 }

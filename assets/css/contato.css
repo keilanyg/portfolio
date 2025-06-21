@@ -13,19 +13,6 @@ textarea {
   resize: vertical;
 }
 
-#submitButton {
-  background-color: #ff5c00;
-  border: none;
-  color: white;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
 #submitButton:hover {
   background-color: #e65300;
   color: white;
@@ -116,7 +103,7 @@ section#contato form#contatoForm .form-group-textarea textarea {
 
 /* Foco do campo */
 section#contato form#contatoForm .form-control:focus {
-  border-color: #ff5c00;
+  border-color: #f04e00	;
   box-shadow: none;
 }
 
@@ -130,7 +117,7 @@ section#contato form#contatoForm button#submitButton {
 
 /* Feedback de erro */
 section#contato form#contatoForm .invalid-feedback {
-  color: #ff5c00;
+  color: #f04e00	;
   font-size: 0.875rem;
 }
 
