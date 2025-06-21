@@ -39,8 +39,8 @@
         <div class="container">
             <!-- Imagem na navbar -->
             <a class="navbar-brand" href="javascript:void(0);" onclick="abrirModal()">
-                <img src="images/logo2.png"
-                    alt="Letra K estilizada com formato de pena de escrita e curvas de vetor, representando design gráfico e criatividade.">
+                <img src="images/logo2.png" width="80%" alt="Letra K estilizada com formato de pena de escrita e curvas de vetor, 
+                    representando design gráfico e criatividade.">
             </a>
 
             <!-- Modal -->
@@ -112,14 +112,34 @@
     <section class="page-section" id="ferramentas">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Ferramentas utilizadas</h2>
+                <h2 class="section-heading text-uppercase">Ferramentas Conhecidas</h2>
             </div>
             <section id="section3" class="sections">
                 <div class="divconhecimento">
+                    <!-- Filtros -->
+                    <div class="filters text-center">
+                        <button data-filter="all" class="active">Todos</button>
+                        <button data-filter="design">Design e Colaboração Visual
+                            Visual</button>
+                        <button data-filter="frontend">Front-End</button>
+                        <button data-filter="backend">Back-End e Integrações</button>
+                        <button data-filter="accessibility">Testes de Acessibilidade(a11y)</button>
+                    </div>
                     <div class="conhecimentos">
-                        <div class="test">
+                        <!-- Cards -->
+                        <div class="test cards-container">
+                            <!--Penpont-->
+                            <div class="card design">
+                                <div class="face face1">
+                                    <div class="content">
+                                        <img src="images/penpot.svg" alt="Logo Penpot"
+                                            style="width:50px; height:50px; filter: brightness(0) invert(1);">
+                                        <h4>Penpot</h4>
+                                    </div>
+                                </div>
+                            </div>
                             <!--HTML-->
-                            <div class="card">
+                            <div class="card frontend">
                                 <div class="face face1">
                                     <div class="content">
                                         <img src="images/html.png" alt="Logo HTML">
@@ -128,7 +148,7 @@
                                 </div>
                             </div>
                             <!--CSS-->
-                            <div class="card">
+                            <div class="card frontend">
                                 <div class="face face1">
                                     <div class="content">
                                         <img src="images/css.png" alt="Logo CSS">
@@ -137,7 +157,7 @@
                                 </div>
                             </div>
                             <!--Python-->
-                            <div class="card">
+                            <div class="card backend">
                                 <div class="face face1">
                                     <div class="content">
                                         <img src="images/python.png" alt="Logo PYTHON">
@@ -146,7 +166,7 @@
                                 </div>
                             </div>
                             <!--Bootstrap-->
-                            <div class="card">
+                            <div class="card frontend">
                                 <div class="face face1">
                                     <div class="content">
                                         <img src="images/bootstrap.png" alt="Logo BOOTSTRAP" width="50%">
@@ -154,17 +174,27 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--Materialize-->
-                            <div class="card">
+                            <!--Notion-->
+                            <div class="card design">
                                 <div class="face face1">
                                     <div class="content">
-                                        <img src="images/materializecss.png" alt="Logo " MATERIALIZE width="60%">
+                                        <img src="images/notion.svg" alt="Logo Notion"
+                                            style="width:50px; height:50px; filter: brightness(0) invert(1);">
+                                        <h4>Notion</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Materialize-->
+                            <div class="card frontend">
+                                <div class="face face1">
+                                    <div class="content">
+                                        <img src="images/materializecss.png" alt="Logo MATERIALIZE" width="60%">
                                         <h4>Materialize</h4>
                                     </div>
                                 </div>
                             </div>
                             <!--React-->
-                            <div class="card">
+                            <div class="card frontend">
                                 <div class="face face1">
                                     <div class="content">
                                         <img src="images/react.png" alt="Logo REACT">
@@ -173,7 +203,7 @@
                                 </div>
                             </div>
                             <!--API-->
-                            <div class="card">
+                            <div class="card backend">
                                 <div class="face face1">
                                     <div class="content">
                                         <img src="images/api.png" alt="Logo API">
@@ -181,8 +211,18 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--TypeScript-->
+                            <div class="card frontend">
+                                <div class="face face1">
+                                    <div class="content">
+                                        <img src="images/typescript.svg" alt="Logo TypeScript"
+                                            style="width:50px; height:50px; filter: brightness(0) invert(1);">
+                                        <h4>TypeScript</h4>
+                                    </div>
+                                </div>
+                            </div>
                             <!--PostgreSQL-->
-                            <div class="card">
+                            <div class="card backend">
                                 <div class="face face1">
                                     <div class="content">
                                         <img src="images/postgresql.png" alt="Logo POSTGRESQL" width="50%">
@@ -191,7 +231,7 @@
                                 </div>
                             </div>
                             <!--Django-->
-                            <div class="card">
+                            <div class="card backend">
                                 <div class="face face1">
                                     <div class="content">
                                         <img src="images/django.png" alt="Logo DJANGO">
@@ -200,7 +240,7 @@
                                 </div>
                             </div>
                             <!--Figma-->
-                            <div class="card">
+                            <div class="card design">
                                 <div class="face face1">
                                     <div class="content">
                                         <img src="images/figma.png" alt="Logo FIGMA">
@@ -209,7 +249,7 @@
                                 </div>
                             </div>
                             <!--Invision-->
-                            <div class="card">
+                            <div class="card design">
                                 <div class="face face1">
                                     <div class="content">
                                         <img src="images/invision.png" alt="Logo INVISION">
@@ -218,7 +258,7 @@
                                 </div>
                             </div>
                             <!--Mockplus-->
-                            <div class="card">
+                            <div class="card design">
                                 <div class="face face1">
                                     <div class="content">
                                         <img src="images/mockplus.png" alt="Logo MOCKPLUS">
@@ -227,7 +267,7 @@
                                 </div>
                             </div>
                             <!--Whimsical-->
-                            <div class="card">
+                            <div class="card design">
                                 <div class="face face1">
                                     <div class="content">
                                         <img src="images/whimsical.png" alt="Logo WHIMSICAL" width="60%">
@@ -236,7 +276,7 @@
                                 </div>
                             </div>
                             <!--Miro-->
-                            <div class="card">
+                            <div class="card design">
                                 <div class="face face1">
                                     <div class="content">
                                         <img src="images/miro.png" alt="Logo MIRO">
@@ -245,7 +285,7 @@
                                 </div>
                             </div>
                             <!--Jamboard-->
-                            <div class="card">
+                            <div class="card design">
                                 <div class="face face1">
                                     <div class="content">
                                         <img src="images/jamboard.png" alt="Logo JAMBOARD">
@@ -254,12 +294,38 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Script para filtro -->
+                        <script>
+                            const buttons = document.querySelectorAll('.filters button');
+                            const cards = document.querySelectorAll('.cards-container .card');
+
+                            buttons.forEach(button => {
+                                button.addEventListener('click', () => {
+                                    // Remove active de todos
+                                    buttons.forEach(btn => btn.classList.remove('active'));
+                                    // Adiciona active no clicado
+                                    button.classList.add('active');
+
+                                    const filter = button.getAttribute('data-filter');
+
+                                    cards.forEach(card => {
+                                        if (filter === 'all') {
+                                            card.style.display = 'block';
+                                        } else {
+                                            card.style.display = card.classList.contains(filter) ? 'block' : 'none';
+                                        }
+                                    });
+                                });
+                            });
+                        </script>
+
                     </div>
             </section>
         </div>
     </section>
 
-    <section class="page-section" id="projetos">
+    <section id="projetos" style="padding-top: 50px;">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase" style="color: #fff;">Projetos</h2>
@@ -650,6 +716,23 @@
         </div>
     </footer>
 
+    <!-- Botão de voltar ao topo -->
+    <button id="btnTopo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </button>
+
+    <script>
+        const botao = document.getElementById("btnTopo");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+                botao.style.display = "block";
+            } else {
+                botao.style.display = "none";
+            }
+        });
+    </script>
+
     <script>
         function abrirModal() {
             var imgSrc = document.querySelector('.navbar-brand img').src;
@@ -672,9 +755,9 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-    <!--<script>
+    <script>
         document.addEventListener("contextmenu", (event) => event.preventDefault());
-    </script>-->
+    </script>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <script src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script>

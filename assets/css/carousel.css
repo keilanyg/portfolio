@@ -79,7 +79,7 @@ button.owl-dot.active {
   margin-top: 100px;
 }
 
-#btn-laranja, #submitButton {
+#btn-laranja {
   background-color: #f04e00	;
   border: none;
   color: #ffffff;
@@ -224,7 +224,7 @@ button.owl-dot.active {
   }
 
   .fh5co-about-us .owl-carousel1 img {
-    max-width: 100%;
+    max-width: 70%;
     margin: 0 auto;
     display: block;
   }

@@ -5,13 +5,7 @@
 }
 
 .navbar-brand img {
-    height: 80px;
-    width: auto;
-}
-
-/* Já existente */
-.navbar-brand img {
-    height: 80px;
+    height: 120px;
     width: auto;
     cursor: pointer;
 }
