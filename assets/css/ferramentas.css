@@ -29,13 +29,13 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 10px;
+  margin-top: 5px;
 
 }
 
 .divconhecimentos .card .face {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
 }
 
 .card {
@@ -61,8 +61,8 @@
 }
 
 .divconhecimento .card .face {
-  width: 130px;
-  height: 130px;
+  width: 160px;
+  height: 160px;
 }
 
 .divconhecimento .card .face.face1 {
@@ -70,7 +70,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 15px 15px;
+  margin: 12xpx 12px;
   border-radius: 10px;
   opacity: 1;
   z-index: -1;
