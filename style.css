@@ -84,6 +84,13 @@
 	margin: 0 auto !important;
 }
 
+.content img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+
 .wphtsp-slick-slider .slick-dots {
 	left: 0 !important;
 	right: 0 !important;
