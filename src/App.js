@@ -5,6 +5,7 @@ import Servicos from "./components/servicos/index";
 import { Rodape } from "./components/rodape/index";
 import Sidebar from "./components/barradenavegacao/index.jsx";
 import  {Ferramentas} from "./components/Camposdapag/cardferramentas/index.jsx";
+import Portfolio from "./components/Camposdapag/cardportfolio/index.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <main className="flex-1 ml-20 md:ml-56 pt-10">
         <SobreMim />
         <Qualificacoes />
+        <Portfolio/>
         <Ferramentas/>
         <Servicos />
         <Rodape />

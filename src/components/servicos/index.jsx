@@ -40,9 +40,9 @@ export default function Servicos() {
 
     return (
         <section className="services section" id="services">
-            <TituloSecao subtitulo="O que posso fazer" tituloPrincipal="Capacidades" />
+            <TituloSecao subtitulo="Áreas de Atuação" tituloPrincipal="Competências" />
 
-            <div className="services-container grid">
+              <div className="services-container grid">
                 {servicesData.map(({ id, iconClass, title, level, details }) => (
                     <div key={id} className="services-content">
                         <div>
@@ -50,7 +50,7 @@ export default function Servicos() {
                             <h3 className="services-title">
                                 {title.includes(" ") ? (
                                     <>
-                                        {title.split(" ")[0]} <br /> {title.split(" ")[1]}
+                                        {title}
                                     </>
                                 ) : (
                                     title

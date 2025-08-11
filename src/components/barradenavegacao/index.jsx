@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'; 
+import React, { useEffect, useState } from 'react';
 import logo from "../../assets/logo2.png";
 
 export default function Sidebar() {
@@ -15,35 +15,52 @@ export default function Sidebar() {
   return (
     <aside
       className={`fixed top-0 left-0 h-full w-20 md:w-56 z-50 flex flex-col justify-between py-8 px-4 transition-all duration-300
-        ${scrolled 
+        ${scrolled
           ? 'bg-[#1c1e22]/90 backdrop-blur-md shadow-lg border-none'
           : 'bg-[#1c1e22] border border-none'
         }
       `}
-      style={{ boxShadow: '0 8px 32px 0 #ff66004d' }}
+      style={{ boxShadow: '0 8px 30px 0 #ff66004d' }}
     >
       <div className="flex flex-col items-center md:items-start">
         <img src={logo} alt="logo, letra K" className="md:w-20 mb-8" />
 
-        <nav className="flex flex-col gap-8 w-full">
-          <a 
-            href="#sobre" 
+        <nav className="flex flex-col gap-4 w-full">
+          <a
+            href="#sobre"
             className="text-white hover:text-[#ffffff] transition-colors duration-300 text-sm md:text-base flex items-center gap-3 px-3 py-2 rounded-md
                        hover:bg-[#ff6600] focus:bg-[#ff6600] focus:outline-none"
           >
             <i className="uil uil-user text-lg"></i>
             <span className="hidden md:inline font-medium">Sobre</span>
           </a>
-          <a 
-            href="#services" 
+          <a
+            href="#portfolio"
+            className="text-white hover:text-[#ffffff] transition-colors duration-300 text-sm md:text-base flex items-center gap-3 px-3 py-2 rounded-md
+             hover:bg-[#ff6600] focus:bg-[#ff6600] focus:outline-none"
+          >
+            <i className="uil uil-folder-open text-lg"></i>
+            <span className="hidden md:inline font-medium">Portfólio</span>
+          </a>
+
+          <a
+            href="#ferramentas"
+            className="text-white hover:text-[#ffffff] transition-colors duration-300 text-sm md:text-base flex items-center gap-3 px-3 py-2 rounded-md
+                       hover:bg-[#ff6600] focus:bg-[#ff6600] focus:outline-none"
+          >
+            <i className="uil uil-wrench text-lg"></i>
+            <span className="hidden md:inline font-medium">Ferramentas</span>
+          </a>
+          <a
+            href="#services"
             className="text-white hover:text-[#ffffff] transition-colors duration-300 text-sm md:text-base flex items-center gap-3 px-3 py-2 rounded-md
                        hover:bg-[#ff6600] focus:bg-[#ff6600] focus:outline-none"
           >
             <i className="uil uil-briefcase text-lg"></i>
-            <span className="hidden md:inline font-medium">Serviços</span>
+            <span className="hidden md:inline font-medium">Competências</span>
           </a>
-          <a 
-            href="#contato" 
+          <a
+            href="#contato"
             className="text-white hover:text-[#ffffff] transition-colors duration-300 text-sm md:text-base flex items-center gap-3 px-3 py-2 rounded-md
                        hover:bg-[#ff6600] focus:bg-[#ff6600] focus:outline-none"
           >
@@ -53,9 +70,6 @@ export default function Sidebar() {
         </nav>
       </div>
 
-      <div className="text-white text-xs text-center mt-8 md:mt-0 select-none">
-        © {new Date().getFullYear()} Seu Nome
-      </div>
     </aside>
   );
 }

@@ -27,6 +27,8 @@ import whimsical from "../../../assets/whimsical.png";
 import miro from "../../../assets/miro.png";
 import cypress from "../../../assets/cypress.png";
 import jamboard from "../../../assets/jamboard.svg";
+import illustrator from "../../../assets/illustrator.png";
+import adobe from "../../../assets/adobe-xd.png";
 
 const ferramentas = [
     { id: 1, categoria: "design", nome: "Penpot", img: penpot, alt: "Logo Penpot", style: { filter: "brightness(0) invert(1)" } },
@@ -55,7 +57,10 @@ const ferramentas = [
     { id: 24, categoria: "design", nome: "Miro", img: miro, alt: "Logo MIRO" },
     { id: 25, categoria: "accessibility", nome: "Cypress", img: cypress, alt: "Logo Cypress" },
     { id: 26, categoria: "design", nome: "Jamboard", img: jamboard, alt: "Logo JAMBOARD", style: { filter: "brightness(0) invert(1)" } },
+    { id: 27, categoria: "design", nome: "Illustrator", img: illustrator, alt: "Logo Illustrator" },
+    { id: 28, categoria: "design", nome: "Adobe XD", img: adobe, alt: "Logo Adobe XD" },
 ];
+
 
 const filtros = [
     { chave: "all", label: "Todos" },
@@ -75,36 +80,35 @@ export function Ferramentas() {
 
     return (
         <section className="page-section" id="ferramentas">
-            <div style={{ maxWidth: 960, margin: "0 auto" }}>
+            <div style={{ maxWidth: "1200px", width: "90%", margin: "0 auto" }}>
                 <TituloSecao
                     subtitulo="O que uso para entregar resultados"
                     tituloPrincipal="Ferramentas"
                 />
+
                 {/* Filtros */}
-                <div
-                    style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        gap: 15,
-                        flexWrap: "wrap",
-                        marginBottom: 24,
-                    }}
-                >
+                <div style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    gap: 15,
+                    flexWrap: "wrap",
+                    marginBottom: 24
+                }}>
                     {filtros.map(({ chave, label }) => (
                         <button
                             key={chave}
                             onClick={() => setFiltroAtivo(chave)}
                             style={{
-                                backgroundColor: filtroAtivo === chave ? "#334155" : "white",
-                                color: filtroAtivo === chave ? "white" : "#334155",
-                                border: "1.5px solid #334155",
+                                backgroundColor: filtroAtivo === chave ? "#2c2f34" : "white",
+                                color: filtroAtivo === chave ? "white" : "#2c2f34",
+                                border: "1.5px solid #2c2f34",
                                 padding: "0.5rem 1rem",
                                 fontSize: 16,
                                 borderRadius: 6,
                                 cursor: "pointer",
                                 fontWeight: filtroAtivo === chave ? "600" : "400",
                                 transition: "all 0.3s ease",
-                                minWidth: 140,
+                                minWidth: 140
                             }}
                         >
                             {label}
@@ -113,63 +117,57 @@ export function Ferramentas() {
                 </div>
 
                 {/* Cards */}
-                <div
-                    style={{
-                        display: "flex",
-                        flexWrap: "wrap",
-                        justifyContent: "center",
-                        gap: 10,
-                    }}
-                >
+                <div style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                    gap: 10
+                }}>
                     {ferramentasFiltradas.map(({ id, nome, img, alt, style }) => (
                         <div
                             key={id}
                             style={{
-                                width: "140px",
-                                backgroundColor: "#334155",
+                                width: "120px",
+                                height: "140px",
+                                backgroundColor: "#2c2f34",
                                 borderRadius: "0.5rem",
                                 boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
                                 overflow: "hidden",
                                 textAlign: "center",
-                                padding: "10px"
+                                transition: "transform 0.3s ease"
                             }}
-                            onMouseEnter={(e) =>
-                                (e.currentTarget.style.transform = "scale(1.05)")
-                            }
-                            onMouseLeave={(e) =>
-                                (e.currentTarget.style.transform = "scale(1)")
-                            }
+                            onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.05)"}
+                            onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
                         >
-                            <div
-                                style={{
-                                    height: 100,
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    padding: "1rem",
-                                }}
-                            >
+                            <div style={{
+                                height: 100,
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                padding: "1rem"
+                            }}>
                                 <img
                                     src={img}
                                     alt={alt}
+                                    onError={(e) => {
+                                        e.currentTarget.src = "/image/ferramentas/default.png";
+                                    }}
                                     style={{
                                         maxWidth: "100%",
                                         maxHeight: "100%",
                                         objectFit: "contain",
-                                        ...style,
+                                        ...style
                                     }}
                                 />
                             </div>
                             <div>
-                                <h3
-                                    style={{
-                                        fontSize: "1.125rem",
-                                        fontWeight: 600,
-                                        color: "#ffffff",
-                                        margin: 0,
-                                        userSelect: "text",
-                                    }}
-                                >
+                                <h3 style={{
+                                    fontSize: "1.125rem",
+                                    fontWeight: 600,
+                                    color: "#ffffff",
+                                    margin: 0,
+                                    userSelect: "text"
+                                }}>
                                     {nome}
                                 </h3>
                             </div>

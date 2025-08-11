@@ -1,0 +1,218 @@
+.grid {
+    max-width: 960px;
+    /* limite de largura para o grid */
+    margin: 0 auto;
+    /* centraliza na tela */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.card {
+    background: #2c2f34;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* mais suave */
+    outline: none;
+}
+
+.card:hover,
+.card:focus {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    outline: 2px solid #ff6600;
+    outline-offset: 2px;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.979);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 999;
+    padding: 20px;
+    text-align: center;
+    overflow-y: auto;
+
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.modal-title {
+    color: #fff;
+    font-size: 20px;
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+.modal-content {
+    display: flex;
+}
+
+body.modal-open {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.modal-description {
+    color: #ccc;
+    margin-top: 10px;
+    font-size: 15px;
+    max-width: 800px;
+    line-height: 1.4;
+}
+
+.modal-description.strong {
+    color: #fff;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.modal-functionalities {
+    list-style-type: disc;
+    color: #eee;
+    margin: auto 0;
+    max-width: 800px;
+    text-align: left;
+    font-size: 14px;
+    padding-left: 20px;
+    /* para recuar bullets */
+}
+
+.modal-description-container {
+    text-align: start;
+    padding: 10px 0;
+    width: 40%;
+}
+
+/* Botões do modal */
+.modal button {
+    position: fixed;
+    /* para sair do fluxo flex e posicionar na tela */
+    background: none;
+    color: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    padding: 5px 10px;
+    transition: color 0.2s;
+}
+
+.modal button:hover,
+.modal button:focus {
+    color: #ff6600;
+    outline: none;
+}
+
+.close-btn {
+    top: 20px;
+    right: 30px;
+}
+
+.prev-btn,
+.next-btn {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+}
+
+.prev-btn {
+    left: 30px;
+}
+
+.next-btn {
+    right: 30px;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+    .grid {
+        max-width: 90%;
+        padding: 10px;
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .modal-description {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .modal img {
+        max-height: 80vh;
+        max-width: 95%;
+    }
+
+    .modal-title {
+        font-size: 18px;
+    }
+
+    .modal button {
+        font-size: 26px;
+    }
+
+    .close-btn {
+        right: 15px;
+        top: 15px;
+    }
+
+    .prev-btn {
+        left: 15px;
+        font-size: 30px;
+    }
+
+    .next-btn {
+        right: 15px;
+        font-size: 30px;
+    }
+
+    .modal-content {
+        max-width: 90%;
+        margin-top: 90%;
+        display: block;
+
+    }
+}
