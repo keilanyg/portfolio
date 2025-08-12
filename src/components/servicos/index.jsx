@@ -40,7 +40,7 @@ export default function Servicos() {
 
     return (
         <section className="services section" id="services">
-            <TituloSecao subtitulo="Áreas de Atuação" tituloPrincipal="Competências" />
+            <TituloSecao subtitulo="Áreas de Atuação" tituloPrincipal="Aptidão" />
 
               <div className="services-container grid">
                 {servicesData.map(({ id, iconClass, title, level, details }) => (

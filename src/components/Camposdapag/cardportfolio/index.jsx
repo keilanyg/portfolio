@@ -1,17 +1,46 @@
 import { useState, useEffect } from "react";
 import TituloSecao from "../tituloSubtitulo/index";
 import "./index.scss";
-import img2 from "../../../assets/works/Prontuario_1.png";
+import prontuario1 from "../../../assets/works/Prontuario_1.png";
+import jogos from "../../../assets/works/Tela de Jogos.png";
+import doelivros1 from "../../../assets/works/doelivros/iPhone 14 Plus - 1.png";
+import doelivros2 from "../../../assets/works/doelivros/iPhone 14 Plus - 2.png";
+import doelivros3 from "../../../assets/works/doelivros/iPhone 14 Plus - 3.png";
+import doelivros4 from "../../../assets/works/doelivros/iPhone 14 Plus - 4.png";
+import doelivros5 from "../../../assets/works/doelivros/iPhone 14 Plus - 5.png";
+import doelivros6 from "../../../assets/works/doelivros/iPhone 14 Plus - 6.png";
+import doelivros7 from "../../../assets/works/doelivros/iPhone 14 Plus - 7.png";
+import doelivros8 from "../../../assets/works/doelivros/iPhone 14 Plus - 8.png";
+import doelivros9 from "../../../assets/works/doelivros/iPhone 14 Plus - 9.png";
+import telabrasil from "../../../assets/works/TelaBrasil.png";
 
 const projects = [
     {
-        title: "Prontuário (Mobile)",
+        title: "DoeLivros - Plataforma de Doação de Livros Usados",
+        year: 2025,
+        short:
+            "UX/UI Design (Mobile)",
+        long:
+            "Esse projeto foi desenvolvido como trabalho final do curso online “Especialização do projeto UX/UI: da pesquisa à acessibilidade”, ministrado pela Domestika. DoeLivros é uma plataforma online acessível que liga pessoas interessadas em fazer livros usados a quem precisa, promovendo a leitura e o reaproveitamento. O projeto foi desenvolvido visando o processo completo de UX/UI, priorizando a simplicidade e o impacto social.",
+        descriptionStrong: "Entregas:",
+        functionalities: [
+            "Pesquisa UX: entrevistas, questionário online e comparação com plataformas semelhantes;",
+            "Personas e Jornada do Usuário: estabelecimento de perfis e trajetórias de doação / recebimento;",
+            "Wireframes e Protótipo Lo - fi: rascunhos das telas e organização da navegação;",
+            "Design de UI: guia visual com cores, tipografia e elementos acessíveis;",
+            "Protótipo de alta fidelidade no Figma: fluxo completo do usuário para web responsiva;",
+            "Estudo de Caso: documentos contendo percepções, escolhas de design e etapas futuras.",
+        ],
+        images: [doelivros1, doelivros2, doelivros3, doelivros4, doelivros5, doelivros6, doelivros7, doelivros8, doelivros9],
+    },
+    {
+        title: "Sistema de Gerenciamento de Prontuário do Paciente",
         year: 2023,
         short:
             "Aplicativo mobile para gestão ágil de prontuários médicos, com interface simples e intuitiva.",
         long:
             "Desenvolvido como projeto acadêmico, o Prontuário Mobile oferece uma solução prática para profissionais da saúde gerenciarem informações de pacientes. Permite cadastro e acompanhamento de dados pessoais e histórico clínico, com funcionalidades como login seguro, gerenciamento de usuários, painel de controle, listagem e cadastro de pacientes, inserção de itens e visualização detalhada do perfil de cada paciente. O design prioriza usabilidade e acessibilidade para otimizar a rotina médica.",
-        descriptionStrong: "Sistema de Gerenciamento de Prontuário do Paciente",
+        descriptionStrong: "Funcionalidades:",
         functionalities: [
             "Login",
             "Cadastro de usuários",
@@ -20,7 +49,37 @@ const projects = [
             "Cadastro de itens",
             "Perfil do paciente",
         ],
-        images: [img2], // adicionei aqui a propriedade images com a imagem importada
+        images: [prontuario1],
+    },
+    {
+        title: "Plataforma de Divulgação de Competições",
+        year: 2024,
+        short:
+            "UX/UI Design (Web e Mobile)",
+        long:
+            "Projeto pessoal de design de interface e experiência do usuário para uma plataforma informativa sobre competições de jogos. A proposta inclui layouts responsivos para web e mobile, com foco em divulgar eventos, prêmios, desafios e permitir o acesso a formulários de inscrição. O design prioriza clareza, impacto visual e fácil leitura dos avisos e chamadas promocionais.",
+        descriptionStrong: "Entregas:",
+        functionalities: [
+            "Wireframe",
+            "Protótipo",
+            "Tela voltada à comunicação eficiente com o público",
+        ],
+        images: [jogos],
+    },
+    {
+        title: "Desenvolvimento de Plataformas Digitais Nacionais e Inclusivas (Tela Brasil)",
+        year: "2024 - 2025 (1 ano e 7 meses)",
+        short:
+            "Desenvolvimento de Plataformas Digitais Nacionais e Inclusivas UX/UI Design (Web e Mobile)",
+        long:
+            "Atei como UX/UI Designer na plataforma de streaming, a Tela Brasil, com lançamento previsto em nível nacional, o objetivo é desenvolver plataformas que sejam inclusivas, com acesso ao cinema brasileiro, priorizando escolas, bibliotecas e instituições de ensino, garantindo uma experiência intuitiva e fluida para todos os usuários.",
+        descriptionStrong: "Entregas:",
+        functionalities: [
+            "Pesquisa e análise focadas em acessibilidade",
+            "Criação de protótipos responsivos e inclusivos",
+            "Design visual alinhado às melhores práticas de UX e acessibilidade",
+        ],
+        images: [telabrasil],
     },
 ];
 
@@ -83,8 +142,8 @@ export default function Portfolio() {
                     >
                         <img src={proj.images[0]} alt={`Projeto ${index + 1}`} />
                         <div className="card-content">
-                            <div className="card-title">{proj.title}</div> {/* Corrigido aqui */}
-                            <div className="card-description">{proj.short}</div>
+                            <div className="card-title">{proj.title}</div>
+                            <div className="card-description">{proj.year}</div>
                         </div>
                     </div>
                 ))}
@@ -123,6 +182,8 @@ export default function Portfolio() {
                         />
                         <div className="modal-description-container">
                             <div className="modal-title">{project.title}</div>
+                            <div className="modal-description">{project.short}</div>
+                            <div className="modal-description">{project.year}</div>
                             <div className="modal-description">{project.long}</div>
                             <div className="modal-description strong">{project.descriptionStrong}</div>
                             <div className="modal-functionalities">

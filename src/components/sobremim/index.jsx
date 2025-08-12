@@ -6,7 +6,6 @@ const SobreMim = () => {
   return (
     <section className="sobre-mim" id="sobre">
       <div className="foto-container">
-        <div className="fundo-laranja" />
         <div className="imagem-wrapper">
           <img src={fotoPerfil} alt="Keilany com tablet" className="foto-perfil" />
         </div>
@@ -27,7 +26,6 @@ const SobreMim = () => {
           essencial para meu desenvolvimento e fortalecimento de habilidades relevantes
           focados na inclusão.
         </p>
-        <button className="botao-curriculo">CURRÍCULO</button>
       </div>
     </section>
   );

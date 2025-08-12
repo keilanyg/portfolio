@@ -90,9 +90,9 @@ export function Ferramentas() {
                 <div style={{
                     display: "flex",
                     justifyContent: "center",
-                    gap: 15,
+                    gap: 8,              // menos espaço entre botões
                     flexWrap: "wrap",
-                    marginBottom: 24
+                    marginBottom: 12     // margem menor abaixo da seção
                 }}>
                     {filtros.map(({ chave, label }) => (
                         <button
@@ -102,19 +102,20 @@ export function Ferramentas() {
                                 backgroundColor: filtroAtivo === chave ? "#2c2f34" : "white",
                                 color: filtroAtivo === chave ? "white" : "#2c2f34",
                                 border: "1.5px solid #2c2f34",
-                                padding: "0.5rem 1rem",
-                                fontSize: 16,
+                                padding: "0.25rem 0.75rem", // menos padding
+                                fontSize: 14,               // fonte menor
                                 borderRadius: 6,
                                 cursor: "pointer",
                                 fontWeight: filtroAtivo === chave ? "600" : "400",
                                 transition: "all 0.3s ease",
-                                minWidth: 140
+                                minWidth: 100              // largura mínima menor
                             }}
                         >
                             {label}
                         </button>
                     ))}
                 </div>
+
 
                 {/* Cards */}
                 <div style={{
@@ -127,14 +128,14 @@ export function Ferramentas() {
                         <div
                             key={id}
                             style={{
-                                width: "120px",
-                                height: "140px",
+                                width: "110px",
+                                height: "130px",
                                 backgroundColor: "#2c2f34",
                                 borderRadius: "0.5rem",
                                 boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
                                 overflow: "hidden",
                                 textAlign: "center",
-                                transition: "transform 0.3s ease"
+                                transition: "transform 0.2s ease"
                             }}
                             onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.05)"}
                             onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
@@ -162,7 +163,7 @@ export function Ferramentas() {
                             </div>
                             <div>
                                 <h3 style={{
-                                    fontSize: "1.125rem",
+                                    fontSize: "1rem",
                                     fontWeight: 600,
                                     color: "#ffffff",
                                     margin: 0,
