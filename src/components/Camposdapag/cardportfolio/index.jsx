@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import TituloSecao from "../tituloSubtitulo/index";
 import "./index.scss";
-import prontuario1 from "../../../assets_optimized/works/Prontuario/Prontuario_1.webp";
 import prontuario2 from "../../../assets_optimized/works/Prontuario/Group 2.webp";
 import prontuario3 from "../../../assets_optimized/works/Prontuario/Group 3.webp";
 import prontuario4 from "../../../assets_optimized/works/Prontuario/Group 4.webp";
@@ -12,17 +11,16 @@ import jogos1 from "../../../assets_optimized/works/Jogos/Desktop - 1.webp";
 import jogos2 from "../../../assets_optimized/works/Jogos/Desktop - 3.webp";
 import jogos3 from "../../../assets_optimized/works/Jogos/Group 12.webp";
 import jogos4 from "../../../assets_optimized/works/Jogos/Group 13.webp";
+import jogos5 from "../../../assets_optimized/works/Jogos/Group 14.webp";
 
 
-import doelivros1 from "../../../assets_optimized/works/doelivros/iPhone 14 Plus - 1.webp";
-import doelivros2 from "../../../assets_optimized/works/doelivros/iPhone 14 Plus - 2.webp";
-import doelivros3 from "../../../assets_optimized/works/doelivros/iPhone 14 Plus - 3.webp";
-import doelivros4 from "../../../assets_optimized/works/doelivros/iPhone 14 Plus - 4.webp";
-import doelivros5 from "../../../assets_optimized/works/doelivros/iPhone 14 Plus - 5.webp";
-import doelivros6 from "../../../assets_optimized/works/doelivros/iPhone 14 Plus - 6.webp";
-import doelivros7 from "../../../assets_optimized/works/doelivros/iPhone 14 Plus - 7.webp";
-import doelivros8 from "../../../assets_optimized/works/doelivros/iPhone 14 Plus - 8.webp";
-import doelivros9 from "../../../assets_optimized/works/doelivros/iPhone 14 Plus - 9.webp";
+import doelivros1 from "../../../assets_optimized/works/DoeLeitura/Group 20.webp";
+import doelivros2 from "../../../assets_optimized/works/DoeLeitura/Group 21.webp";
+import doelivros3 from "../../../assets_optimized/works/DoeLeitura/Group 22.webp";
+import doelivros4 from "../../../assets_optimized/works/DoeLeitura/Group 23.webp";
+import doelivros5 from "../../../assets_optimized/works/DoeLeitura/Group 24.webp";
+
+
 import telabrasil from "../../../assets_optimized/works/TelaBrasil.webp";
 
 const projects = [
@@ -42,7 +40,7 @@ const projects = [
             "Protótipo de alta fidelidade no Figma: fluxo completo do usuário para web responsiva;",
             "Estudo de Caso: documentos contendo percepções, escolhas de design e etapas futuras.",
         ],
-        images: [doelivros1, doelivros2, doelivros3, doelivros4, doelivros5, doelivros6, doelivros7, doelivros8, doelivros9],
+        images: [doelivros1, doelivros2, doelivros3, doelivros4, doelivros5],
     },
     {
         title: "Sistema de Gerenciamento de Prontuário do Paciente",
@@ -60,7 +58,7 @@ const projects = [
             "Cadastro de itens",
             "Perfil do paciente",
         ],
-        images: [prontuario1, prontuario2, prontuario3, prontuario4, prontuario5],
+        images: [prontuario2, prontuario3, prontuario4, prontuario5],
     },
     {
         title: "Plataforma de Divulgação de Competições",
@@ -75,7 +73,7 @@ const projects = [
             "Protótipo",
             "Tela voltada à comunicação eficiente com o público",
         ],
-        images: [jogos, jogos1, jogos2, jogos3, jogos4],
+        images: [jogos, jogos1, jogos2, jogos3, jogos4, jogos5],
     },
     {
         title: "Desenvolvimento de Plataformas Digitais Nacionais e Inclusivas (Tela Brasil)",
@@ -122,6 +120,7 @@ export default function Portfolio() {
             (currentImageIndex - 1 + project.images.length) % project.images.length
         );
     }
+    
     useEffect(() => {
         if (modalActive) {
             document.body.classList.add("modal-open");

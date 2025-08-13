@@ -1,8 +1,6 @@
 .grid {
     max-width: 960px;
-    /* limite de largura para o grid */
     margin: 0 auto;
-    /* centraliza na tela */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
@@ -15,19 +13,7 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, outline 0.2s ease;
-    /* mais suave */
-    outline: none;
 }
-
-.card:hover,
-.card:focus {
-    transform: scale(1.02);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    outline: 2px solid #ff6600;
-    outline-offset: 2px;
-}
-
 
 .card img {
     width: 100%;
@@ -81,12 +67,12 @@
 .modal-title {
     color: #fff;
     font-size: 20px;
-    margin: 20px 0;
     font-weight: 500;
 }
 
 .modal-content {
     display: flex;
+    gap: 10px;
 }
 
 body.modal-open {
@@ -121,8 +107,7 @@ body.modal-open {
 
 .modal-description-container {
     text-align: start;
-    padding: 10px 0;
-    width: 40%;
+    width: 60%;
 }
 
 /* Botões do modal */
@@ -136,13 +121,6 @@ body.modal-open {
     cursor: pointer;
     user-select: none;
     padding: 5px 10px;
-    transition: color 0.2s;
-}
-
-.modal button:hover,
-.modal button:focus {
-    color: #ff6600;
-    outline: none;
 }
 
 .close-btn {
@@ -165,7 +143,8 @@ body.modal-open {
     right: 30px;
 }
 
-/* Responsivo */
+
+/* RESPONSIVO MOBILE */
 @media (max-width: 500px) {
     .grid {
         max-width: 90%;
@@ -177,22 +156,48 @@ body.modal-open {
         height: 150px;
     }
 
+    .modal {
+        align-items: flex-start;
+        /* alinha no topo */
+        justify-content: flex-start;
+        padding: 20px 10px;
+        overflow-y: auto;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+
+    .modal-content {
+        flex-direction: column-reverse;
+        /* texto em cima, imagem embaixo */
+        align-items: flex-start;
+        max-width: 100%;
+        margin: 0 25px;
+        gap: 15px;
+    }
+
     .modal-description {
         font-size: 14px;
-        padding: 0 10px;
+        padding: 0;
     }
 
     .modal img {
-        max-height: 80vh;
-        max-width: 95%;
+        max-height: 50vh;
+        max-width: 100%;
+        margin-bottom: 20px;
     }
 
     .modal-title {
         font-size: 18px;
+        margin: 0;
     }
 
     .modal button {
         font-size: 26px;
+        padding: 0;
+    }
+
+    .modal-description-container {
+        width: 95%;
     }
 
     .close-btn {
@@ -208,12 +213,5 @@ body.modal-open {
     .next-btn {
         right: 15px;
         font-size: 30px;
-    }
-
-    .modal-content {
-        max-width: 90%;
-        margin-top: 90%;
-        display: block;
-
     }
 }

@@ -4,7 +4,7 @@ import logo from "../../assets_optimized/logo2.webp";
 
 export function Rodape() {
     return (
-        <footer className="w-full p-8 text-white">
+        <footer className="w-full p-8 text-white" id="contato">
             <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
                 <img
                     src={logo}
