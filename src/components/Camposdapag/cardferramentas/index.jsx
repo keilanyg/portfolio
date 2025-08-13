@@ -2,33 +2,33 @@ import React, { useState } from "react";
 import TituloSecao from "../tituloSubtitulo/index";
 
 import penpot from "../../../assets/penpot.svg";
-import html from "../../../assets/html.png";
-import css from "../../../assets/css.png";
-import python from "../../../assets/python.png";
-import accessibilityInsights from "../../../assets/accessibility-insights.png";
-import wave from "../../../assets/wave.png";
+import html from "../../../assets_optimized/html.webp";
+import css from "../../../assets_optimized/css.webp";
+import python from "../../../assets_optimized/python.webp";
+import accessibilityInsights from "../../../assets_optimized/accessibility-insights.webp";
+import wave from "../../../assets_optimized/wave.webp";
 import storybook from "../../../assets/storybook.svg";
-import bootstrap from "../../../assets/bootstrap.png";
-import sass from "../../../assets/sass.png";
+import bootstrap from "../../../assets_optimized/bootstrap.webp";
+import sass from "../../../assets_optimized/sass.webp";
 import notion from "../../../assets/notion.svg";
 import materialize from "../../../assets/materializecss.svg";
-import reactLogo from "../../../assets/react.png";
-import api from "../../../assets/api.png";
+import reactLogo from "../../../assets_optimized/react.webp";
+import api from "../../../assets_optimized/api.webp";
 import typescript from "../../../assets/typescript.svg";
-import tailwind from "../../../assets/tailwind-css.png";
-import jira from "../../../assets/jira.png";
-import confluence from "../../../assets/confluence.png";
-import postgresql from "../../../assets/postgresql.png";
-import django from "../../../assets/django.png";
-import figma from "../../../assets/figma.png";
-import invision from "../../../assets/invision.png";
-import mockplus from "../../../assets/mockplus.png";
-import whimsical from "../../../assets/whimsical.png";
-import miro from "../../../assets/miro.png";
-import cypress from "../../../assets/cypress.png";
+import tailwind from "../../../assets_optimized/tailwind-css.webp";
+import jira from "../../../assets_optimized/jira.webp";
+import confluence from "../../../assets_optimized/confluence.webp";
+import postgresql from "../../../assets_optimized/postgresql.webp";
+import django from "../../../assets_optimized/django.webp";
+import figma from "../../../assets_optimized/figma.webp";
+import invision from "../../../assets_optimized/invision.webp";
+import mockplus from "../../../assets_optimized/mockplus.webp";
+import whimsical from "../../../assets_optimized/whimsical.webp";
+import miro from "../../../assets_optimized/miro.webp";
+import cypress from "../../../assets_optimized/cypress.webp";
 import jamboard from "../../../assets/jamboard.svg";
-import illustrator from "../../../assets/illustrator.png";
-import adobe from "../../../assets/adobe-xd.png";
+import illustrator from "../../../assets_optimized/illustrator.webp";
+import adobe from "../../../assets_optimized/adobe-xd.webp";
 
 const ferramentas = [
     { id: 1, categoria: "design", nome: "Penpot", img: penpot, alt: "Logo Penpot", style: { filter: "brightness(0) invert(1)" } },
@@ -151,7 +151,7 @@ export function Ferramentas() {
                                     src={img}
                                     alt={alt}
                                     onError={(e) => {
-                                        e.currentTarget.src = "/image/ferramentas/default.png";
+                                        e.currentTarget.src = "/image/ferramentas/default.webp";
                                     }}
                                     style={{
                                         maxWidth: "100%",

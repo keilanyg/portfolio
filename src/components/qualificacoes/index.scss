@@ -14,7 +14,7 @@
       flex: 1 1 300px;
 
       h3 {
-        font-weight: 600;
+        //font-weight: 600;
         font-size: 1.2rem;
         margin-bottom: 1.2rem;
         display: flex;
@@ -51,13 +51,13 @@
           flex: 1;
 
           h4 {
-            font-weight: 600;
+            font-weight: 500;
             font-size: 1rem;
             margin-bottom: 0.25rem;
           }
 
           .descricao {
-            font-weight: 400;
+            font-weight: 500;
             font-size: 0.875rem;
             color: #aaa;
             margin-bottom: 0.5rem;
@@ -65,7 +65,7 @@
 
           .periodo {
             font-size: 0.875rem;
-            font-weight: 600;
+            font-weight: 500;
             color: #ff6600;
             display: flex;
             align-items: center;

@@ -1,13 +1,13 @@
 import React from "react";
 import "./index.scss";
-import fotoPerfil from "../../assets/fotoPerfil.png";
+import fotoPerfil from "../../assets_optimized/fotoPerfil.webp";
 
 const SobreMim = () => {
   return (
     <section className="sobre-mim" id="sobre">
       <div className="foto-container">
         <div className="imagem-wrapper">
-          <img src={fotoPerfil} alt="Keilany com tablet" className="foto-perfil" />
+          <img src={fotoPerfil} alt="Keilany com tablet" className="foto-perfil" loading="lazy"/>
         </div>
       </div>
 

@@ -1,18 +1,29 @@
 import { useState, useEffect } from "react";
 import TituloSecao from "../tituloSubtitulo/index";
 import "./index.scss";
-import prontuario1 from "../../../assets/works/Prontuario_1.png";
-import jogos from "../../../assets/works/Tela de Jogos.png";
-import doelivros1 from "../../../assets/works/doelivros/iPhone 14 Plus - 1.png";
-import doelivros2 from "../../../assets/works/doelivros/iPhone 14 Plus - 2.png";
-import doelivros3 from "../../../assets/works/doelivros/iPhone 14 Plus - 3.png";
-import doelivros4 from "../../../assets/works/doelivros/iPhone 14 Plus - 4.png";
-import doelivros5 from "../../../assets/works/doelivros/iPhone 14 Plus - 5.png";
-import doelivros6 from "../../../assets/works/doelivros/iPhone 14 Plus - 6.png";
-import doelivros7 from "../../../assets/works/doelivros/iPhone 14 Plus - 7.png";
-import doelivros8 from "../../../assets/works/doelivros/iPhone 14 Plus - 8.png";
-import doelivros9 from "../../../assets/works/doelivros/iPhone 14 Plus - 9.png";
-import telabrasil from "../../../assets/works/TelaBrasil.png";
+import prontuario1 from "../../../assets_optimized/works/Prontuario/Prontuario_1.webp";
+import prontuario2 from "../../../assets_optimized/works/Prontuario/Group 2.webp";
+import prontuario3 from "../../../assets_optimized/works/Prontuario/Group 3.webp";
+import prontuario4 from "../../../assets_optimized/works/Prontuario/Group 4.webp";
+import prontuario5 from "../../../assets_optimized/works/Prontuario/Group 5.webp";
+
+import jogos from "../../../assets_optimized/works/Jogos/Tela de Jogos.webp";
+import jogos1 from "../../../assets_optimized/works/Jogos/Desktop - 1.webp";
+import jogos2 from "../../../assets_optimized/works/Jogos/Desktop - 3.webp";
+import jogos3 from "../../../assets_optimized/works/Jogos/Group 12.webp";
+import jogos4 from "../../../assets_optimized/works/Jogos/Group 13.webp";
+
+
+import doelivros1 from "../../../assets_optimized/works/doelivros/iPhone 14 Plus - 1.webp";
+import doelivros2 from "../../../assets_optimized/works/doelivros/iPhone 14 Plus - 2.webp";
+import doelivros3 from "../../../assets_optimized/works/doelivros/iPhone 14 Plus - 3.webp";
+import doelivros4 from "../../../assets_optimized/works/doelivros/iPhone 14 Plus - 4.webp";
+import doelivros5 from "../../../assets_optimized/works/doelivros/iPhone 14 Plus - 5.webp";
+import doelivros6 from "../../../assets_optimized/works/doelivros/iPhone 14 Plus - 6.webp";
+import doelivros7 from "../../../assets_optimized/works/doelivros/iPhone 14 Plus - 7.webp";
+import doelivros8 from "../../../assets_optimized/works/doelivros/iPhone 14 Plus - 8.webp";
+import doelivros9 from "../../../assets_optimized/works/doelivros/iPhone 14 Plus - 9.webp";
+import telabrasil from "../../../assets_optimized/works/TelaBrasil.webp";
 
 const projects = [
     {
@@ -49,7 +60,7 @@ const projects = [
             "Cadastro de itens",
             "Perfil do paciente",
         ],
-        images: [prontuario1],
+        images: [prontuario1, prontuario2, prontuario3, prontuario4, prontuario5],
     },
     {
         title: "Plataforma de Divulgação de Competições",
@@ -64,7 +75,7 @@ const projects = [
             "Protótipo",
             "Tela voltada à comunicação eficiente com o público",
         ],
-        images: [jogos],
+        images: [jogos, jogos1, jogos2, jogos3, jogos4],
     },
     {
         title: "Desenvolvimento de Plataformas Digitais Nacionais e Inclusivas (Tela Brasil)",
@@ -140,7 +151,7 @@ export default function Portfolio() {
                             if (e.key === "Enter" || e.key === " ") openModal(index);
                         }}
                     >
-                        <img src={proj.images[0]} alt={`Projeto ${index + 1}`} />
+                        <img src={proj.images[0]} alt={`Projeto ${index + 1}`} loading="lazy" />
                         <div className="card-content">
                             <div className="card-title">{proj.title}</div>
                             <div className="card-description">{proj.year}</div>
@@ -179,6 +190,7 @@ export default function Portfolio() {
                             src={project.images[currentImageIndex]}
                             alt={`Imagem do projeto ${currentProjectIndex + 1}`}
                             className="modal-image"
+                            loading="lazy"
                         />
                         <div className="modal-description-container">
                             <div className="modal-title">{project.title}</div>

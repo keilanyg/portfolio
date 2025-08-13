@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from "../../assets/logo2.png";
+import logo from "../../assets_optimized/logo2.webp";
 
 export default function Sidebar() {
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +23,7 @@ export default function Sidebar() {
       style={{ boxShadow: '0 8px 20px 0 #ff66004d' }}
     >
       <div className="flex flex-col items-center md:items-start w-full">
-        <img src={logo} alt="logo, letra K" className="w-10 md:w-20 mb-8" />
+        <img src={logo} alt="logo, letra K" className="w-10 md:w-20 mb-8" loading="lazy" />
 
         <nav className="flex flex-col gap-4 w-full">
           <a

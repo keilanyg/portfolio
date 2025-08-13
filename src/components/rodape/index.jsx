@@ -1,5 +1,5 @@
 import IconeUnicons from "../Camposdapag/icones/index";
-import logo from "../../assets/logo2.png";
+import logo from "../../assets_optimized/logo2.webp";
 
 
 export function Rodape() {
@@ -10,6 +10,7 @@ export function Rodape() {
                     src={logo}
                     alt="logo com formato de letra K"
                     className="w-20"
+                    loading="lazy"
                 />
                 <ul className="flex flex-wrap items-center gap-y-2 gap-x-8 hover:text-[#ff6600] focus:text-[#ff6600]" >
                     <li>
