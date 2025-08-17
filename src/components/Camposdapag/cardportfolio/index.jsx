@@ -78,7 +78,7 @@ const projects = [
     },
     {
         title: "Desenvolvimento de Plataformas Digitais Nacionais e Inclusivas (Tela Brasil)",
-        year: "2024 - 2025 (1 ano e 7 meses)",
+        year: "2024 (Janeiro) - 2025 (Julho)",
         short:
             "Desenvolvimento de Plataformas Digitais Nacionais e Inclusivas UX/UI Design (Web e Mobile)",
         long:
