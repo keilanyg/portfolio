@@ -3,14 +3,43 @@ import logo from "../../assets_optimized/logo2.webp";
 
 export default function Sidebar() {
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("sobre");
 
   useEffect(() => {
     function handleScroll() {
       setScrolled(window.scrollY > 20);
+
+      const sections = ["sobre", "jornada", "portfolio", "ferramentas", "services"];
+      let current = sections[0];
+
+      sections.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top < window.innerHeight / 2 && rect.bottom > 0) {
+            // marca como ativa se qualquer parte da seção estiver visível
+            current = id;
+          }
+        }
+      });
+
+      setActiveSection(current);
     }
+
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // checa no load
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+
+  const links = [
+    { id: "sobre", label: "Sobre", icon: "uil-user" },
+    { id: "jornada", label: "Jornada", icon: "uil-graduation-cap" },
+    { id: "portfolio", label: "Portfólio", icon: "uil-folder-open" },
+    { id: "ferramentas", label: "Ferramentas", icon: "uil-wrench" },
+    { id: "services", label: "Aptidão", icon: "uil-briefcase" },
+  ];
 
   return (
     <aside
@@ -26,52 +55,20 @@ export default function Sidebar() {
         <img src={logo} alt="logo, letra K" className="w-10 md:w-20 mb-8" loading="lazy" />
 
         <nav className="flex flex-col gap-4 w-full">
-          <a
-            href="#sobre"
-            className="text-white hover:text-[#ffffff] transition-colors duration-300 text-sm md:text-base 
-                 flex flex-col md:flex-row items-center gap-1 md:gap-3 px-3 py-2 rounded-md
-                 hover:bg-[#ff6600] focus:bg-[#ff6600] focus:outline-none"
-          >
-            <i className="uil uil-user text-lg"></i>
-            <span className="text-xs md:text-base font-medium whitespace-nowrap mt-1 md:mt-0">Sobre</span>
-          </a>
-          <a
-            href="#portfolio"
-            className="text-white hover:text-[#ffffff] transition-colors duration-300 text-sm md:text-base 
-                 flex flex-col md:flex-row items-center gap-1 md:gap-3 px-3 py-2 rounded-md
-                 hover:bg-[#ff6600] focus:bg-[#ff6600] focus:outline-none"
-          >
-            <i className="uil uil-folder-open text-lg"></i>
-            <span className="text-xs md:text-base font-medium whitespace-nowrap mt-1 md:mt-0">Portfólio</span>
-          </a>
-
-          <a
-            href="#ferramentas"
-            className="text-white hover:text-[#ffffff] transition-colors duration-300 text-sm md:text-base 
-                 flex flex-col md:flex-row items-center gap-1 md:gap-3 px-3 py-2 rounded-md
-                 hover:bg-[#ff6600] focus:bg-[#ff6600] focus:outline-none"
-          >
-            <i className="uil uil-wrench text-lg"></i>
-            <span className="text-xs md:text-base font-medium whitespace-nowrap mt-1 md:mt-0">Ferramentas</span>
-          </a>
-          <a
-            href="#services"
-            className="text-white hover:text-[#ffffff] transition-colors duration-300 text-sm md:text-base 
-                 flex flex-col md:flex-row items-center gap-1 md:gap-3 px-3 py-2 rounded-md
-                 hover:bg-[#ff6600] focus:bg-[#ff6600] focus:outline-none"
-          >
-            <i className="uil uil-briefcase text-lg"></i>
-            <span className="text-xs md:text-base font-medium whitespace-nowrap mt-1 md:mt-0">Aptidão</span>
-          </a>
-          <a
-            href="#contato"
-            className="text-white hover:text-[#ffffff] transition-colors duration-300 text-sm md:text-base 
-                 flex flex-col md:flex-row items-center gap-1 md:gap-3 px-3 py-2 rounded-md
-                 hover:bg-[#ff6600] focus:bg-[#ff6600] focus:outline-none"
-          >
-            <i className="uil uil-envelope-alt text-lg"></i>
-            <span className="text-xs md:text-base font-medium whitespace-nowrap mt-1 md:mt-0">Contato</span>
-          </a>
+          {links.map(link => (
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              className={`text-white transition-colors duration-300 text-sm md:text-base 
+                flex flex-col md:flex-row items-center gap-1 md:gap-3 px-3 py-2 rounded-md
+                hover:bg-[#ff6600] focus:outline-none
+                ${activeSection === link.id ? 'bg-[#ff6600]' : ''}
+              `}
+            >
+              <i className={`uil ${link.icon} text-lg`}></i>
+              <span className="text-xs md:text-base font-medium whitespace-nowrap mt-1 md:mt-0">{link.label}</span>
+            </a>
+          ))}
         </nav>
       </div>
 

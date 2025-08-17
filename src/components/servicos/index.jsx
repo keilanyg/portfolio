@@ -29,8 +29,6 @@ const servicesData = [
             "Desenvolvimento de interfaces",
             "Criação de layouts responsivos e acessíveis",
             "Familiaridade com frameworks modernos para componentes reutilizáveis",
-            "Company Brand Positioning",
-            "Design and Mockup of products for companies",
         ],
     },
 ];

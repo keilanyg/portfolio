@@ -45,7 +45,7 @@
       border: none;
       padding: 0.6rem 1.5rem;
       font-weight: bold;
-      border-radius: 5px;
+      border-radius: 10px;
       cursor: pointer;
       transition: background-color 0.3s ease;
 
@@ -56,7 +56,26 @@
   }
 
   // Responsividade
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
+    gap: 1.8rem;
+
+    .foto-container {
+      .imagem-wrapper {
+        .foto-perfil {
+          width: 200px;
+        }
+      }
+    }
+
+    .descricao {
+      max-width: 600px;
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
     flex-direction: column;
     padding: 1rem;
     gap: 1.5rem;
@@ -75,12 +94,12 @@
       max-width: 90%;
       text-align: start; 
       p {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
       }
 
       .botao-curriculo {
         padding: 0.5rem 1.2rem;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
       }
     }
   }
@@ -93,7 +112,7 @@
       .imagem-wrapper {
         padding: 0.3rem;
         .foto-perfil {
-          width: 140px;  // reduz ainda mais a imagem em mobile pequeno
+          width: 140px;
         }
       }
     }

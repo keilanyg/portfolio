@@ -1,3 +1,4 @@
+/* Variáveis */
 :root {
     --box-color: #222;
     --skin-color: #ff6600;
@@ -11,13 +12,13 @@
     --z-modal: 100;
 }
 
+/* Container principal */
 .services {
-  padding: 2rem 1rem;
-  max-width: 900px;
-  margin: 0 auto;
-  color: white;
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    color: white;
 }
-
 
 .section-title {
     text-align: center;
@@ -29,7 +30,7 @@
 
 .services-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     justify-content: center;
     gap: 1.8rem;
     margin-top: 10px;
@@ -81,166 +82,180 @@
 
 /* Modal */
 .services-modal {
-  position: fixed;
-  inset: 0;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
-  z-index: var(--z-modal);
-  opacity: 0;
-  visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.5); // Fundo escuro com transparência
-  transition: opacity 0.4s ease;
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    z-index: var(--z-modal);
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: opacity 0.4s ease;
 }
 
 .active-modal {
-  display: flex;
-  opacity: 1;
-  visibility: visible;
+    display: flex;
+    opacity: 1;
+    visibility: visible;
 }
 
 .services-modal-content {
-  width: 100%;
-  max-width: 520px; // Modal pequeno
-  padding: 2rem 1.5rem;
-  border-radius: 0.75rem;
-  position: relative;
-  max-height: 70vh;
-  overflow-y: auto;
-  color: white;
-  background-color: #333; // Cor do conteúdo
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  transform: scale(0.95);
-  transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 520px;
+    padding: 2rem 1.5rem;
+    border-radius: 0.75rem;
+    position: relative;
+    max-height: 75vh;
+    overflow-y: auto;
+    color: white;
+    background-color: #333;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
 }
 
 .active-modal .services-modal-content {
-  transform: scale(1); // Animação de entrada
+    transform: scale(1);
 }
 
 .services-modal-close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
 }
 
 .services-modal-close svg {
-  stroke: var(--skin-color);
-  width: 24px;
-  height: 24px;
-}
-
-.services-modal-close:focus {
-  outline: 2px solid var(--skin-color);
-  outline-offset: 2px;
+    stroke: var(--skin-color);
+    width: 24px;
+    height: 24px;
 }
 
 .services-modal-title,
 .services-modal-description {
-  text-align: center;
+    text-align: center;
 }
 
 .services-modal-title {
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
 }
 
 .services-modal-description {
-  font-size: 1.1rem;
-  padding: 0 0.5rem;
-  margin-bottom: 1rem;
-  line-height: 1.5;
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
 }
 
+/* Lista de itens do modal */
 .services-modal-services {
-  display: grid;
-  row-gap: 0.75rem;
+    display: grid;
+    row-gap: 0.75rem;
 }
 
 .services-modal-service {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
 }
 
 .services-modal-icon {
-  color: var(--skin-color);
-  font-size: 1.4rem;
-  flex-shrink: 0;
+    color: var(--skin-color);
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    line-height: 1;
 }
 
 .services-modal-info {
-  font-size: 1.3rem;
-  margin: 0;
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-  .services-modal-content {
-    padding: 1.5rem 1rem;
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 1024px) {
-  .services-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-
-  .services-modal-content {
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
-  .services-title {
-    font-size: 1.2rem;
-  }
-
-  .services-button {
-    font-size: 1rem;
-  }
-
-  .services-modal-title {
     font-size: 1.1rem;
-  }
-
-  .services-modal-description {
-    font-size: 1rem;
-  }
-
-  .services-modal-info {
-    font-size: 1rem;
-  }
+    margin: 0;
+    line-height: 1.4;
 }
 
+/* RESPONSIVIDADE */
+
+/* 1024px */
+@media (max-width: 1024px) {
+    .services-container {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .services-modal-content {
+        max-width: 90%;
+        padding: 1.8rem 1.2rem;
+    }
+
+    .services-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+    .services {
+        padding: 1.8rem 1rem;
+    }
+
+    .services-title {
+        font-size: 1.5rem;
+    }
+
+    .services-button {
+        font-size: 1rem;
+    }
+
+    .services-modal-title {
+        font-size: 1.2rem;
+    }
+
+    .services-modal-description,
+    .services-modal-info {
+        font-size: 1rem;
+    }
+}
+
+/* 480px */
 @media (max-width: 480px) {
-  .services {
-    padding: 1.5rem 1rem;
-  }
+    .services {
+        padding: 1.5rem 1rem;
+    }
 
-  .services-container {
-    grid-template-columns: 1fr;
-    margin: 0 50px;
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 
-  }
+    .services-content {
+        padding: 1rem 0.8rem;
+    }
 
-  .services-content {
-    padding: 1.5rem 1rem;
-  }
+    .services-modal-content {
+        max-width: 95%;
+        padding: 1rem;
+    }
 
-  .services-modal-content {
-    max-width: 95%;
-    padding: 1rem;
-  }
+    .services-title {
+        font-size: 1.2rem;
+    }
 
-  .services-modal-info {
-    font-size: 0.95rem;
-  }
+    .services-button {
+        font-size: 0.95rem;
+    }
+
+    .services-modal-title {
+        font-size: 1.1rem;
+    }
+
+    .services-modal-description,
+    .services-modal-info {
+        font-size: 0.95rem;
+    }
 }

@@ -6,7 +6,7 @@ import IconeUnicons from "../Camposdapag/icones/index";
 
 const Qualificacoes = () => {
   return (
-    <section className="qualificacoes">
+    <section className="qualificacoes" id="jornada" >
       <TituloSecao subtitulo="Minha Jornada" tituloPrincipal="Qualificações" />
       <div className="conteudo">
         <div className="item">

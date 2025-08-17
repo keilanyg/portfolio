@@ -22,6 +22,7 @@ import doelivros5 from "../../../assets_optimized/works/DoeLeitura/Group 24.webp
 
 
 import telabrasil from "../../../assets_optimized/works/TelaBrasil.webp";
+import telabrasil1 from "../../../assets/Tela Brasil.svg";
 
 const projects = [
     {
@@ -88,7 +89,7 @@ const projects = [
             "Criação de protótipos responsivos e inclusivos",
             "Design visual alinhado às melhores práticas de UX e acessibilidade",
         ],
-        images: [telabrasil],
+        images: [telabrasil1, telabrasil],
     },
 ];
 

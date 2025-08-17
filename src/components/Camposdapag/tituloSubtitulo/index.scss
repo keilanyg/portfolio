@@ -12,6 +12,34 @@
   color: white;
 }
 
-.estilizacaodotitulo{
+.estilizacaodotitulo {
   margin-top: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) { /* tablets grandes */
+  .subtitulo {
+    font-size: 0.9rem;
+  }
+  .titulo-principal {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) { /* tablets e tablets pequenos */
+  .subtitulo {
+    font-size: 0.8rem;
+  }
+  .titulo-principal {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) { /* celulares */
+  .subtitulo {
+    font-size: 0.7rem;
+  }
+  .titulo-principal {
+    font-size: 1.4rem;
+  }
 }

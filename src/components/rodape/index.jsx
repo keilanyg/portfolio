@@ -4,15 +4,15 @@ import logo from "../../assets_optimized/logo2.webp";
 
 export function Rodape() {
     return (
-        <footer className="w-full p-8 text-white" id="contato">
-            <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
+        <footer className="w-full p-8 text-white " id="contato">
+            <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 list-none text-center md:justify-between">
                 <img
                     src={logo}
                     alt="logo com formato de letra K"
-                    className="w-20"
+                    className="w-16 sm:w-20 md:w-24"
                     loading="lazy"
                 />
-                <ul className="flex flex-wrap items-center gap-y-2 gap-x-8 hover:text-[#ff6600] focus:text-[#ff6600]" >
+                <ul className="flex flex-wrap items-center justify-center gap-y-2 gap-x-6 sm:gap-x-8 list-none hover:text-[#ff6600] focus:text-[#ff6600]">
                     <li>
                         <a
                             href="https://github.com/keilanyg"
@@ -20,7 +20,7 @@ export function Rodape() {
                             rel="noopener noreferrer"
                             aria-label="GitHub"
                         >
-                            <IconeUnicons iconClass="uil uil-github" tamanho="24px" cor="#ffffff" />
+                            <IconeUnicons iconClass="uil uil-github" tamanho="20px sm:24px" cor="#ffffff" />
                         </a>
                     </li>
                     <li>
@@ -30,7 +30,7 @@ export function Rodape() {
                             rel="noopener noreferrer"
                             aria-label="LinkedIn"
                         >
-                            <IconeUnicons iconClass="uil uil-linkedin" tamanho="24px" cor="#ffffff" />
+                            <IconeUnicons iconClass="uil uil-linkedin" tamanho="20px sm:24px" cor="#ffffff" />
                         </a>
                     </li>
                     <li>
@@ -40,7 +40,7 @@ export function Rodape() {
                             rel="noopener noreferrer"
                             aria-label="Instagram"
                         >
-                            <IconeUnicons iconClass="uil uil-instagram" tamanho="24px" cor="#ffffff" />
+                            <IconeUnicons iconClass="uil uil-instagram" tamanho="20px sm:24px" cor="#ffffff" />
                         </a>
                     </li>
                     <li>
@@ -48,14 +48,14 @@ export function Rodape() {
                             href="mailto:keilanydes@gmail.com"
                             aria-label="Email"
                         >
-                            <IconeUnicons iconClass="uil uil-envelope" tamanho="24px" cor="#ffffff" />
+                            <IconeUnicons iconClass="uil uil-envelope" tamanho="20px sm:24px" cor="#ffffff" />
                         </a>
                     </li>
                 </ul>
             </div>
-            <h5 className="text-center font-normal text-white">
+            <h6 className="mt-6 text-center font-normal text-white text-[5px] sm:text-[7px] md:text-sm">
                 &copy; {new Date().getFullYear()} Keilany Gabriel | Portfólio
-            </h5>
+            </h6>
         </footer>
     );
 }
