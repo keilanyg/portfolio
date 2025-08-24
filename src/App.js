@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="flex min-h-screen">
       <Sidebar />
-      <main className="flex-1 ml-20 md:ml-56 pt-10">
+      <main className="flex-1 md:ml-56 pt-10 mt-10">
         <SobreMim />
         <Qualificacoes />
         <Portfolio/>

@@ -28,7 +28,7 @@ function ensureDirSync(dir) {
 
 // Pastas que você quer processar
 const foldersToProcess = [
-  'src/assets/DoeLeitura',
+  'src/assets/',
 
 ];
 

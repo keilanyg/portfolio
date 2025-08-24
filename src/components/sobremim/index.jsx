@@ -2,6 +2,7 @@ import React from "react";
 import "./index.scss";
 import fotoPerfil from "../../assets_optimized/fotoPerfil.webp";
 import TituloSecao from "../Camposdapag/tituloSubtitulo/index";
+import documentoPDF from './documento.pdf';
 
 const SobreMim = () => {
   return (
@@ -23,18 +24,20 @@ const SobreMim = () => {
         <div className="descricao">
           <p>
             Sou Keilany desenvolvedora front-end com ênfase em UX/UI Design,
-            dedicada concepção e desenvolvimento de interfaces. Graduada em Análise
-            e Desenvolvimento de Sistemas. Possuo experiência prática adquirida
-            durante a graduação. Uma vivência profissional significativa.
+            dedicada concepção e desenvolvimento de interfaces. Possuo experiência prática
+            adquirida durante a graduação. E uma vivência profissional significativa.
           </p>
           <p>
             Tenho me dedicado no estudo da criação de plataformas digitais acessíveis e
             inclusivas, garantindo uma experiência positiva para pessoas com diversas
             deficiências e habilidades. Nesse cenário, venho expandindo meus conhecimentos
-            em acessibilidade digital, design universal e usabilidade. Esse processo tem sido
+            em acessibilidade, design e usabilidade. Esse processo tem sido
             essencial para meu desenvolvimento e fortalecimento de habilidades relevantes
             focados na inclusão.
           </p>
+          <a href={documentoPDF} className="botao-curriculo" target="_blank" rel="noopener noreferrer">
+            Currículo
+          </a>
         </div>
       </section>
     </div>

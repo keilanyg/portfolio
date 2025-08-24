@@ -77,10 +77,10 @@ const projects = [
         images: [jogos, jogos1, jogos2, jogos3, jogos4, jogos5],
     },
     {
-        title: "Desenvolvimento de Plataformas Digitais Nacionais e Inclusivas (Tela Brasil)",
+        title: "Desenvolvimento de Plataforma Streaming Nacional e Inclusiva - Tela Brasil",
         year: "2024 (Janeiro) - 2025 (Julho)",
         short:
-            "Desenvolvimento de Plataformas Digitais Nacionais e Inclusivas UX/UI Design (Web e Mobile)",
+            "UX/UI Design (Web e Mobile)",
         long:
             "Atei como UX/UI Designer na plataforma de streaming, a Tela Brasil, com lançamento previsto em nível nacional, o objetivo é desenvolver plataformas que sejam inclusivas, com acesso ao cinema brasileiro, priorizando escolas, bibliotecas e instituições de ensino, garantindo uma experiência intuitiva e fluida para todos os usuários.",
         descriptionStrong: "Entregas:",

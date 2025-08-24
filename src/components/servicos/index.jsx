@@ -12,12 +12,14 @@ const servicesData = [
         details: [
             "Levantamento e análise de requisitos",
             "Pesquisa de usuário",
-            "Protótipos funcionais para testes de usabilidade",
+            "Protótipos funcionais e responsivos",
             "Teste de acessibilidade",
-            "Design responsivo e de interação",
             "Hierarquia visual",
             "Criação de mockups",
-            "Posicionamento visual da marca",
+            "Posicionamento visual da marca e branding",
+            "Noções de acessibilidade digital (WCAG)",
+            "Familiaridade com metodologias de ideação e prototipagem (Design Thinking)",
+            "Noções de arquitetura e estruturação de sistemas (Systems Design)",
         ],
     },
     {
@@ -26,9 +28,14 @@ const servicesData = [
         title: "Front-End",
         level: "Nível intermediário - avançado",
         details: [
-            "Desenvolvimento de interfaces",
-            "Criação de layouts responsivos e acessíveis",
+            "Desenvolvimento de interfaces modernas e interativas",
+            "Criação de layouts responsivos e acessíveis(WCAG)",
             "Familiaridade com frameworks modernos para componentes reutilizáveis",
+            "Integração com APIs REST",
+            "Noções de versionamento de código com Git e GitHub",
+            "Boas práticas de semântica e SEO em HTML",
+            "Estilização com pré - processadores e utilitários",
+            "Otimização de performance, incluindo carregamento de páginas e imagens",
         ],
     },
 ];
@@ -40,7 +47,7 @@ export default function Servicos() {
         <section className="services section" id="services">
             <TituloSecao subtitulo="Áreas de Atuação" tituloPrincipal="Aptidão" />
 
-              <div className="services-container grid">
+            <div className="services-container grid">
                 {servicesData.map(({ id, iconClass, title, level, details }) => (
                     <div key={id} className="services-content">
                         <div>

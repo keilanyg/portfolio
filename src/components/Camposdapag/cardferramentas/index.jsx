@@ -2,33 +2,35 @@ import React, { useState } from "react";
 import TituloSecao from "../tituloSubtitulo/index";
 
 import penpot from "../../../assets/penpot.svg";
-import html from "../../../assets_optimized/html.webp";
-import css from "../../../assets_optimized/css.webp";
-import python from "../../../assets_optimized/python.webp";
-import accessibilityInsights from "../../../assets_optimized/accessibility-insights.webp";
-import wave from "../../../assets_optimized/wave.webp";
+import html from "../../../assets_optimized/ferramentas/html.webp";
+import css from "../../../assets_optimized/ferramentas/css.webp";
+import python from "../../../assets_optimized/ferramentas/python.webp";
+import accessibilityInsights from "../../../assets_optimized/ferramentas/accessibility-insights.webp";
+import wave from "../../../assets_optimized/ferramentas/wave.webp";
 import storybook from "../../../assets/storybook.svg";
-import bootstrap from "../../../assets_optimized/bootstrap.webp";
-import sass from "../../../assets_optimized/sass.webp";
+import bootstrap from "../../../assets_optimized/ferramentas/bootstrap.webp";
+import sass from "../../../assets_optimized/ferramentas/sass.webp";
 import notion from "../../../assets/notion.svg";
 import materialize from "../../../assets/materializecss.svg";
-import reactLogo from "../../../assets_optimized/react.webp";
-import api from "../../../assets_optimized/api.webp";
+import reactLogo from "../../../assets_optimized/ferramentas/react.webp";
+import api from "../../../assets_optimized/ferramentas/api.webp";
 import typescript from "../../../assets/typescript.svg";
-import tailwind from "../../../assets_optimized/tailwind-css.webp";
-import jira from "../../../assets_optimized/jira.webp";
-import confluence from "../../../assets_optimized/confluence.webp";
-import postgresql from "../../../assets_optimized/postgresql.webp";
-import django from "../../../assets_optimized/django.webp";
-import figma from "../../../assets_optimized/figma.webp";
-import invision from "../../../assets_optimized/invision.webp";
-import mockplus from "../../../assets_optimized/mockplus.webp";
-import whimsical from "../../../assets_optimized/whimsical.webp";
-import miro from "../../../assets_optimized/miro.webp";
-import cypress from "../../../assets_optimized/cypress.webp";
+import tailwind from "../../../assets_optimized/ferramentas/tailwind-css.webp";
+import jira from "../../../assets_optimized/ferramentas/jira.webp";
+import confluence from "../../../assets_optimized/ferramentas/confluence.webp";
+import postgresql from "../../../assets_optimized/ferramentas/postgresql.webp";
+import django from "../../../assets_optimized/ferramentas/django.webp";
+import figma from "../../../assets_optimized/ferramentas/figma.webp";
+import invision from "../../../assets_optimized/ferramentas/invision.webp";
+import mockplus from "../../../assets_optimized/ferramentas/mockplus.webp";
+import whimsical from "../../../assets_optimized/ferramentas/whimsical.webp";
+import miro from "../../../assets_optimized/ferramentas/miro.webp";
+import cypress from "../../../assets_optimized/ferramentas/cypress.webp";
 import jamboard from "../../../assets/jamboard.svg";
-import illustrator from "../../../assets_optimized/illustrator.webp";
-import adobe from "../../../assets_optimized/adobe-xd.webp";
+import illustrator from "../../../assets_optimized/ferramentas/illustrator.webp";
+import adobe from "../../../assets_optimized/ferramentas/adobe-xd.webp";
+import clickup from "../../../assets_optimized/ferramentas/clickup.webp";
+import trello from "../../../assets_optimized/ferramentas/trello.webp";
 
 const ferramentas = [
     { id: 1, categoria: "design", nome: "Penpot", img: penpot, alt: "Logo Penpot", style: { filter: "brightness(0) invert(1)" } },
@@ -59,6 +61,8 @@ const ferramentas = [
     { id: 26, categoria: "design", nome: "Jamboard", img: jamboard, alt: "Logo JAMBOARD", style: { filter: "brightness(0) invert(1)" } },
     { id: 27, categoria: "design", nome: "Illustrator", img: illustrator, alt: "Logo Illustrator" },
     { id: 28, categoria: "design", nome: "Adobe XD", img: adobe, alt: "Logo Adobe XD" },
+    { id: 29, categoria: "design", nome: "Clickup", img: clickup, alt: "Logo Clickup" },
+    { id: 30, categoria: "design", nome: "Trello", img: trello, alt: "Logo Trello" },
 ];
 
 
