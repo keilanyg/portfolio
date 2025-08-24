@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.b5460580.css",
-    "main.js": "/portfolio/static/js/main.c57cd7b6.js",
+    "main.css": "/portfolio/static/css/main.2973c558.css",
+    "main.js": "/portfolio/static/js/main.de4cb94b.js",
     "static/js/453.5d79306b.chunk.js": "/portfolio/static/js/453.5d79306b.chunk.js",
     "static/media/Group 4.webp": "/portfolio/static/media/Group 4.2ff2516c6816ff7323ed.webp",
     "static/media/Group 2.webp": "/portfolio/static/media/Group 2.ff680a09a8aac4b69fa6.webp",
@@ -16,6 +16,7 @@
     "static/media/Group 23.webp": "/portfolio/static/media/Group 23.4dd4e015186ede1a57be.webp",
     "static/media/Group 24.webp": "/portfolio/static/media/Group 24.bc1c5eb581451ea19643.webp",
     "static/media/Tela de Jogos.webp": "/portfolio/static/media/Tela de Jogos.e3a3489f08de368644c0.webp",
+    "static/media/documento.pdf": "/portfolio/static/media/documento.024d6d18df42d1bf2be9.pdf",
     "static/media/TelaBrasil.webp": "/portfolio/static/media/TelaBrasil.0815e747d7b404339447.webp",
     "static/media/Group 14.webp": "/portfolio/static/media/Group 14.3f2b613a185ab34a80ec.webp",
     "static/media/Desktop - 3.webp": "/portfolio/static/media/Desktop - 3.9b041262a2ba1b1d7f0f.webp",
@@ -41,6 +42,7 @@
     "static/media/html.webp": "/portfolio/static/media/html.b9c6a22f46ff34119457.webp",
     "static/media/figma.webp": "/portfolio/static/media/figma.9e45a07e0f56ba18d45e.webp",
     "static/media/whimsical.webp": "/portfolio/static/media/whimsical.14e9ab407c5505ad6d33.webp",
+    "static/media/clickup.webp": "/portfolio/static/media/clickup.b2e54208dee71a48ec7e.webp",
     "static/media/css.webp": "/portfolio/static/media/css.12fd4bd571404dee7cbf.webp",
     "static/media/jira.webp": "/portfolio/static/media/jira.cb000718cbf3c3c6312b.webp",
     "static/media/bootstrap.webp": "/portfolio/static/media/bootstrap.db384b901ee932b13b0b.webp",
@@ -50,13 +52,14 @@
     "static/media/tailwind-css.webp": "/portfolio/static/media/tailwind-css.2cd18fe36eab1c6655c2.webp",
     "static/media/python.webp": "/portfolio/static/media/python.6e02d3b6abab3d0581d7.webp",
     "static/media/illustrator.webp": "/portfolio/static/media/illustrator.ff9d3f2a7281c8c84203.webp",
+    "static/media/trello.webp": "/portfolio/static/media/trello.51d2a7893d0f50d429bc.webp",
     "static/media/jamboard.svg": "/portfolio/static/media/jamboard.75df0cb1defb725451d24f9adcf78b11.svg",
-    "main.b5460580.css.map": "/portfolio/static/css/main.b5460580.css.map",
-    "main.c57cd7b6.js.map": "/portfolio/static/js/main.c57cd7b6.js.map",
+    "main.2973c558.css.map": "/portfolio/static/css/main.2973c558.css.map",
+    "main.de4cb94b.js.map": "/portfolio/static/js/main.de4cb94b.js.map",
     "453.5d79306b.chunk.js.map": "/portfolio/static/js/453.5d79306b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5460580.css",
-    "static/js/main.c57cd7b6.js"
+    "static/css/main.2973c558.css",
+    "static/js/main.de4cb94b.js"
   ]
 }
