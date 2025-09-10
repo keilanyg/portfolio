@@ -162,7 +162,8 @@ export function Ferramentas() {
                                         maxHeight: "100%",
                                         objectFit: "contain",
                                         ...style
-                                    }}
+                                    }} 
+                                    loading="lazy"
                                 />
                             </div>
                             <div>

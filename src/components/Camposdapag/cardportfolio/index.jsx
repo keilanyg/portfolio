@@ -82,7 +82,7 @@ const projects = [
         short:
             "UX/UI Design (Web e Mobile)",
         long:
-            "Atei como UX/UI Designer na plataforma de streaming, a Tela Brasil, com lançamento previsto em nível nacional, o objetivo é desenvolver plataformas que sejam inclusivas, com acesso ao cinema brasileiro, priorizando escolas, bibliotecas e instituições de ensino, garantindo uma experiência intuitiva e fluida para todos os usuários.",
+            "Atuei como UX/UI Designer na plataforma de streaming, a Tela Brasil, com lançamento previsto em nível nacional, o objetivo é desenvolver plataformas que sejam inclusivas, com acesso ao cinema brasileiro, priorizando escolas, bibliotecas e instituições de ensino, garantindo uma experiência intuitiva e fluida para todos os usuários.",
         descriptionStrong: "Entregas:",
         functionalities: [
             "Pesquisa e análise focadas em acessibilidade",

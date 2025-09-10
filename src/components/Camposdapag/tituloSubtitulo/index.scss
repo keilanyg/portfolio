@@ -2,7 +2,7 @@
   color: #ff6600;
   font-weight: 500;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .titulo-principal {
@@ -19,7 +19,7 @@
 /* Responsividade */
 @media (max-width: 1024px) { /* tablets grandes */
   .subtitulo {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .titulo-principal {
     font-size: 1.8rem;
@@ -28,7 +28,7 @@
 
 @media (max-width: 768px) { /* tablets e tablets pequenos */
   .subtitulo {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .titulo-principal {
     font-size: 1.6rem;
@@ -37,7 +37,7 @@
 
 @media (max-width: 480px) { /* celulares */
   .subtitulo {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   .titulo-principal {
     font-size: 1.4rem;

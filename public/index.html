@@ -8,9 +8,22 @@
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+  <!-- Unicons carregando sem bloquear -->
+  <link rel="preload" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  </noscript>
+
+  <!-- Google Fonts otimizado -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=optional">
+  <link rel="stylesheet" href="%PUBLIC_URL%/fonts/roboto/roboto.css">
+
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=optional" rel="stylesheet">
+
 
   <title>Portfolio | Keilany</title>
 </head>

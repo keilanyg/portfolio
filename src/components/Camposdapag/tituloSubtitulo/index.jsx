@@ -3,7 +3,7 @@ import "./index.scss";
 
 const TituloSecao = ({ subtitulo, tituloPrincipal }) => (
   <div className="estilizacaodotitulo">
-    <h5 className="subtitulo">{subtitulo}</h5>
+    <p className="subtitulo">{subtitulo}</p>
     <h2 className="titulo-principal">{tituloPrincipal}</h2>
   </div>
 );

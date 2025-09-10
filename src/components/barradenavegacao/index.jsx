@@ -44,13 +44,15 @@ export default function Sidebar() {
     <>
       {/* Top bar no mobile */}
       <div className="fixed top-0 left-0 w-full h-14 bg-[#1c1e22] z-50 flex items-center justify-between px-4 md:hidden shadow-md">
-        <img src={logo} alt="logo" className="w-10 h-auto" />
+        <img src={logo} alt="logo" className="w-10 h-auto" loading="lazy" />
         <button
           className="text-white p-2 rounded-lg"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
         >
           <i className={`uil ${isOpen ? "uil-times" : "uil-bars"} text-2xl`}></i>
         </button>
+
       </div>
 
       {/* Sidebar */}
