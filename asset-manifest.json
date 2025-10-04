@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.b897529c.css",
-    "main.js": "/portfolio/static/js/main.6f0e3e09.js",
+    "main.css": "/portfolio/static/css/main.bd69e38a.css",
+    "main.js": "/portfolio/static/js/main.4ddeeed2.js",
     "static/js/453.5d79306b.chunk.js": "/portfolio/static/js/453.5d79306b.chunk.js",
     "static/media/Group 4.webp": "/portfolio/static/media/Group 4.2ff2516c6816ff7323ed.webp",
     "static/media/Group 2.webp": "/portfolio/static/media/Group 2.ff680a09a8aac4b69fa6.webp",
@@ -16,9 +16,17 @@
     "static/media/Group 23.webp": "/portfolio/static/media/Group 23.4dd4e015186ede1a57be.webp",
     "static/media/Group 24.webp": "/portfolio/static/media/Group 24.bc1c5eb581451ea19643.webp",
     "static/media/documento.pdf": "/portfolio/static/media/documento.d1d655bd148a66705fa3.pdf",
+    "static/media/casePratica(6).webp": "/portfolio/static/media/casePratica(6).a4e66481bc26cc40d660.webp",
     "static/media/Tela de Jogos.webp": "/portfolio/static/media/Tela de Jogos.e3a3489f08de368644c0.webp",
+    "static/media/casePratica(2).webp": "/portfolio/static/media/casePratica(2).1c18f43c7fb1c649328e.webp",
+    "static/media/casePratica(5).webp": "/portfolio/static/media/casePratica(5).8cb710fe8d8d2e1efe45.webp",
+    "static/media/casePratica(4).webp": "/portfolio/static/media/casePratica(4).5fa4d44600219283ffa8.webp",
+    "static/media/casePratica(1).webp": "/portfolio/static/media/casePratica(1).e047a97b383a4f90645c.webp",
     "static/media/TelaBrasil.webp": "/portfolio/static/media/TelaBrasil.0815e747d7b404339447.webp",
     "static/media/Group 14.webp": "/portfolio/static/media/Group 14.3f2b613a185ab34a80ec.webp",
+    "static/media/casePratica(3).webp": "/portfolio/static/media/casePratica(3).ec6941714103b0cc588b.webp",
+    "static/media/casePratica(7).webp": "/portfolio/static/media/casePratica(7).f091a24643e638ad8d6e.webp",
+    "static/media/casePratica(8).webp": "/portfolio/static/media/casePratica(8).aa67b2f7b401dbcea601.webp",
     "static/media/Desktop - 3.webp": "/portfolio/static/media/Desktop - 3.9b041262a2ba1b1d7f0f.webp",
     "static/media/Desktop - 1.webp": "/portfolio/static/media/Desktop - 1.541db222130f971b6c60.webp",
     "static/media/wave.webp": "/portfolio/static/media/wave.1f8987628d376b21c848.webp",
@@ -54,12 +62,12 @@
     "static/media/illustrator.webp": "/portfolio/static/media/illustrator.ff9d3f2a7281c8c84203.webp",
     "static/media/trello.webp": "/portfolio/static/media/trello.51d2a7893d0f50d429bc.webp",
     "static/media/jamboard.svg": "/portfolio/static/media/jamboard.75df0cb1defb725451d24f9adcf78b11.svg",
-    "main.b897529c.css.map": "/portfolio/static/css/main.b897529c.css.map",
-    "main.6f0e3e09.js.map": "/portfolio/static/js/main.6f0e3e09.js.map",
+    "main.bd69e38a.css.map": "/portfolio/static/css/main.bd69e38a.css.map",
+    "main.4ddeeed2.js.map": "/portfolio/static/js/main.4ddeeed2.js.map",
     "453.5d79306b.chunk.js.map": "/portfolio/static/js/453.5d79306b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b897529c.css",
-    "static/js/main.6f0e3e09.js"
+    "static/css/main.bd69e38a.css",
+    "static/js/main.4ddeeed2.js"
   ]
 }
