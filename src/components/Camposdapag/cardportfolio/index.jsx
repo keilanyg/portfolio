@@ -41,7 +41,7 @@ const projects = [
         year: 2025,
         figmaLink: "https://www.figma.com/design/WyL8DyTZCvGC2EzSev0nni/Case-pr%C3%A1tica?node-id=0-1&t=sYJeLk5CxFkKp0cB-1",
         short:
-            "UX/UI Design",
+            "UX/UI Design (Web)",
         long:
             "Pensado para equipes do setor de energia e infraestrutura que recebem grande volume de documentos operacionais e técnicos. A solução centraliza ingestão, aplica IA para leitura, classificação e extração de documentos e informações, e coloca o humano no centro da validação e tomada de decisão — reduzindo tempo operacional e minimizando risco.",
         descriptionStrong: "Entregas:",

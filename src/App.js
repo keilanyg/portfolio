@@ -15,8 +15,8 @@ function App() {
         <SobreMim />
         <Qualificacoes />
         <Portfolio/>
-        <Ferramentas/>
         <Servicos />
+        <Ferramentas/>
         <Rodape />
       </main>
     </div>
