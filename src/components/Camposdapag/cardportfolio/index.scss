@@ -73,6 +73,7 @@
 .modal-content {
     display: flex;
     gap: 10px;
+    margin: 0 45px;
 }
 
 body.modal-open {
@@ -107,6 +108,7 @@ body.modal-open {
 .modal-description-container {
     text-align: start;
     width: 60%;
+    margin: 0 15px;
 }
 
 .modal button {

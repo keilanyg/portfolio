@@ -1,9 +1,3 @@
-import imagemin from 'imagemin';
-import imageminWebp from 'imagemin-webp';
-import imageminPngquant from 'imagemin-pngquant';
-import path from 'path';
-import fs from 'fs';
-
 /*
   COMANDO PARA OTIMIZAR IMAGENS
 
@@ -18,46 +12,51 @@ import fs from 'fs';
 ];
 */
 
+import imagemin from "imagemin";
+import imageminWebp from "imagemin-webp";
+import path from "node:path";
+import fs from "node:fs";
 
-// Função para criar pastas recursivamente
 function ensureDirSync(dir) {
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 }
 
-// Pastas que você quer processar
-const foldersToProcess = [
-  'src/assets/',
+const foldersToProcess = ["src/assets/"];
 
-];
-
-async function processFolder(folder, outputRoot = 'src/assets_optimized') {
+async function processFolder(folder, outputRoot = "src/assets_optimized") {
   const items = fs.readdirSync(folder);
+
   for (const item of items) {
     const fullPath = path.join(folder, item);
     const stats = fs.statSync(fullPath);
+
     if (stats.isDirectory()) {
-      await processFolder(fullPath, outputRoot); // recursivo para subpastas
+      await processFolder(fullPath, outputRoot);
     } else if (/\.(png|jpg|jpeg)$/i.test(item)) {
-      const relativePath = path.relative('src/assets', folder);
+      const relativePath = path.relative("src/assets", folder);
       const outputFolder = path.join(outputRoot, relativePath);
       ensureDirSync(outputFolder);
-      await imagemin([fullPath], {
-        destination: outputFolder,
-        plugins: [
-          imageminPngquant({ quality: [0.6, 0.8] }),
-          imageminWebp({ quality: 80 })
-        ]
+
+      const baseName = path.parse(item).name;
+      const outputFile = path.join(outputFolder, `${baseName}.webp`);
+
+      // Lê a imagem original
+      const buffer = fs.readFileSync(fullPath);
+
+      // Converte para webp
+      const webpBuffer = await imagemin.buffer(buffer, {
+        plugins: [imageminWebp({ quality: 80 })],
       });
-      console.log(`Convertido: ${fullPath} → ${outputFolder}`);
+
+      // Salva o arquivo webp
+      fs.writeFileSync(outputFile, webpBuffer);
+
+      console.log(`Convertido: ${fullPath} → ${outputFile}`);
     }
   }
 }
 
 (async () => {
-  for (const folder of foldersToProcess) {
-    await processFolder(folder);
-  }
-  console.log('Todas as imagens das pastas especificadas foram otimizadas!');
+  for (const folder of foldersToProcess) await processFolder(folder);
+  console.log("Todas as imagens foram convertidas para WEBP!");
 })();

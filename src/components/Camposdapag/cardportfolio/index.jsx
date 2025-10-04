@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import TituloSecao from "../tituloSubtitulo/index";
 import "./index.scss";
+import figma from "../../../assets_optimized/ferramentas/figma.webp";
+
 import prontuario2 from "../../../assets_optimized/works/Prontuario/Group 2.webp";
 import prontuario3 from "../../../assets_optimized/works/Prontuario/Group 3.webp";
 import prontuario4 from "../../../assets_optimized/works/Prontuario/Group 4.webp";
@@ -20,14 +22,45 @@ import doelivros3 from "../../../assets_optimized/works/DoeLeitura/Group 22.webp
 import doelivros4 from "../../../assets_optimized/works/DoeLeitura/Group 23.webp";
 import doelivros5 from "../../../assets_optimized/works/DoeLeitura/Group 24.webp";
 
+import casepratica1 from "../../../assets_optimized/works/CasePratica/casePratica(1).webp";
+import casepratica2 from "../../../assets_optimized/works/CasePratica/casePratica(2).webp";
+import casepratica3 from "../../../assets_optimized/works/CasePratica/casePratica(3).webp";
+import casepratica4 from "../../../assets_optimized/works/CasePratica/casePratica(4).webp";
+import casepratica5 from "../../../assets_optimized/works/CasePratica/casePratica(5).webp";
+import casepratica6 from "../../../assets_optimized/works/CasePratica/casePratica(6).webp";
+import casepratica7 from "../../../assets_optimized/works/CasePratica/casePratica(7).webp";
+import casepratica8 from "../../../assets_optimized/works/CasePratica/casePratica(8).webp";
+
 
 import telabrasil from "../../../assets_optimized/works/TelaBrasil.webp";
 import telabrasil1 from "../../../assets/Tela Brasil.svg";
 
 const projects = [
     {
+        title: "Sistema de Gerenciamento de Documentos por meio de IA",
+        year: 2025,
+        figmaLink: "https://www.figma.com/design/WyL8DyTZCvGC2EzSev0nni/Case-pr%C3%A1tica?node-id=0-1&t=sYJeLk5CxFkKp0cB-1",
+        short:
+            "UX/UI Design",
+        long:
+            "Pensado para equipes do setor de energia e infraestrutura que recebem grande volume de documentos operacionais e técnicos. A solução centraliza ingestão, aplica IA para leitura, classificação e extração de documentos e informações, e coloca o humano no centro da validação e tomada de decisão — reduzindo tempo operacional e minimizando risco.",
+        descriptionStrong: "Entregas:",
+        functionalities: [
+            "Pesquisa UX: mapeamento da dor, impactos e necessidades do usuário;",
+            "Personas e Jornada do Usuário: definição de perfis(analista, engenheiro, gestor) e fluxo de triagem → decisão;",
+            "Protótipo de Telas: dashboard, envio e análise de documentos, histórico e tomada de decisão;",
+            "Aplicação de IA: OCR, classificação, extração de dados, detecção de riscos e resumos automáticos;",
+            "MVP Funcional: upload em lote, visualizador com highlights, fila de revisão e criação de ações;",
+            "Fluxo de Dados: ingestão, processamento, armazenamento, interface e exportação;",
+            "Segurança: criptografia, auditoria imutável e políticas de retenção;",
+            "Estudo de Caso: critérios de aceitação, métricas de desempenho e justificativas de produto.",
+        ],
+        images: [casepratica1, casepratica7, casepratica8, casepratica3, casepratica2, casepratica4, casepratica5, casepratica6],
+    },
+    {
         title: "DoeLivros - Plataforma de Doação de Livros Usados",
         year: 2025,
+        figmaLink: "https://www.figma.com/design/dXHfTRilfLLNMyOipJYOwp/DoeLeitura?node-id=0-1&t=SHvrGgtbH3t3aUHg-1",
         short:
             "UX/UI Design (Mobile)",
         long:
@@ -46,8 +79,9 @@ const projects = [
     {
         title: "Sistema de Gerenciamento de Prontuário do Paciente",
         year: 2023,
+        figmaLink: "https://www.figma.com/design/4mAfq44mJvR0jMqIKN0clF/Telas?node-id=202-8&t=RDQZPzOzlbKq7Sjl-1",
         short:
-            "Aplicativo mobile para gestão ágil de prontuários médicos, com interface simples e intuitiva.",
+            "UX UI Design e Implementação com React Native",
         long:
             "Desenvolvido como projeto acadêmico, o Prontuário Mobile oferece uma solução prática para profissionais da saúde gerenciarem informações de pacientes. Permite cadastro e acompanhamento de dados pessoais e histórico clínico, com funcionalidades como login seguro, gerenciamento de usuários, painel de controle, listagem e cadastro de pacientes, inserção de itens e visualização detalhada do perfil de cada paciente. O design prioriza usabilidade e acessibilidade para otimizar a rotina médica.",
         descriptionStrong: "Funcionalidades:",
@@ -64,6 +98,7 @@ const projects = [
     {
         title: "Plataforma de Divulgação de Competições",
         year: 2024,
+        figmaLink: "https://www.figma.com/design/4mAfq44mJvR0jMqIKN0clF/Telas?node-id=204-126&t=RDQZPzOzlbKq7Sjl-1",
         short:
             "UX/UI Design (Web e Mobile)",
         long:
@@ -121,7 +156,7 @@ export default function Portfolio() {
             (currentImageIndex - 1 + project.images.length) % project.images.length
         );
     }
-    
+
     useEffect(() => {
         if (modalActive) {
             document.body.classList.add("modal-open");
@@ -151,14 +186,38 @@ export default function Portfolio() {
                             if (e.key === "Enter" || e.key === " ") openModal(index);
                         }}
                     >
-                        <img src={proj.images[0]} alt={`Projeto ${index + 1}`} loading="lazy" />
+                        <img
+                            src={proj.images[0]}
+                            alt={`Projeto ${index + 1}`}
+                            loading="lazy"
+                        />
+
                         <div className="card-content">
                             <div className="card-title">{proj.title}</div>
-                            <div className="card-description">{proj.year}</div>
+
+                            <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                                <a
+                                    href={proj.figmaLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={(e) => e.stopPropagation()}
+                                >
+                                    <img
+                                        src={figma}
+                                        alt="Figma"
+                                        href={proj.figmaLink}
+                                        style={{ cursor: "pointer", width: "25px", height: "25px" }}
+                                    />
+                                </a>
+
+                                {/* Ano */}
+                                <div className="card-description">{proj.year}</div>
+                            </div>
                         </div>
                     </div>
                 ))}
             </div>
+
 
             {modalActive && (
                 <div className="modal active" role="dialog" aria-modal="true">
@@ -194,10 +253,25 @@ export default function Portfolio() {
                         />
                         <div className="modal-description-container">
                             <div className="modal-title">{project.title}</div>
-                            <div className="modal-description">{project.short}</div>
+                            <div style={{ display: "flex", alignItems: "center" }}>
+                                <div className="modal-description">{project.short}</div>
+
+                                <a
+                                    href={project.figmaLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img
+                                        src={figma}
+                                        alt="Figma"
+                                        style={{ cursor: "pointer", width: "30px", height: "30px" }}
+                                    />
+                                </a>
+                            </div>
                             <div className="modal-description">{project.year}</div>
                             <div className="modal-description">{project.long}</div>
                             <div className="modal-description strong">{project.descriptionStrong}</div>
+
                             <div className="modal-functionalities">
                                 <ul>
                                     {project.functionalities.map((func, i) => (
@@ -205,6 +279,7 @@ export default function Portfolio() {
                                     ))}
                                 </ul>
                             </div>
+
                         </div>
                     </div>
                 </div>
