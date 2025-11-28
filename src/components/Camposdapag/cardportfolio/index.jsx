@@ -15,6 +15,7 @@ import jogos3 from "../../../assets_optimized/works/Jogos/Group 12.webp";
 import jogos4 from "../../../assets_optimized/works/Jogos/Group 13.webp";
 import jogos5 from "../../../assets_optimized/works/Jogos/Group 14.webp";
 
+
 import doelivros1 from "../../../assets_optimized/works/DoeLeitura/Group 20.webp";
 import doelivros2 from "../../../assets_optimized/works/DoeLeitura/Group 21.webp";
 import doelivros3 from "../../../assets_optimized/works/DoeLeitura/Group 22.webp";
@@ -30,6 +31,7 @@ import casepratica6 from "../../../assets_optimized/works/CasePratica/casePratic
 import casepratica7 from "../../../assets_optimized/works/CasePratica/casePratica(7).webp";
 import casepratica8 from "../../../assets_optimized/works/CasePratica/casePratica(8).webp";
 
+
 import telabrasil from "../../../assets_optimized/works/TelaBrasil.webp";
 import telabrasil1 from "../../../assets/Tela Brasil.svg";
 
@@ -40,17 +42,38 @@ import bazar4 from "../../../assets_optimized/works/Bazar/Bazar 4.webp";
 
 const projects = [
     {
+        title: "Desenvolvimento de Plataforma Streaming Nacional e Inclusiva - Tela Brasil",
+        year: "2024 (Janeiro) - 2025 (Julho)",
+        figmaLink: false,
+
+        short:
+            "UX/UI Design (Web e Mobile)",
+        long:
+            "Atuei como UX/UI Designer na plataforma de streaming, a Tela Brasil, com lançamento previsto em nível nacional, o objetivo é desenvolver plataformas que sejam inclusivas, com acesso ao cinema brasileiro, priorizando escolas, bibliotecas e instituições de ensino, garantindo uma experiência intuitiva e fluida para todos os usuários.",
+        descriptionStrong: "Entregas:",
+        functionalities: [
+            "Pesquisa e análise focadas em acessibilidade",
+            "Criação de protótipos responsivos e inclusivos",
+            "Design visual alinhado às melhores práticas de UX e acessibilidade",
+        ],
+        images: [telabrasil1, telabrasil],
+    },
+    {
         title: "Sistema de Gerenciamento de Documentos por meio de IA",
         year: 2025,
         figmaLink: "https://www.figma.com/design/WyL8DyTZCvGC2EzSev0nni/Case-pr%C3%A1tica?node-id=0-1&t=sYJeLk5CxFkKp0cB-1",
-        short: "UX/UI Design (Web)",
+        short:
+            "UX/UI Design (Web)",
         long:
-            "Pensado para equipes do setor de energia e infraestrutura que recebem grande volume de documentos operacionais e técnicos...",
+            "Pensado para equipes do setor de energia e infraestrutura que recebem grande volume de documentos operacionais e técnicos. A solução centraliza ingestão, aplica IA para leitura, classificação e extração de documentos e informações, e coloca o humano no centro da validação e tomada de decisão — reduzindo tempo operacional e minimizando risco.",
         descriptionStrong: "Entregas:",
         functionalities: [
-            "Pesquisa UX: mapeamento da dor, impactos e necessidades do usuário;",
-            "Personas e Jornada do Usuário...",
-            "Protótipo de Telas...",
+            "Pesquisa UX: impactos e necessidades do usuário;",
+            "Personas e Jornada do Usuário: definição de perfis(analista, engenheiro, gestor);",
+            "Protótipo de Telas: dashboard, envio e análise de documentos, histórico e tomada de decisão;",
+            "Aplicação de IA: OCR, classificação, extração de dados, detecção de riscos e resumos automáticos;",
+            "MVP Funcional: upload em lote, visualizador com highlights, fila de revisão e criação de ações;",
+            "Fluxo de dados: etapas de ingestão, processamento, armazenamento, interface e exportação.",
         ],
         images: [casepratica1, casepratica7, casepratica8, casepratica3, casepratica2, casepratica4, casepratica5, casepratica6],
     },
@@ -58,62 +81,74 @@ const projects = [
         title: "DoeLivros - Plataforma de Doação de Livros Usados",
         year: 2025,
         figmaLink: "https://www.figma.com/design/dXHfTRilfLLNMyOipJYOwp/DoeLeitura?node-id=0-1&t=SHvrGgtbH3t3aUHg-1",
-        short: "UX/UI Design (Mobile)",
+        short:
+            "UX/UI Design (Mobile)",
         long:
-            "Esse projeto foi desenvolvido como trabalho final do curso online...",
+            "Esse projeto foi desenvolvido como trabalho final do curso online “Especialização do projeto UX/UI: da pesquisa à acessibilidade”, ministrado pela Domestika. DoeLivros é uma plataforma online acessível que liga pessoas interessadas em fazer livros usados a quem precisa, promovendo a leitura e o reaproveitamento. O projeto foi desenvolvido visando o processo completo de UX/UI, priorizando a simplicidade e o impacto social.",
         descriptionStrong: "Entregas:",
         functionalities: [
-            "Pesquisa UX...",
-            "Personas...",
+            "Pesquisa UX: entrevistas, questionários e comparação com plataformas semelhantes;",
+            "Personas e Jornada do Usuário: estabelecimento de perfis e trajetórias de doação / recebimento;",
+            "Wireframes e Protótipo Lo - fi: rascunhos das telas e organização da navegação;",
+            "Design de UI: guia visual com cores, tipografia e elementos acessíveis;",
+            "Protótipo de alta fidelidade no Figma: fluxo completo do usuário para web responsiva;",
+            "Estudo de Caso: documentos contendo percepções, escolhas de design e etapas futuras.",
         ],
         images: [doelivros1, doelivros2, doelivros3, doelivros4, doelivros5],
     },
     {
-        title: "Sistema de Gerenciamento de Prontuário do Paciente",
-        year: 2023,
-        figmaLink: "https://www.figma.com/design/4mAfq44mJvR0jMqIKN0clF/Telas?node-id=202-8&t=RDQZPzOzlbKq7Sjl-1",
-        short: "UX UI Design e Implementação com React Native",
+        title: "Plataforma de Divulgação de Bazar",
+        year: "2025",
+        figmaLink: false,
+        short:
+            "UX/UI Design (Web)",
         long:
-            "Desenvolvido como projeto acadêmico...",
-        descriptionStrong: "Funcionalidades:",
+            "Projeto pessoal de design de interface e experiência do usuário criado para promover um evento comercial local.  A landing page fornece informações fundamentais a respeito do bazar, como segmentos participantes, marcas confirmadas, catálogo oficial com descontos exclusivos e informações sobre o local e as datas do evento.  O design dá prioridade a uma hierarquia clara, comunicação direta e um visual contemporâneo que combina elementos gráficos orgânicos com cores vibrantes, fortalecendo a identidade do bazar e estimulando a conversão do usuário.",
+        descriptionStrong: "Entregas:",
         functionalities: [
-            "Login",
-            "Cadastro de usuários",
+            "Layout completo da landing page",
+            "Estrutura focada em comunicação de ofertas e participação",
+            "Seções informativas organizadas por prioridade",
+            "Chamadas de ação destacadas (participação e catálogo)",
+            "Design orientado para clareza e impacto visual"
         ],
-        images: [prontuario2, prontuario3, prontuario4, prontuario5],
+        images: [bazar1, bazar2, bazar3, bazar4],
+
     },
     {
         title: "Plataforma de Divulgação de Competições",
         year: 2024,
         figmaLink: "https://www.figma.com/design/4mAfq44mJvR0jMqIKN0clF/Telas?node-id=204-126&t=RDQZPzOzlbKq7Sjl-1",
-        short: "UX/UI Design (Web e Mobile)",
+        short:
+            "UX/UI Design (Web e Mobile)",
         long:
-            "Projeto pessoal de design de interface e experiência do usuário...",
+            "Projeto pessoal de design de interface e experiência do usuário para uma plataforma informativa sobre competições de jogos. A proposta inclui layouts responsivos para web e mobile, com foco em divulgar eventos, prêmios, desafios e permitir o acesso a formulários de inscrição. O design prioriza clareza, impacto visual e fácil leitura dos avisos e chamadas promocionais.",
         descriptionStrong: "Entregas:",
-        functionalities: ["Wireframe", "Protótipo"],
+        functionalities: [
+            "Wireframe",
+            "Protótipo",
+            "Tela voltada à comunicação eficiente com o público",
+        ],
         images: [jogos, jogos1, jogos2, jogos3, jogos4, jogos5],
     },
     {
-        title: "Desenvolvimento de Plataforma Streaming Nacional e Inclusiva - Tela Brasil",
-        year: "2024 (Janeiro) - 2025 (Julho)",
-        figmaLink: false,
-        short: "UX/UI Design (Web e Mobile)",
+        title: "Sistema de Gerenciamento de Prontuário do Paciente",
+        year: 2023,
+        figmaLink: "https://www.figma.com/design/4mAfq44mJvR0jMqIKN0clF/Telas?node-id=202-8&t=RDQZPzOzlbKq7Sjl-1",
+        short:
+            "UX UI Design e Implementação com React Native",
         long:
-            "Atuei como UX/UI Designer na plataforma de streaming Tela Brasil...",
-        descriptionStrong: "Entregas:",
-        functionalities: ["Pesquisa e análise focadas em acessibilidade", "Criação de protótipos"],
-        images: [telabrasil1, telabrasil],
-    },
-    {
-        title: "Landing Page – Bazar do Novo",
-        year: "2025",
-        figmaLink: false,
-        short: "UX/UI Design (Web)",
-        long:
-            "Projeto pessoal de design de interface e experiência do usuário...",
-        descriptionStrong: "Entregas:",
-        functionalities: ["Layout completo", "Estrutura focada em comunicação"],
-        images: [bazar1, bazar2, bazar3, bazar4],
+            "Desenvolvido como projeto acadêmico, o Prontuário Mobile oferece uma solução prática para profissionais da saúde gerenciarem informações de pacientes. Permite cadastro e acompanhamento de dados pessoais e histórico clínico, com funcionalidades como login seguro, gerenciamento de usuários, painel de controle, listagem e cadastro de pacientes, inserção de itens e visualização detalhada do perfil de cada paciente. O design prioriza usabilidade e acessibilidade para otimizar a rotina médica.",
+        descriptionStrong: "Funcionalidades:",
+        functionalities: [
+            "Login",
+            "Cadastro de usuários",
+            "Painel de controle",
+            "Listagem de pacientes",
+            "Cadastro de itens",
+            "Perfil do paciente",
+        ],
+        images: [prontuario2, prontuario3, prontuario4, prontuario5],
     },
 ];
 
@@ -183,7 +218,7 @@ export default function Portfolio() {
                             <div className="card-title">{proj.title}</div>
 
                             <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                                
+
                                 {/* SÓ MOSTRA O FIGMA SE TIVER LINK */}
                                 {proj.figmaLink && (
                                     <a
