@@ -15,7 +15,6 @@ import jogos3 from "../../../assets_optimized/works/Jogos/Group 12.webp";
 import jogos4 from "../../../assets_optimized/works/Jogos/Group 13.webp";
 import jogos5 from "../../../assets_optimized/works/Jogos/Group 14.webp";
 
-
 import doelivros1 from "../../../assets_optimized/works/DoeLeitura/Group 20.webp";
 import doelivros2 from "../../../assets_optimized/works/DoeLeitura/Group 21.webp";
 import doelivros3 from "../../../assets_optimized/works/DoeLeitura/Group 22.webp";
@@ -31,29 +30,27 @@ import casepratica6 from "../../../assets_optimized/works/CasePratica/casePratic
 import casepratica7 from "../../../assets_optimized/works/CasePratica/casePratica(7).webp";
 import casepratica8 from "../../../assets_optimized/works/CasePratica/casePratica(8).webp";
 
-
 import telabrasil from "../../../assets_optimized/works/TelaBrasil.webp";
 import telabrasil1 from "../../../assets/Tela Brasil.svg";
+
+import bazar1 from "../../../assets_optimized/works/Bazar/Bazar.webp";
+import bazar2 from "../../../assets_optimized/works/Bazar/Bazar 2.webp";
+import bazar3 from "../../../assets_optimized/works/Bazar/Bazar 3.webp";
+import bazar4 from "../../../assets_optimized/works/Bazar/Bazar 4.webp";
 
 const projects = [
     {
         title: "Sistema de Gerenciamento de Documentos por meio de IA",
         year: 2025,
         figmaLink: "https://www.figma.com/design/WyL8DyTZCvGC2EzSev0nni/Case-pr%C3%A1tica?node-id=0-1&t=sYJeLk5CxFkKp0cB-1",
-        short:
-            "UX/UI Design (Web)",
+        short: "UX/UI Design (Web)",
         long:
-            "Pensado para equipes do setor de energia e infraestrutura que recebem grande volume de documentos operacionais e técnicos. A solução centraliza ingestão, aplica IA para leitura, classificação e extração de documentos e informações, e coloca o humano no centro da validação e tomada de decisão — reduzindo tempo operacional e minimizando risco.",
+            "Pensado para equipes do setor de energia e infraestrutura que recebem grande volume de documentos operacionais e técnicos...",
         descriptionStrong: "Entregas:",
         functionalities: [
             "Pesquisa UX: mapeamento da dor, impactos e necessidades do usuário;",
-            "Personas e Jornada do Usuário: definição de perfis(analista, engenheiro, gestor) e fluxo de triagem → decisão;",
-            "Protótipo de Telas: dashboard, envio e análise de documentos, histórico e tomada de decisão;",
-            "Aplicação de IA: OCR, classificação, extração de dados, detecção de riscos e resumos automáticos;",
-            "MVP Funcional: upload em lote, visualizador com highlights, fila de revisão e criação de ações;",
-            "Fluxo de Dados: ingestão, processamento, armazenamento, interface e exportação;",
-            "Segurança: criptografia, auditoria imutável e políticas de retenção;",
-            "Estudo de Caso: critérios de aceitação, métricas de desempenho e justificativas de produto.",
+            "Personas e Jornada do Usuário...",
+            "Protótipo de Telas...",
         ],
         images: [casepratica1, casepratica7, casepratica8, casepratica3, casepratica2, casepratica4, casepratica5, casepratica6],
     },
@@ -61,18 +58,13 @@ const projects = [
         title: "DoeLivros - Plataforma de Doação de Livros Usados",
         year: 2025,
         figmaLink: "https://www.figma.com/design/dXHfTRilfLLNMyOipJYOwp/DoeLeitura?node-id=0-1&t=SHvrGgtbH3t3aUHg-1",
-        short:
-            "UX/UI Design (Mobile)",
+        short: "UX/UI Design (Mobile)",
         long:
-            "Esse projeto foi desenvolvido como trabalho final do curso online “Especialização do projeto UX/UI: da pesquisa à acessibilidade”, ministrado pela Domestika. DoeLivros é uma plataforma online acessível que liga pessoas interessadas em fazer livros usados a quem precisa, promovendo a leitura e o reaproveitamento. O projeto foi desenvolvido visando o processo completo de UX/UI, priorizando a simplicidade e o impacto social.",
+            "Esse projeto foi desenvolvido como trabalho final do curso online...",
         descriptionStrong: "Entregas:",
         functionalities: [
-            "Pesquisa UX: entrevistas, questionário online e comparação com plataformas semelhantes;",
-            "Personas e Jornada do Usuário: estabelecimento de perfis e trajetórias de doação / recebimento;",
-            "Wireframes e Protótipo Lo - fi: rascunhos das telas e organização da navegação;",
-            "Design de UI: guia visual com cores, tipografia e elementos acessíveis;",
-            "Protótipo de alta fidelidade no Figma: fluxo completo do usuário para web responsiva;",
-            "Estudo de Caso: documentos contendo percepções, escolhas de design e etapas futuras.",
+            "Pesquisa UX...",
+            "Personas...",
         ],
         images: [doelivros1, doelivros2, doelivros3, doelivros4, doelivros5],
     },
@@ -80,18 +72,13 @@ const projects = [
         title: "Sistema de Gerenciamento de Prontuário do Paciente",
         year: 2023,
         figmaLink: "https://www.figma.com/design/4mAfq44mJvR0jMqIKN0clF/Telas?node-id=202-8&t=RDQZPzOzlbKq7Sjl-1",
-        short:
-            "UX UI Design e Implementação com React Native",
+        short: "UX UI Design e Implementação com React Native",
         long:
-            "Desenvolvido como projeto acadêmico, o Prontuário Mobile oferece uma solução prática para profissionais da saúde gerenciarem informações de pacientes. Permite cadastro e acompanhamento de dados pessoais e histórico clínico, com funcionalidades como login seguro, gerenciamento de usuários, painel de controle, listagem e cadastro de pacientes, inserção de itens e visualização detalhada do perfil de cada paciente. O design prioriza usabilidade e acessibilidade para otimizar a rotina médica.",
+            "Desenvolvido como projeto acadêmico...",
         descriptionStrong: "Funcionalidades:",
         functionalities: [
             "Login",
             "Cadastro de usuários",
-            "Painel de controle",
-            "Listagem de pacientes",
-            "Cadastro de itens",
-            "Perfil do paciente",
         ],
         images: [prontuario2, prontuario3, prontuario4, prontuario5],
     },
@@ -99,32 +86,34 @@ const projects = [
         title: "Plataforma de Divulgação de Competições",
         year: 2024,
         figmaLink: "https://www.figma.com/design/4mAfq44mJvR0jMqIKN0clF/Telas?node-id=204-126&t=RDQZPzOzlbKq7Sjl-1",
-        short:
-            "UX/UI Design (Web e Mobile)",
+        short: "UX/UI Design (Web e Mobile)",
         long:
-            "Projeto pessoal de design de interface e experiência do usuário para uma plataforma informativa sobre competições de jogos. A proposta inclui layouts responsivos para web e mobile, com foco em divulgar eventos, prêmios, desafios e permitir o acesso a formulários de inscrição. O design prioriza clareza, impacto visual e fácil leitura dos avisos e chamadas promocionais.",
+            "Projeto pessoal de design de interface e experiência do usuário...",
         descriptionStrong: "Entregas:",
-        functionalities: [
-            "Wireframe",
-            "Protótipo",
-            "Tela voltada à comunicação eficiente com o público",
-        ],
+        functionalities: ["Wireframe", "Protótipo"],
         images: [jogos, jogos1, jogos2, jogos3, jogos4, jogos5],
     },
     {
         title: "Desenvolvimento de Plataforma Streaming Nacional e Inclusiva - Tela Brasil",
         year: "2024 (Janeiro) - 2025 (Julho)",
-        short:
-            "UX/UI Design (Web e Mobile)",
+        figmaLink: false,
+        short: "UX/UI Design (Web e Mobile)",
         long:
-            "Atuei como UX/UI Designer na plataforma de streaming, a Tela Brasil, com lançamento previsto em nível nacional, o objetivo é desenvolver plataformas que sejam inclusivas, com acesso ao cinema brasileiro, priorizando escolas, bibliotecas e instituições de ensino, garantindo uma experiência intuitiva e fluida para todos os usuários.",
+            "Atuei como UX/UI Designer na plataforma de streaming Tela Brasil...",
         descriptionStrong: "Entregas:",
-        functionalities: [
-            "Pesquisa e análise focadas em acessibilidade",
-            "Criação de protótipos responsivos e inclusivos",
-            "Design visual alinhado às melhores práticas de UX e acessibilidade",
-        ],
+        functionalities: ["Pesquisa e análise focadas em acessibilidade", "Criação de protótipos"],
         images: [telabrasil1, telabrasil],
+    },
+    {
+        title: "Landing Page – Bazar do Novo",
+        year: "2025",
+        figmaLink: false,
+        short: "UX/UI Design (Web)",
+        long:
+            "Projeto pessoal de design de interface e experiência do usuário...",
+        descriptionStrong: "Entregas:",
+        functionalities: ["Layout completo", "Estrutura focada em comunicação"],
+        images: [bazar1, bazar2, bazar3, bazar4],
     },
 ];
 
@@ -145,9 +134,7 @@ export default function Portfolio() {
 
     function nextImage() {
         const project = projects[currentProjectIndex];
-        setCurrentImageIndex(
-            (currentImageIndex + 1) % project.images.length
-        );
+        setCurrentImageIndex((currentImageIndex + 1) % project.images.length);
     }
 
     function prevImage() {
@@ -196,21 +183,23 @@ export default function Portfolio() {
                             <div className="card-title">{proj.title}</div>
 
                             <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                                <a
-                                    href={proj.figmaLink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    onClick={(e) => e.stopPropagation()}
-                                >
-                                    <img
-                                        src={figma}
-                                        alt="Figma"
+                                
+                                {/* SÓ MOSTRA O FIGMA SE TIVER LINK */}
+                                {proj.figmaLink && (
+                                    <a
                                         href={proj.figmaLink}
-                                        style={{ cursor: "pointer", width: "25px", height: "25px" }}
-                                    />
-                                </a>
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        <img
+                                            src={figma}
+                                            alt="Figma"
+                                            style={{ cursor: "pointer", width: "25px", height: "25px" }}
+                                        />
+                                    </a>
+                                )}
 
-                                {/* Ano */}
                                 <div className="card-description">{proj.year}</div>
                             </div>
                         </div>
@@ -218,28 +207,15 @@ export default function Portfolio() {
                 ))}
             </div>
 
-
             {modalActive && (
                 <div className="modal active" role="dialog" aria-modal="true">
-                    <button
-                        className="close-btn"
-                        onClick={closeModal}
-                        aria-label="Fechar modal"
-                    >
+                    <button className="close-btn" onClick={closeModal} aria-label="Fechar modal">
                         ✕
                     </button>
-                    <button
-                        className="prev-btn"
-                        onClick={prevImage}
-                        aria-label="Imagem anterior"
-                    >
+                    <button className="prev-btn" onClick={prevImage} aria-label="Imagem anterior">
                         &#10094;
                     </button>
-                    <button
-                        className="next-btn"
-                        onClick={nextImage}
-                        aria-label="Próxima imagem"
-                    >
+                    <button className="next-btn" onClick={nextImage} aria-label="Próxima imagem">
                         &#10095;
                     </button>
 
@@ -251,25 +227,32 @@ export default function Portfolio() {
                             className="modal-image"
                             loading="lazy"
                         />
+
                         <div className="modal-description-container">
                             <div className="modal-title">{project.title}</div>
-                            <div style={{ display: "flex", alignItems: "center" }}>
+
+                            <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                                 <div className="modal-description">{project.short}</div>
 
-                                <a
-                                    href={project.figmaLink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <img
-                                        src={figma}
-                                        alt="Figma"
-                                        style={{ cursor: "pointer", width: "30px", height: "30px" }}
-                                    />
-                                </a>
+                                {/* SOMENTE SE TIVER LINK */}
+                                {project.figmaLink && (
+                                    <a
+                                        href={project.figmaLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            src={figma}
+                                            alt="Figma"
+                                            style={{ cursor: "pointer", width: "30px", height: "30px" }}
+                                        />
+                                    </a>
+                                )}
                             </div>
+
                             <div className="modal-description">{project.year}</div>
                             <div className="modal-description">{project.long}</div>
+
                             <div className="modal-description strong">{project.descriptionStrong}</div>
 
                             <div className="modal-functionalities">
@@ -279,7 +262,6 @@ export default function Portfolio() {
                                     ))}
                                 </ul>
                             </div>
-
                         </div>
                     </div>
                 </div>
