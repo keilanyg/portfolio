@@ -2,13 +2,13 @@ import React from "react";
 import "./index.scss";
 import fotoPerfil from "../../assets_optimized/fotoPerfil.webp";
 import TituloSecao from "../Camposdapag/tituloSubtitulo/index";
-import documentoPDF from './documento.pdf';
+import documentoPDF from './Curriculo-KeilanyGabriel.pdf';
 
 const SobreMim = () => {
   return (
     <div>
-      <h1 className="text-[#e05500] font-bold mb-5 text-center text-xl sm:text-1xl md:text-2xl lg:text-3xl leading-snug px-4 sm:px-6 md:px-0">
-        Meu Trabalho em UX, UI Design e Desenvolvimento de Soluções Digitais
+      <h1 className="text-[#ffffff] font-bold mb-5 text-center text-xl sm:text-1xl md:text-2xl lg:text-3xl leading-snug px-4 sm:px-6 md:px-0">
+        Portfólio - UX, UI e Desenvolvimento de Soluções Digitais
       </h1>
 
       <TituloSecao tituloPrincipal="Sobre mim" />
@@ -24,13 +24,13 @@ const SobreMim = () => {
         <div className="descricao">
           <p>
             Sou Keilany desenvolvedora front-end com ênfase em UX/UI Design,
-            dedicada concepção e desenvolvimento de interfaces. Possuo experiência prática
-            adquirida durante a graduação. E uma vivência profissional significativa.
-          </p>
-          <p>
+            dedicada concepção e desenvolvimento de interfaces.
             Tenho me dedicado no estudo da criação de plataformas digitais acessíveis e
             inclusivas, garantindo uma experiência positiva para pessoas com diversas
-            deficiências e habilidades. Nesse cenário, venho expandindo meus conhecimentos
+            deficiências e habilidades.
+          </p>
+          <p>
+            Nesse cenário, venho expandindo meus conhecimentos
             em acessibilidade, design e usabilidade. Esse processo tem sido
             essencial para meu desenvolvimento e fortalecimento de habilidades relevantes
             focados na inclusão.
