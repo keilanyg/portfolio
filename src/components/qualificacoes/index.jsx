@@ -40,12 +40,12 @@ const Qualificacoes = () => {
             <div className="circulo"></div>
             <div className="linha-vertical"></div>
             <div className="texto">
-              <h4>Plataforma de Streaming - Tela Brasil</h4>
+              <h4>Plataforma de Streaming Nacional - Tela Brasil</h4>
               <p className="descricao">UX/UI Designer</p>
               <p className="periodo">
                 <span role="img" aria-label="Calendário">
                   <IconeUnicons iconClass="uil uil-calendar-alt" />
-                </span> 2024 - 2025
+                </span> 2024 - 2025 (1 ano e 7 meses)
               </p>
             </div>
           </div>

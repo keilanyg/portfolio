@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function IconeUnicons({ iconClass, tamanho = '24px', cor = '#ff6600', ...props }) {
+export default function IconeUnicons({ iconClass, tamanho = '24px', cor = '#fff', ...props }) {
   const estilo = {
     fontSize: tamanho,
     color: cor,

@@ -2,7 +2,7 @@ import React from "react";
 import "./index.scss";
 import fotoPerfil from "../../assets_optimized/fotoPerfil.webp";
 import TituloSecao from "../Camposdapag/tituloSubtitulo/index";
-import documentoPDF from './Curriculo-KeilanyGabriel.pdf';
+import documentoPDF from './Currículo-KeilanyGabriel.pdf';
 
 const SobreMim = () => {
   return (
@@ -23,10 +23,9 @@ const SobreMim = () => {
 
         <div className="descricao">
           <p>
-            Sou Keilany desenvolvedora front-end com ênfase em UX/UI Design,
-            dedicada concepção e desenvolvimento de interfaces.
-            Tenho me dedicado no estudo da criação de plataformas digitais acessíveis e
-            inclusivas, garantindo uma experiência positiva para pessoas com diversas
+            Sou Keilany desenvolvedora web com ênfase em UX/UI Design,
+            dedicada concepção e desenvolvimento de interfaces, como também no estudo da criação de 
+            plataformas digitais acessíveis e inclusivas, garantindo uma experiência positiva para pessoas com diversas
             deficiências e habilidades.
           </p>
           <p>

@@ -43,7 +43,7 @@ import bazar4 from "../../../assets_optimized/works/Bazar/Bazar 4.webp";
 const projects = [
     {
         title: "Desenvolvimento de Plataforma Streaming Nacional e Inclusiva - Tela Brasil",
-        year: "2024 (Janeiro) - 2025 (Julho)",
+        year: "2024 - 2025",
         figmaLink: false,
 
         short:
