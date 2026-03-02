@@ -194,7 +194,7 @@ export default function Portfolio() {
 
     return (
         <section id="portfolio">
-            <TituloSecao subtitulo="Meus projetos" tituloPrincipal="Portfolio" />
+            <TituloSecao subtitulo="Projetos Desenvolvidoss" tituloPrincipal="Trabalhos e Experiências" />
 
             <div className="grid">
                 {projects.map((proj, index) => (
@@ -219,7 +219,6 @@ export default function Portfolio() {
 
                             <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
 
-                                {/* SÓ MOSTRA O FIGMA SE TIVER LINK */}
                                 {proj.figmaLink && (
                                     <a
                                         href={proj.figmaLink}

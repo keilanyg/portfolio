@@ -11,7 +11,6 @@ import storybook from "../../../assets/storybook.svg";
 import bootstrap from "../../../assets_optimized/ferramentas/bootstrap.webp";
 import sass from "../../../assets_optimized/ferramentas/sass.webp";
 import notion from "../../../assets/notion.svg";
-import materialize from "../../../assets/materializecss.svg";
 import reactLogo from "../../../assets_optimized/ferramentas/react.webp";
 import api from "../../../assets_optimized/ferramentas/api.webp";
 import typescript from "../../../assets/typescript.svg";
@@ -22,8 +21,6 @@ import postgresql from "../../../assets_optimized/ferramentas/postgresql.webp";
 import django from "../../../assets_optimized/ferramentas/django.webp";
 import figma from "../../../assets_optimized/ferramentas/figma.webp";
 import invision from "../../../assets_optimized/ferramentas/invision.webp";
-import mockplus from "../../../assets_optimized/ferramentas/mockplus.webp";
-import whimsical from "../../../assets_optimized/ferramentas/whimsical.webp";
 import miro from "../../../assets_optimized/ferramentas/miro.webp";
 import cypress from "../../../assets_optimized/ferramentas/cypress.webp";
 import jamboard from "../../../assets/jamboard.svg";
@@ -91,9 +88,9 @@ export function Ferramentas() {
                 <div style={{
                     display: "flex",
                     justifyContent: "center",
-                    gap: 8,              // menos espaço entre botões
+                    gap: 8,              
                     flexWrap: "wrap",
-                    marginBottom: 12     // margem menor abaixo da seção
+                    marginBottom: 12
                 }}>
                     {filtros.map(({ chave, label }) => (
                         <button
@@ -103,13 +100,13 @@ export function Ferramentas() {
                                 backgroundColor: filtroAtivo === chave ? "#2c2f34" : "white",
                                 color: filtroAtivo === chave ? "white" : "#2c2f34",
                                 border: "1.5px solid #2c2f34",
-                                padding: "0.25rem 0.75rem", // menos padding
-                                fontSize: 14,               // fonte menor
+                                padding: "0.25rem 0.75rem", 
+                                fontSize: 14,               
                                 borderRadius: 6,
                                 cursor: "pointer",
                                 fontWeight: filtroAtivo === chave ? "600" : "400",
                                 transition: "all 0.3s ease",
-                                minWidth: 100              // largura mínima menor
+                                minWidth: 100              
                             }}
                         >
                             {label}

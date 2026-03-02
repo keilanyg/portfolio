@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 
   .foto-container {
     position: relative;
@@ -16,7 +16,6 @@
       padding: 1rem;
 
       .foto-perfil {
-        width: 220px;
         max-width: 100%;
         height: auto;
         border-radius: 10px;
@@ -26,16 +25,17 @@
   }
 
   .descricao {
-    background-color: #f1f1f1;
     padding: 1.5rem;
     border-radius: 10px;
-    max-width: 700px;
-    color: #1c1e22;
+    max-width: 650px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
 
     p {
-      margin-bottom: 1rem;
       font-size: 1rem;
       line-height: 1.5;
+      margin-bottom: 10px;
     }
 
     .botao-curriculo {
@@ -50,88 +50,90 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
 
-    &:hover {
-      background-color: #e05500;
-    }
-  }
-}
-
-// Responsividade
-@media (max-width: 1024px) {
-  gap: 1.8rem;
-
-  .foto-container {
-    .imagem-wrapper {
-      .foto-perfil {
-        width: 200px;
+      &:hover {
+        background-color: #e05500;
       }
     }
   }
 
-  .descricao {
-    max-width: 600px;
+ 
 
-    p {
-      font-size: 0.95rem;
+  // Responsividade
+  @media (max-width: 1024px) {
+    gap: 1.8rem;
+
+    .foto-container {
+      .imagem-wrapper {
+        .foto-perfil {
+          width: 200px;
+        }
+      }
     }
-  }
-}
 
-@media (max-width: 768px) {
-  flex-direction: column;
-  padding: 1rem;
-  gap: 1.5rem;
+    .descricao {
+      max-width: 600px;
 
-  .foto-container {
-    .imagem-wrapper {
-      padding: 0.5rem;
-
-      .foto-perfil {
-        width: 180px;
+      p {
+        font-size: 0.95rem;
       }
     }
   }
 
-  .descricao {
-    max-width: 90%;
-    text-align: start;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
 
-    p {
-      font-size: 0.9rem;
+    .foto-container {
+      .imagem-wrapper {
+        padding: 0.5rem;
+
+        .foto-perfil {
+          width: 180px;
+        }
+      }
     }
 
-    .botao-curriculo {
-      padding: 0.5rem 1.2rem;
-      font-size: 0.9rem;
-    }
-  }
-}
+    .descricao {
+      max-width: 90%;
+      text-align: start;
 
-@media (max-width: 480px) {
-  padding: 0.5rem;
-  gap: 1rem;
+      p {
+        font-size: 0.9rem;
+      }
 
-  .foto-container {
-    .imagem-wrapper {
-      padding: 0.3rem;
-
-      .foto-perfil {
-        width: 140px;
+      .botao-curriculo {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.9rem;
       }
     }
   }
 
-  .descricao {
-    max-width: 100%;
+  @media (max-width: 480px) {
+    padding: 0.5rem;
+    gap: 1rem;
 
-    p {
-      font-size: 0.85rem;
+    .foto-container {
+      .imagem-wrapper {
+        padding: 0.3rem;
+
+        .foto-perfil {
+          width: 140px;
+        }
+      }
     }
 
-    .botao-curriculo {
-      width: 100%;
-      font-size: 0.9rem;
+    .descricao {
+      max-width: 100%;
+
+      p {
+        font-size: 0.85rem;
+      }
+
+      .botao-curriculo {
+        width: 100%;
+        font-size: 0.9rem;
+      }
     }
   }
-}
 }

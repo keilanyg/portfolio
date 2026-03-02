@@ -10,7 +10,7 @@ export default function Sidebar() {
     function handleScroll() {
       setScrolled(window.scrollY > 20);
 
-      const sections = ["sobre", "jornada", "portfolio", "ferramentas", "services"];
+      const sections = ["sobre", "jornada", "portfolio", "services", "ferramentas"];
       let current = sections[0];
 
       sections.forEach((id) => {
@@ -35,9 +35,9 @@ export default function Sidebar() {
   const links = [
     { id: "sobre", label: "Sobre", icon: "uil-user" },
     { id: "jornada", label: "Jornada", icon: "uil-graduation-cap" },
-    { id: "portfolio", label: "Portfólio", icon: "uil-folder-open" },
-    { id: "ferramentas", label: "Ferramentas", icon: "uil-wrench" },
+    { id: "projetos", label: "Projetos", icon: "uil-folder-open" },
     { id: "services", label: "Aptidão", icon: "uil-briefcase" },
+    { id: "ferramentas", label: "Ferramentas", icon: "uil-wrench" },
   ];
 
   return (
