@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import TituloSecao from "../tituloSubtitulo/index";
 
-import penpot from "../../../assets/penpot.svg";
 import html from "../../../assets_optimized/ferramentas/html.webp";
 import css from "../../../assets_optimized/ferramentas/css.webp";
 import python from "../../../assets_optimized/ferramentas/python.webp";
 import accessibilityInsights from "../../../assets_optimized/ferramentas/accessibility-insights.webp";
 import wave from "../../../assets_optimized/ferramentas/wave.webp";
-import storybook from "../../../assets/storybook.svg";
 import bootstrap from "../../../assets_optimized/ferramentas/bootstrap.webp";
 import sass from "../../../assets_optimized/ferramentas/sass.webp";
 import notion from "../../../assets/notion.svg";
@@ -20,23 +18,19 @@ import confluence from "../../../assets_optimized/ferramentas/confluence.webp";
 import postgresql from "../../../assets_optimized/ferramentas/postgresql.webp";
 import django from "../../../assets_optimized/ferramentas/django.webp";
 import figma from "../../../assets_optimized/ferramentas/figma.webp";
-import invision from "../../../assets_optimized/ferramentas/invision.webp";
 import miro from "../../../assets_optimized/ferramentas/miro.webp";
 import cypress from "../../../assets_optimized/ferramentas/cypress.webp";
-import jamboard from "../../../assets/jamboard.svg";
 import illustrator from "../../../assets_optimized/ferramentas/illustrator.webp";
 import adobe from "../../../assets_optimized/ferramentas/adobe-xd.webp";
 import clickup from "../../../assets_optimized/ferramentas/clickup.webp";
 import trello from "../../../assets_optimized/ferramentas/trello.webp";
 
 const ferramentas = [
-    { id: 1, categoria: "design", nome: "Penpot", img: penpot, alt: "Logo Penpot", style: { filter: "brightness(0) invert(1)" } },
     { id: 2, categoria: "frontend", nome: "HTML", img: html, alt: "Logo HTML" },
     { id: 3, categoria: "frontend", nome: "CSS", img: css, alt: "Logo CSS" },
     { id: 4, categoria: "backend", nome: "Python", img: python, alt: "Logo PYTHON" },
     { id: 5, categoria: "accessibility", nome: "A11Y Insights", img: accessibilityInsights, alt: "Logo Accessibility Insights" },
     { id: 6, categoria: "accessibility", nome: "WAVE", img: wave, alt: "Logo WAVE Accessibility" },
-    { id: 7, categoria: "frontend", nome: "Storybook", img: storybook, alt: "Logo Storybook" },
     { id: 8, categoria: "frontend", nome: "Bootstrap", img: bootstrap, alt: "Logo BOOTSTRAP" },
     { id: 9, categoria: "frontend", nome: "Sass", img: sass, alt: "Logo Sass" },
     { id: 10, categoria: "design", nome: "Notion", img: notion, alt: "Logo Notion", style: { filter: "brightness(0) invert(1)" } },
@@ -49,10 +43,8 @@ const ferramentas = [
     { id: 18, categoria: "backend", nome: "PostgreSQL", img: postgresql, alt: "Logo POSTGRESQL" },
     { id: 19, categoria: "backend", nome: "Django", img: django, alt: "Logo DJANGO" },
     { id: 20, categoria: "design", nome: "Figma", img: figma, alt: "Logo FIGMA" },
-    { id: 21, categoria: "design", nome: "InVision", img: invision, alt: "Logo INVISION" },
     { id: 24, categoria: "design", nome: "Miro", img: miro, alt: "Logo MIRO" },
     { id: 25, categoria: "accessibility", nome: "Cypress", img: cypress, alt: "Logo Cypress" },
-    { id: 26, categoria: "design", nome: "Jamboard", img: jamboard, alt: "Logo JAMBOARD", style: { filter: "brightness(0) invert(1)" } },
     { id: 27, categoria: "design", nome: "Illustrator", img: illustrator, alt: "Logo Illustrator" },
     { id: 28, categoria: "design", nome: "Adobe XD", img: adobe, alt: "Logo Adobe XD" },
     { id: 29, categoria: "design", nome: "Clickup", img: clickup, alt: "Logo Clickup" },

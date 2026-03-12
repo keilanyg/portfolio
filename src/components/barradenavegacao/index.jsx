@@ -35,7 +35,7 @@ export default function Sidebar() {
   const links = [
     { id: "sobre", label: "Sobre", icon: "uil-user" },
     { id: "jornada", label: "Jornada", icon: "uil-graduation-cap" },
-    { id: "projetos", label: "Projetos", icon: "uil-folder-open" },
+    { id: "portfolio", label: "Projetos", icon: "uil-folder-open" },
     { id: "services", label: "Aptidão", icon: "uil-briefcase" },
     { id: "ferramentas", label: "Ferramentas", icon: "uil-wrench" },
   ];
