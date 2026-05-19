@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TituloSecao from "../tituloSubtitulo/index";
 
 import html from "../../../assets_optimized/ferramentas/html.webp";
@@ -32,7 +32,7 @@ import photoshop from "../../../assets_optimized/ferramentas/photoshop.webp";
 import chatgpt from "../../../assets_optimized/ferramentas/chatgpt.webp";
 
 const ferramentas = [
-     { id: 2, categoria: "frontend", nome: "HTML", img: html, alt: "Logo HTML" },
+    { id: 2, categoria: "frontend", nome: "HTML", img: html, alt: "Logo HTML" },
     { id: 3, categoria: "frontend", nome: "CSS", img: css, alt: "Logo CSS" },
     { id: 4, categoria: "backend", nome: "Python", img: python, alt: "Logo PYTHON" },
     { id: 5, categoria: "accessibility", nome: "A11y Insights", img: accessibilityInsights, alt: "Logo Accessibility Insights" },
@@ -72,14 +72,37 @@ const filtros = [
 
 export function Ferramentas() {
     const [filtroAtivo, setFiltroAtivo] = useState("design");
+    const [colunas, setColunas] = useState(6);
+    const [isMobile, setIsMobile] = useState(false);
 
     const ferramentasFiltradas = ferramentas.filter(
         (f) => f.categoria === filtroAtivo
     );
 
+    useEffect(() => {
+        const handleResize = () => {
+            const mobile = window.innerWidth <= 768;
+            setIsMobile(mobile);
+
+            if (mobile) {
+                setColunas(3);
+            } else {
+                setColunas(6);
+            }
+        };
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const cardSize = isMobile ? 90 : 110;
+
     return (
         <section className="page-section scroll-mt-24" id="ferramentas">
             <div style={{ maxWidth: "1200px", width: "90%", margin: "0 auto" }}>
+                
                 <TituloSecao
                     tituloPrincipal="O que uso para entregar resultados"
                     subtitulo="Ferramentas"
@@ -117,22 +140,23 @@ export function Ferramentas() {
                 </div>
 
                 {/* Cards */}
-                <div style={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    justifyContent: "center",
-                    gap: 8
-                }}>
+                <div
+                    style={{
+                        display: "grid",
+                        gridTemplateColumns: `repeat(${colunas}, ${cardSize}px)`,
+                        justifyContent: "center",
+                        gap: 8
+                    }}
+                >
                     {ferramentasFiltradas.map(({ id, nome, img, alt, style }) => (
                         <div
                             key={id}
                             style={{
-                                width: "110px",
-                                height: "120px",
+                                width: `${cardSize}px`,
+                                height: `${cardSize + 10}px`,
                                 backgroundColor: "#102A43",
                                 borderRadius: "0.5rem",
                                 boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-                                overflow: "hidden",
                                 textAlign: "center",
                                 transition: "transform 0.2s ease"
                             }}
@@ -145,7 +169,7 @@ export function Ferramentas() {
                         >
                             <div
                                 style={{
-                                    height: 80,
+                                    height: cardSize - 20,
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
@@ -165,18 +189,16 @@ export function Ferramentas() {
                                 />
                             </div>
 
-                            <div>
-                                <h3
-                                    style={{
-                                        fontSize: "1rem",
-                                        fontWeight: 600,
-                                        color: "#ffffff",
-                                        margin: 0
-                                    }}
-                                >
-                                    {nome}
-                                </h3>
-                            </div>
+                            <h3
+                                style={{
+                                    fontSize: "0.9rem",
+                                    fontWeight: 600,
+                                    color: "#ffffff",
+                                    margin: 0
+                                }}
+                            >
+                                {nome}
+                            </h3>
                         </div>
                     ))}
                 </div>

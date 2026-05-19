@@ -54,7 +54,7 @@ export default function Servicos() {
                 {servicesData.map(({ id, iconClass, title, level, details }) => (
                     <div key={id} className="services-content">
 
-                        <div className="flex items-center justify-between gap-4 flex-wrap sm:flex-nowrap">
+                        <div className="flex items-center justify-between flex-wrap sm:flex-nowrap">
 
                             {/* Lado esquerdo */}
                             <div className="flex items-center gap-4">
