@@ -64,7 +64,7 @@ export default function Sidebar() {
             ? "bg-[#102A43]/85 backdrop-blur-md shadow-lg"
             : "bg-[#102A43]/70 backdrop-blur-md"
           }`}
-        style={{ boxShadow: "0 8px 20px 0 #ff66004d" }}
+        style={{ boxShadow: "0 8px 20px 0 #ffffff28" }}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8 h-16">
           {/* LOGO */}
@@ -85,7 +85,7 @@ export default function Sidebar() {
                 href={`#${link.id}`}
                 className={`text-white transition-all duration-300
                   flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium
-                  hover:bg-[#c5a059]/40
+                  hover:bg-[#c5a059]/20
                   ${activeSection === link.id
                     ? "bg-[#c5a059]"
                     : ""

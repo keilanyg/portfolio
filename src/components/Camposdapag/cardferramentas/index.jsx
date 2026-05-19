@@ -35,7 +35,7 @@ const ferramentas = [
     { id: 2, categoria: "frontend", nome: "HTML", img: html, alt: "Logo HTML" },
     { id: 3, categoria: "frontend", nome: "CSS", img: css, alt: "Logo CSS" },
     { id: 4, categoria: "backend", nome: "Python", img: python, alt: "Logo PYTHON" },
-    { id: 5, categoria: "accessibility", nome: "A11y Insights", img: accessibilityInsights, alt: "Logo Accessibility Insights" },
+    { id: 5, categoria: "accessibility", nome: "Insights", img: accessibilityInsights, alt: "Logo Accessibility Insights" },
     { id: 6, categoria: "accessibility", nome: "WAVE", img: wave, alt: "Logo WAVE Accessibility" },
     { id: 8, categoria: "frontend", nome: "Bootstrap", img: bootstrap, alt: "Logo BOOTSTRAP" },
     { id: 9, categoria: "frontend", nome: "Sass", img: sass, alt: "Logo Sass" },
