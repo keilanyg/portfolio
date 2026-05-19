@@ -9,7 +9,7 @@
 }
 
 .card {
-    background: #2c2f34;
+    background: #102A43;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -36,7 +36,7 @@
 
 .card-description {
     font-size: 14px;
-    color: #ddd;
+    color: #fff;
 }
 
 /* MODAL */
@@ -82,7 +82,7 @@ body.modal-open {
 }
 
 .modal-description {
-    color: #ccc;
+    color: #fff;
     margin-top: 10px;
     font-size: 15px;
     max-width: 800px;
@@ -97,7 +97,7 @@ body.modal-open {
 
 .modal-functionalities {
     list-style: disc inside !important;
-    color: #eee !important;
+    color: #fff !important;
     margin: 0 auto !important;
     max-width: 800px;
     text-align: left;
@@ -119,7 +119,7 @@ body.modal-open {
     font-size: 20px;
     cursor: pointer;
     user-select: none;
-    background-color: #ff6600;
+    background-color: #102A43;
     padding: 5px 10px;
     border-radius: 10px;
 }
@@ -127,7 +127,7 @@ body.modal-open {
 ul {
   list-style-type: disc;
   margin: 0;
-  color: #eee;
+  color: #fff;
 }
 .close-btn {
     top: 20px;

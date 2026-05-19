@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./index.scss";
 import TituloSecao from "../Camposdapag/tituloSubtitulo/index";
-
+import BackServicos from "../../assets_optimized/BackServicos.webp"
 
 const servicesData = [
     {
@@ -44,36 +44,40 @@ export default function Servicos() {
     const [activeModal, setActiveModal] = useState(null);
 
     return (
-        <section className="services section" id="services">
+        <section className="services scroll-mt-24 section relative bg-cover bg-no-repeat w-full min-h-[50vh] top-10" id="services"
+            style={{
+                backgroundImage: `url(${BackServicos})`,
+            }}>
             <TituloSecao subtitulo="Áreas de Atuação" tituloPrincipal="Aptidão" />
 
             <div className="services-container grid">
                 {servicesData.map(({ id, iconClass, title, level, details }) => (
                     <div key={id} className="services-content">
-                        <div>
-                            <i className={`${iconClass} services-icon`}></i>
-                            <h3 className="services-title">
-                                {title.includes(" ") ? (
-                                    <>
-                                        {title}
-                                    </>
-                                ) : (
-                                    title
-                                )}
-                            </h3>
-                        </div>
 
-                        <span
-                            className="services-button"
-                            onClick={() => setActiveModal(id)}
-                            tabIndex={0}
-                            role="button"
-                            onKeyDown={(e) => {
-                                if (e.key === "Enter") setActiveModal(id);
-                            }}
-                        >
-                            Ver mais <i className="uil uil-arrow-right services-button-icon"></i>
-                        </span>
+                        <div className="flex items-center justify-between gap-4 flex-wrap sm:flex-nowrap">
+
+                            {/* Lado esquerdo */}
+                            <div className="flex items-center gap-4">
+                                <i className={`${iconClass} services-icon`}></i>
+
+                                <h3 className="services-title text-lg sm:text-xl font-semibold leading-snug">
+                                    {title}
+                                </h3>
+                            </div>
+
+                            {/* Lado direito */}
+                            <button
+                                className="services-button flex items-center gap-2 text-sm sm:text-base"
+                                onClick={() => setActiveModal(id)}
+                                onKeyDown={(e) => {
+                                    if (e.key === "Enter") setActiveModal(id);
+                                }}
+                            >
+                                Ver mais
+                                <i className="uil uil-arrow-right services-button-icon"></i>
+                            </button>
+
+                        </div>
 
                         <div
                             className={`services-modal ${activeModal === id ? "active-modal" : ""}`}

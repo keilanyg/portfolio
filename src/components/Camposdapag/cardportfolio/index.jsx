@@ -193,7 +193,7 @@ export default function Portfolio() {
     const project = projects[currentProjectIndex];
 
     return (
-        <section id="portfolio">
+        <section id="portfolio" className="scroll-mt-24">
             <TituloSecao subtitulo="Projetos Desenvolvidoss" tituloPrincipal="Trabalhos e Experiências" />
 
             <div className="grid">

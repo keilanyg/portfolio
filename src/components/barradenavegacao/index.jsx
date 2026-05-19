@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../assets_optimized/logo2.webp";
+import logo from "../../assets_optimized/logo3.webp";
 
 export default function Sidebar() {
   const [scrolled, setScrolled] = useState(false);
@@ -7,24 +7,39 @@ export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    function handleScroll() {
-      setScrolled(window.scrollY > 20);
+   function handleScroll() {
+  setScrolled(window.scrollY > 20);
 
-      const sections = ["sobre", "jornada", "portfolio", "services", "ferramentas"];
-      let current = sections[0];
+  const sections = [
+    "sobre",
+    "jornada",
+    "portfolio",
+    "ferramentas",
+    "services",
+  ];
 
-      sections.forEach((id) => {
-        const section = document.getElementById(id);
-        if (section) {
-          const rect = section.getBoundingClientRect();
-          if (rect.top < window.innerHeight / 2 && rect.bottom > 0) {
-            current = id;
-          }
-        }
-      });
+  const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-      setActiveSection(current);
+  let current = sections[0];
+
+  sections.forEach((id) => {
+    const section = document.getElementById(id);
+
+    if (section) {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+
+      if (
+        scrollPosition >= sectionTop &&
+        scrollPosition < sectionTop + sectionHeight
+      ) {
+        current = id;
+      }
     }
+  });
+
+  setActiveSection(current);
+}
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
@@ -36,67 +51,99 @@ export default function Sidebar() {
     { id: "sobre", label: "Sobre", icon: "uil-user" },
     { id: "jornada", label: "Jornada", icon: "uil-graduation-cap" },
     { id: "portfolio", label: "Projetos", icon: "uil-folder-open" },
-    { id: "services", label: "Aptidão", icon: "uil-briefcase" },
     { id: "ferramentas", label: "Ferramentas", icon: "uil-wrench" },
+    { id: "services", label: "Aptidão", icon: "uil-briefcase" },
   ];
 
   return (
     <>
-      {/* Top bar no mobile */}
-      <div className="fixed top-0 left-0 w-full h-14 bg-[#1c1e22] z-50 flex items-center justify-between px-4 md:hidden shadow-md">
-        <img src={logo} alt="logo" className="w-10 h-auto" loading="lazy" />
-        <button
-          className="text-white p-2 rounded-lg"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
-        >
-          <i className={`uil ${isOpen ? "uil-times" : "uil-bars"} text-2xl`}></i>
-        </button>
-
-      </div>
-
-      {/* Sidebar */}
-      <aside
-        className={`fixed top-0 left-0 h-full w-48 md:w-40 z-40 flex flex-col justify-between items-center py-6 px-3 transition-transform duration-300
-          ${scrolled
-            ? "bg-[#1c1e22]/90 backdrop-blur-md shadow-lg border-none"
-            : "bg-[#1c1e22] border border-none"
-          }
-          ${isOpen ? "translate-x-0" : "-translate-x-full"} 
-          md:translate-x-0
-        `}
+      {/* NAVBAR TOPO */}
+      <header
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
+        ${scrolled
+            ? "bg-[#102A43]/85 backdrop-blur-md shadow-lg"
+            : "bg-[#102A43]/70 backdrop-blur-md"
+          }`}
         style={{ boxShadow: "0 8px 20px 0 #ff66004d" }}
       >
-        <div className="flex flex-col items-center md:items-start w-full mt-14 md:mt-0">
-          {/* Logo só aparece dentro da sidebar no desktop */}
-          <img
-            src={logo}
-            alt="logo, letra K"
-            className="hidden md:block w-10 md:w-16 mb-6"
-            loading="lazy"
-          />
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8 h-16">
+          {/* LOGO */}
+          <a href="#sobre" className="flex items-center gap-2">
+            <img
+              src={logo}
+              alt="Logo"
+              className="w-10 md:w-12 h-auto"
+              loading="lazy"
+            />
+          </a>
 
-          <nav className="flex flex-col gap-3 w-full">
+          {/* MENU DESKTOP */}
+          <nav className="hidden md:flex items-center gap-2">
+            {links.map((link) => (
+              <a
+                key={link.id}
+                href={`#${link.id}`}
+                className={`text-white transition-all duration-300
+                  flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium
+                  hover:bg-[#c5a059]/40
+                  ${activeSection === link.id
+                    ? "bg-[#c5a059]"
+                    : ""
+                  }
+                `}
+              >
+                <i className={`uil ${link.icon} text-lg`}></i>
+                <span>{link.label}</span>
+              </a>
+            ))}
+          </nav>
+
+          {/* BOTÃO MOBILE */}
+          <button
+            className="md:hidden text-white"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+          >
+            <i
+              className={`uil ${isOpen ? "uil-times" : "uil-bars"
+                } text-3xl`}
+            ></i>
+          </button>
+        </div>
+
+        {/* MENU MOBILE */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300
+          ${isOpen
+              ? "max-h-96 opacity-100"
+              : "max-h-0 opacity-0"
+            }`}
+        >
+          <nav className="flex flex-col px-4 pb-4 gap-2 bg-[#1c1e22]/95 backdrop-blur-md">
             {links.map((link) => (
               <a
                 key={link.id}
                 href={`#${link.id}`}
                 onClick={() => setIsOpen(false)}
-                className={`text-white transition-colors duration-300 text-sm md:text-base 
-                  flex flex-col md:flex-row items-center gap-1 md:gap-2 px-2 py-2 rounded-md
-                  hover:bg-[#ff6600] focus:outline-none
-                  ${activeSection === link.id ? "bg-[#ff6600]" : ""}
+                className={`text-white transition-all duration-300
+                  flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium
+                  hover:bg-[#102A43]
+                  ${activeSection === link.id
+                    ? "bg-[#102A43]"
+                    : ""
+                  }
                 `}
               >
                 <i className={`uil ${link.icon} text-lg`}></i>
-                <span className="text-xs md:text-sm font-medium whitespace-nowrap mt-1 md:mt-0">
-                  {link.label}
-                </span>
+                <span>{link.label}</span>
               </a>
             ))}
           </nav>
         </div>
-      </aside>
+      </header>
+
+      {/* ESPAÇAMENTO PARA NÃO FICAR ATRÁS DA NAVBAR */}
+      <div className="h-16"></div>
     </>
   );
 }

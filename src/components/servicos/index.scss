@@ -1,7 +1,7 @@
 /* Variáveis */
 :root {
     --box-color: #222;
-    --skin-color: #ff6600;
+    --skin-color: #102A43;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.2rem;
     --normal-font-size: 1rem;
@@ -15,9 +15,8 @@
 /* Container principal */
 .services {
     padding: 2rem 1rem;
-    max-width: 900px;
     margin: 0 auto;
-    color: white;
+    color: #102A43;
 }
 
 .section-title {
@@ -40,9 +39,10 @@
     position: relative;
     padding: 1rem;
     border-radius: 0.25rem;
-    box-shadow: 2px 2px 6px rgba(244, 95, 54, 0.397);
+    box-shadow: 2px 2px 6px #102A43;
     display: flex;
     flex-direction: column;
+    background-color: #fff;
 }
 
 .services-icon {
@@ -109,8 +109,7 @@
     position: relative;
     max-height: 75vh;
     overflow-y: auto;
-    color: white;
-    background-color: #333;
+    background-color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     transform: scale(0.95);
     transition: transform 0.3s ease;
@@ -139,19 +138,19 @@
 .services-modal-title,
 .services-modal-description {
     text-align: center;
+    color: #102A43;
 }
 
 .services-modal-title {
     font-size: 1.25rem;
     font-weight: 500;
-    margin-bottom: 0.75rem;
 }
 
 .services-modal-description {
     font-size: 1.1rem;
     padding: 0 0.5rem;
-    margin-bottom: 1rem;
     line-height: 1.5;
+
 }
 
 /* Lista de itens do modal */
@@ -167,7 +166,7 @@
 }
 
 .services-modal-icon {
-    color: var(--skin-color);
+    color: #102A43;
     font-size: 1.4rem;
     flex-shrink: 0;
     line-height: 1;
@@ -177,6 +176,9 @@
     font-size: 1.1rem;
     margin: 0;
     line-height: 1.4;
+    color: #102A43;
+    text-align: start;
+
 }
 
 /* RESPONSIVIDADE */

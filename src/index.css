@@ -5,6 +5,7 @@ body {
   font-weight: 300;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

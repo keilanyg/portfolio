@@ -4,20 +4,23 @@ import Qualificacoes from "./components/qualificacoes/index";
 import Servicos from "./components/servicos/index";
 import { Rodape } from "./components/rodape/index";
 import Sidebar from "./components/barradenavegacao/index.jsx";
-import  {Ferramentas} from "./components/Camposdapag/cardferramentas/index.jsx";
+import { Ferramentas } from "./components/Camposdapag/cardferramentas/index.jsx";
 import Portfolio from "./components/Camposdapag/cardportfolio/index.jsx";
 
 function App() {
   return (
-    <div className="flex min-h-screen">
+    <div>
       <Sidebar />
-      <main className="flex-1 md:ml-56 pt-6 mt-10">
-        <SobreMim />
-        <Qualificacoes />
-        <Portfolio/>
-        <Servicos />
-        <Ferramentas/>
-        <Rodape />
+
+      <main>
+        <div className="flex-col items-center text-center bg-[#FFFFFF]">
+          <SobreMim />
+          <Qualificacoes />
+          <Portfolio />
+          <Ferramentas />
+          <Servicos />
+          <Rodape />
+        </div>
       </main>
     </div>
   );

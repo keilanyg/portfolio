@@ -1,10 +1,10 @@
 import IconeUnicons from "../Camposdapag/icones/index";
-import logo from "../../assets_optimized/logo2.webp";
+import logo from "../../assets_optimized/logo3.webp";
 
 
 export function Rodape() {
     return (
-        <footer className="w-full p-8 text-white " id="contato">
+        <footer className="w-full p-8 mt-10 text-white bg-[#102A43]" id="contato">
             <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 list-none text-center md:justify-between">
                 <img
                     src={logo}
@@ -12,7 +12,7 @@ export function Rodape() {
                     className="w-16 sm:w-20 md:w-24"
                     loading="lazy"
                 />
-                <ul className="flex flex-wrap items-center justify-center gap-y-2 gap-x-6 sm:gap-x-8 list-none hover:text-[#ff6600] focus:text-[#ff6600]">
+                <ul className="flex flex-wrap items-center justify-center gap-y-2 gap-x-6 sm:gap-x-8 list-none hover:text-[#102A43] focus:text-[#102A43]">
                     <li>
                         <a
                             href="https://github.com/keilanyg"
@@ -53,8 +53,11 @@ export function Rodape() {
                     </li>
                 </ul>
             </div>
-            <h6 className="mt-6 text-center font-normal text-white text-[5px] sm:text-[7px] md:text-sm">
+            <h6 className="text-center font-normal text-white text-[5px] sm:text-[7px] md:text-sm">
                 &copy; {new Date().getFullYear()} Keilany Gabriel | Portfólio
+                <p className="text-[5px] sm:text-[8px] text-white/70 uppercase tracking-[0.2em]">
+                    Atualizado em 19/05/2026
+                </p>
             </h6>
         </footer>
     );

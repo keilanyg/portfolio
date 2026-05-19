@@ -24,18 +24,24 @@ import illustrator from "../../../assets_optimized/ferramentas/illustrator.webp"
 import adobe from "../../../assets_optimized/ferramentas/adobe-xd.webp";
 import clickup from "../../../assets_optimized/ferramentas/clickup.webp";
 import trello from "../../../assets_optimized/ferramentas/trello.webp";
+import js from "../../../assets_optimized/ferramentas/javascript.webp";
+import next from "../../../assets_optimized/ferramentas/nextjs.webp";
+import swagger from "../../../assets_optimized/ferramentas/swagger.webp";
+import claude from "../../../assets_optimized/ferramentas/claude-ai.webp";
+import photoshop from "../../../assets_optimized/ferramentas/photoshop.webp";
+import chatgpt from "../../../assets_optimized/ferramentas/chatgpt.webp";
 
 const ferramentas = [
     { id: 2, categoria: "frontend", nome: "HTML", img: html, alt: "Logo HTML" },
     { id: 3, categoria: "frontend", nome: "CSS", img: css, alt: "Logo CSS" },
     { id: 4, categoria: "backend", nome: "Python", img: python, alt: "Logo PYTHON" },
-    { id: 5, categoria: "accessibility", nome: "A11Y Insights", img: accessibilityInsights, alt: "Logo Accessibility Insights" },
+    { id: 5, categoria: "accessibility", nome: "A11y Insights", img: accessibilityInsights, alt: "Logo Accessibility Insights" },
     { id: 6, categoria: "accessibility", nome: "WAVE", img: wave, alt: "Logo WAVE Accessibility" },
     { id: 8, categoria: "frontend", nome: "Bootstrap", img: bootstrap, alt: "Logo BOOTSTRAP" },
     { id: 9, categoria: "frontend", nome: "Sass", img: sass, alt: "Logo Sass" },
     { id: 10, categoria: "design", nome: "Notion", img: notion, alt: "Logo Notion", style: { filter: "brightness(0) invert(1)" } },
     { id: 12, categoria: "frontend", nome: "React", img: reactLogo, alt: "Logo REACT" },
-    { id: 13, categoria: "backend", nome: "API", img: api, alt: "Logo API" },
+    { id: 13, categoria: "backend", nome: "API REST", img: api, alt: "Logo API" },
     { id: 14, categoria: "frontend", nome: "TypeScript", img: typescript, alt: "Logo TypeScript", style: { filter: "brightness(0) invert(1)" } },
     { id: 15, categoria: "frontend", nome: "Tailwind", img: tailwind, alt: "Logo Tailwind" },
     { id: 16, categoria: "design", nome: "Jira", img: jira, alt: "Logo JIRA" },
@@ -49,15 +55,21 @@ const ferramentas = [
     { id: 28, categoria: "design", nome: "Adobe XD", img: adobe, alt: "Logo Adobe XD" },
     { id: 29, categoria: "design", nome: "Clickup", img: clickup, alt: "Logo Clickup" },
     { id: 30, categoria: "design", nome: "Trello", img: trello, alt: "Logo Trello" },
+    { id: 31, categoria: "frontend", nome: "Next.js", img: next, alt: "Logo Next.js" },
+    { id: 32, categoria: "frontend", nome: "JavaScript", img: js, alt: "Logo JavaScript" },
+    { id: 33, categoria: "backend", nome: "Swagger", img: swagger, alt: "Logo Swagger" },
+    { id: 34, categoria: "design", nome: "Claude IA", img: claude, alt: "Logo Claude.IA" },
+    { id: 35, categoria: "design", nome: "Photoshop", img: photoshop, alt: "Logo Photodhop" },
+    { id: 36, categoria: "design", nome: "ChatGPT", img: chatgpt, alt: "Logo ChatGPT" },
 ];
 
 
 const filtros = [
     { chave: "all", label: "Todos" },
-    { chave: "design", label: "Design, Prototipagem & Colaboração" },
+    { chave: "design", label: "Design, Gestão e IA" },
+    { chave: "accessibility", label: "Testes e Acessibilidade" },
     { chave: "frontend", label: "Front-End" },
     { chave: "backend", label: "Back-End e Integrações" },
-    { chave: "accessibility", label: "Testes e Acessibilidade" },
 ];
 
 export function Ferramentas() {
@@ -69,36 +81,37 @@ export function Ferramentas() {
             : ferramentas.filter((f) => f.categoria === filtroAtivo);
 
     return (
-        <section className="page-section" id="ferramentas">
+        <section className="page-section scroll-mt-24" id="ferramentas">
             <div style={{ maxWidth: "1200px", width: "90%", margin: "0 auto" }}>
                 <TituloSecao
-                    subtitulo="O que uso para entregar resultados"
-                    tituloPrincipal="Ferramentas"
+                    tituloPrincipal="O que uso para entregar resultados"
+                    subtitulo="Ferramentas"
                 />
 
                 {/* Filtros */}
                 <div style={{
                     display: "flex",
                     justifyContent: "center",
-                    gap: 8,              
+                    gap: 8,
                     flexWrap: "wrap",
-                    marginBottom: 12
+                    marginBottom: 12,
+                    marginTop: "10px"
                 }}>
                     {filtros.map(({ chave, label }) => (
                         <button
                             key={chave}
                             onClick={() => setFiltroAtivo(chave)}
                             style={{
-                                backgroundColor: filtroAtivo === chave ? "#2c2f34" : "white",
-                                color: filtroAtivo === chave ? "white" : "#2c2f34",
+                                backgroundColor: filtroAtivo === chave ? "#102A43" : "white",
+                                color: filtroAtivo === chave ? "white" : "#102A43",
                                 border: "1.5px solid #2c2f34",
-                                padding: "0.25rem 0.75rem", 
-                                fontSize: 14,               
+                                padding: "0.25rem 0.75rem",
+                                fontSize: 14,
                                 borderRadius: 6,
                                 cursor: "pointer",
                                 fontWeight: filtroAtivo === chave ? "600" : "400",
                                 transition: "all 0.3s ease",
-                                minWidth: 100              
+                                minWidth: 100
                             }}
                         >
                             {label}
@@ -112,15 +125,15 @@ export function Ferramentas() {
                     display: "flex",
                     flexWrap: "wrap",
                     justifyContent: "center",
-                    gap: 10
+                    gap: 8
                 }}>
                     {ferramentasFiltradas.map(({ id, nome, img, alt, style }) => (
                         <div
                             key={id}
                             style={{
                                 width: "110px",
-                                height: "130px",
-                                backgroundColor: "#2c2f34",
+                                height: "120px",
+                                backgroundColor: "#102A43",
                                 borderRadius: "0.5rem",
                                 boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
                                 overflow: "hidden",
@@ -131,7 +144,7 @@ export function Ferramentas() {
                             onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
                         >
                             <div style={{
-                                height: 100,
+                                height: 80,
                                 display: "flex",
                                 alignItems: "center",
                                 justifyContent: "center",
@@ -148,7 +161,7 @@ export function Ferramentas() {
                                         maxHeight: "100%",
                                         objectFit: "contain",
                                         ...style
-                                    }} 
+                                    }}
                                     loading="lazy"
                                 />
                             </div>
