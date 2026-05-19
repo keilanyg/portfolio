@@ -2,7 +2,6 @@ import React from "react";
 import "./index.scss";
 import Fotodeperfil from "../../assets_optimized/fotoperfil2.webp";
 import documentoPDF from './Currículo-Keilany Gabriel.pdf';
-import IconeUnicons from "../Camposdapag/icones/index";
 import Hero from "../../assets_optimized/backtop.webp";
 import Sobre from "../../assets_optimized/backsobremim.webp"
 
@@ -50,9 +49,10 @@ const SobreMim = () => {
               className="foto-perfil rounded-3xl"
               loading="lazy"
               style={{
-                width: "90%",
-                maxWidth: "230px",
+                width: "100%",
+                maxWidth: "280px",
                 height: "auto",
+                maxHeight: "280px",
               }}
             />
           </div>
