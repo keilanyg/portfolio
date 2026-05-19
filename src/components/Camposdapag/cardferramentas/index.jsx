@@ -32,7 +32,7 @@ import photoshop from "../../../assets_optimized/ferramentas/photoshop.webp";
 import chatgpt from "../../../assets_optimized/ferramentas/chatgpt.webp";
 
 const ferramentas = [
-    { id: 2, categoria: "frontend", nome: "HTML", img: html, alt: "Logo HTML" },
+     { id: 2, categoria: "frontend", nome: "HTML", img: html, alt: "Logo HTML" },
     { id: 3, categoria: "frontend", nome: "CSS", img: css, alt: "Logo CSS" },
     { id: 4, categoria: "backend", nome: "Python", img: python, alt: "Logo PYTHON" },
     { id: 5, categoria: "accessibility", nome: "A11y Insights", img: accessibilityInsights, alt: "Logo Accessibility Insights" },
@@ -59,13 +59,11 @@ const ferramentas = [
     { id: 32, categoria: "frontend", nome: "JavaScript", img: js, alt: "Logo JavaScript" },
     { id: 33, categoria: "backend", nome: "Swagger", img: swagger, alt: "Logo Swagger" },
     { id: 34, categoria: "design", nome: "Claude IA", img: claude, alt: "Logo Claude.IA" },
-    { id: 35, categoria: "design", nome: "Photoshop", img: photoshop, alt: "Logo Photodhop" },
+    { id: 35, categoria: "design", nome: "Photoshop", img: photoshop, alt: "Logo Photoshop" },
     { id: 36, categoria: "design", nome: "ChatGPT", img: chatgpt, alt: "Logo ChatGPT" },
 ];
 
-
 const filtros = [
-    { chave: "all", label: "Todos" },
     { chave: "design", label: "Design, Gestão e IA" },
     { chave: "accessibility", label: "Testes e Acessibilidade" },
     { chave: "frontend", label: "Front-End" },
@@ -73,12 +71,11 @@ const filtros = [
 ];
 
 export function Ferramentas() {
-    const [filtroAtivo, setFiltroAtivo] = useState("all");
+    const [filtroAtivo, setFiltroAtivo] = useState("design");
 
-    const ferramentasFiltradas =
-        filtroAtivo === "all"
-            ? ferramentas
-            : ferramentas.filter((f) => f.categoria === filtroAtivo);
+    const ferramentasFiltradas = ferramentas.filter(
+        (f) => f.categoria === filtroAtivo
+    );
 
     return (
         <section className="page-section scroll-mt-24" id="ferramentas">
@@ -119,7 +116,6 @@ export function Ferramentas() {
                     ))}
                 </div>
 
-
                 {/* Cards */}
                 <div style={{
                     display: "flex",
@@ -140,22 +136,25 @@ export function Ferramentas() {
                                 textAlign: "center",
                                 transition: "transform 0.2s ease"
                             }}
-                            onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.05)"}
-                            onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
+                            onMouseEnter={(e) =>
+                                (e.currentTarget.style.transform = "scale(1.05)")
+                            }
+                            onMouseLeave={(e) =>
+                                (e.currentTarget.style.transform = "scale(1)")
+                            }
                         >
-                            <div style={{
-                                height: 80,
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                padding: "1rem"
-                            }}>
+                            <div
+                                style={{
+                                    height: 80,
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    padding: "1rem"
+                                }}
+                            >
                                 <img
                                     src={img}
                                     alt={alt}
-                                    onError={(e) => {
-                                        e.currentTarget.src = "/image/ferramentas/default.webp";
-                                    }}
                                     style={{
                                         maxWidth: "100%",
                                         maxHeight: "100%",
@@ -165,14 +164,16 @@ export function Ferramentas() {
                                     loading="lazy"
                                 />
                             </div>
+
                             <div>
-                                <h3 style={{
-                                    fontSize: "1rem",
-                                    fontWeight: 600,
-                                    color: "#ffffff",
-                                    margin: 0,
-                                    userSelect: "text"
-                                }}>
+                                <h3
+                                    style={{
+                                        fontSize: "1rem",
+                                        fontWeight: 600,
+                                        color: "#ffffff",
+                                        margin: 0
+                                    }}
+                                >
                                     {nome}
                                 </h3>
                             </div>
