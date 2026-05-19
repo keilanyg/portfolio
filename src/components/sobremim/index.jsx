@@ -11,7 +11,7 @@ const SobreMim = () => {
       <div className="hero-container w-full overflow-hidden">
         <img
           src={Hero}
-          alt="Keilany com tablet"
+          alt="Banner com nome portfolio"
           loading="lazy"
           className="
   w-full
