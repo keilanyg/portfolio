@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.2b51e53c.css",
-    "main.js": "/portfolio/static/js/main.2e6ada91.js",
+    "main.css": "/portfolio/static/css/main.0b0a776a.css",
+    "main.js": "/portfolio/static/js/main.19bbd8ee.js",
     "static/js/453.5d79306b.chunk.js": "/portfolio/static/js/453.5d79306b.chunk.js",
     "static/media/Group 4.webp": "/portfolio/static/media/Group 4.2ff2516c6816ff7323ed.webp",
     "static/media/Group 2.webp": "/portfolio/static/media/Group 2.ff680a09a8aac4b69fa6.webp",
@@ -37,6 +37,7 @@
     "static/media/backtop.webp": "/portfolio/static/media/backtop.3571dfadcc71b02e3dc5.webp",
     "static/media/wave.webp": "/portfolio/static/media/wave.1f8987628d376b21c848.webp",
     "static/media/logo3.webp": "/portfolio/static/media/logo3.4c0bf0bae2013de78b4d.webp",
+    "static/media/Oncocard.webp": "/portfolio/static/media/Oncocard.3a548ea055ad7d69cf2b.webp",
     "static/media/backsobremim.webp": "/portfolio/static/media/backsobremim.41dc196daf4e2525d411.webp",
     "static/media/cypress.webp": "/portfolio/static/media/cypress.2430d618070181b731e5.webp",
     "static/media/accessibility-insights.webp": "/portfolio/static/media/accessibility-insights.78c1716eb1a8bfd7eb07.webp",
@@ -68,12 +69,12 @@
     "static/media/illustrator.webp": "/portfolio/static/media/illustrator.ff9d3f2a7281c8c84203.webp",
     "static/media/trello.webp": "/portfolio/static/media/trello.51d2a7893d0f50d429bc.webp",
     "static/media/photoshop.webp": "/portfolio/static/media/photoshop.994879178a1c96ce560c.webp",
-    "main.2b51e53c.css.map": "/portfolio/static/css/main.2b51e53c.css.map",
-    "main.2e6ada91.js.map": "/portfolio/static/js/main.2e6ada91.js.map",
+    "main.0b0a776a.css.map": "/portfolio/static/css/main.0b0a776a.css.map",
+    "main.19bbd8ee.js.map": "/portfolio/static/js/main.19bbd8ee.js.map",
     "453.5d79306b.chunk.js.map": "/portfolio/static/js/453.5d79306b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b51e53c.css",
-    "static/js/main.2e6ada91.js"
+    "static/css/main.0b0a776a.css",
+    "static/js/main.19bbd8ee.js"
   ]
 }
