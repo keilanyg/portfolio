@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.74032a18.css",
-    "main.js": "/portfolio/static/js/main.52e66676.js",
+    "main.js": "/portfolio/static/js/main.94e828ae.js",
     "static/js/453.5d79306b.chunk.js": "/portfolio/static/js/453.5d79306b.chunk.js",
     "static/media/Group 4.webp": "/portfolio/static/media/Group 4.2ff2516c6816ff7323ed.webp",
     "static/media/Group 2.webp": "/portfolio/static/media/Group 2.ff680a09a8aac4b69fa6.webp",
@@ -31,9 +31,9 @@
     "static/media/Desktop - 3.webp": "/portfolio/static/media/Desktop - 3.9b041262a2ba1b1d7f0f.webp",
     "static/media/Currículo-Keilany Gabriel.pdf": "/portfolio/static/media/Currículo-Keilany Gabriel.734fc3592cb9b0603dc4.pdf",
     "static/media/Bazar 3.webp": "/portfolio/static/media/Bazar 3.7b6a2e92e6efe5136f91.webp",
+    "static/media/backtop.webp": "/portfolio/static/media/backtop.78635caa957990f1658f.webp",
     "static/media/Desktop - 1.webp": "/portfolio/static/media/Desktop - 1.541db222130f971b6c60.webp",
     "static/media/Bazar 4.webp": "/portfolio/static/media/Bazar 4.86a1685616f228bc335c.webp",
-    "static/media/backtop.webp": "/portfolio/static/media/backtop.3571dfadcc71b02e3dc5.webp",
     "static/media/wave.webp": "/portfolio/static/media/wave.1f8987628d376b21c848.webp",
     "static/media/logo3.webp": "/portfolio/static/media/logo3.4c0bf0bae2013de78b4d.webp",
     "static/media/fotoperfil2.webp": "/portfolio/static/media/fotoperfil2.03fb7531ccff50f3cc46.webp",
@@ -70,11 +70,11 @@
     "static/media/trello.webp": "/portfolio/static/media/trello.51d2a7893d0f50d429bc.webp",
     "static/media/photoshop.webp": "/portfolio/static/media/photoshop.994879178a1c96ce560c.webp",
     "main.74032a18.css.map": "/portfolio/static/css/main.74032a18.css.map",
-    "main.52e66676.js.map": "/portfolio/static/js/main.52e66676.js.map",
+    "main.94e828ae.js.map": "/portfolio/static/js/main.94e828ae.js.map",
     "453.5d79306b.chunk.js.map": "/portfolio/static/js/453.5d79306b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.74032a18.css",
-    "static/js/main.52e66676.js"
+    "static/js/main.94e828ae.js"
   ]
 }
