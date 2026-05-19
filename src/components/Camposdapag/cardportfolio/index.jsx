@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import TituloSecao from "../tituloSubtitulo/index";
 import "./index.scss";
+import { Globe } from "lucide-react";
 import figma from "../../../assets_optimized/ferramentas/figma.webp";
 
 import prontuario2 from "../../../assets_optimized/works/Prontuario/Group 2.webp";
@@ -40,7 +41,28 @@ import bazar2 from "../../../assets_optimized/works/Bazar/Bazar 2.webp";
 import bazar3 from "../../../assets_optimized/works/Bazar/Bazar 3.webp";
 import bazar4 from "../../../assets_optimized/works/Bazar/Bazar 4.webp";
 
+import oncocard from "../../../assets_optimized/Oncocard.webp"
+
 const projects = [
+    {
+        title: "Desenvolvimento de Plataforma de Benefícios em Saúde - OncoCard",
+        year: "2026",
+        figmaLink: "https://www.figma.com/design/4mAfq44mJvR0jMqIKN0clF/Telas?node-id=327-149&t=0Yr7iauEizAhaNj8-1",
+        siteLink: "https://oncocard.com.br/",
+
+        short:
+            "UX/UI Design e Desenvolvimento Front-end",
+        long:
+            "Atuei como UX/UI Designer e Desenvolvedora Front-end na OncoCard, uma plataforma de cartão de descontos voltada para a área da saúde. O projeto foi desenvolvido com foco em proporcionar uma experiência simples, acessível e intuitiva para usuários que buscam benefícios, descontos e praticidade no acesso a serviços e parceiros da área médica.",
+        descriptionStrong: "Entregas:",
+        functionalities: [
+            "Criação de interfaces responsivas e centradas no usuário",
+            "Desenvolvimento front-end com foco em usabilidade e performance",
+            "Estruturação de fluxos para facilitar o acesso aos benefícios e descontos",
+            "Aplicação de boas práticas de UX/UI para melhorar a experiência digital",
+        ],
+        images: [oncocard],
+    },
     {
         title: "Desenvolvimento de Plataforma Streaming Nacional e Inclusiva - Tela Brasil",
         year: "2024 - 2025",
@@ -215,11 +237,14 @@ export default function Portfolio() {
                         />
 
                         <div className="card-content">
-                            <div className="card-title">{proj.title}</div>
+                            <div className="card-title font-semibold">{proj.title}</div>
 
-                            <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                            <div style={{ gap: "6px" }}>
 
-                                {proj.figmaLink && (
+                                <div className="card-description font-semibold">{proj.year}</div>
+                                
+                                <div className="display: flex">
+                                    {proj.figmaLink && (
                                     <a
                                         href={proj.figmaLink}
                                         target="_blank"
@@ -234,7 +259,20 @@ export default function Portfolio() {
                                     </a>
                                 )}
 
-                                <div className="card-description">{proj.year}</div>
+                                {proj.siteLink && (
+                                    <a
+                                        href={proj.siteLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        <Globe
+                                            size={22}
+                                            style={{ cursor: "pointer", color: "#fff" }}
+                                        />
+                                    </a>
+                                )}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -268,7 +306,6 @@ export default function Portfolio() {
                             <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                                 <div className="modal-description">{project.short}</div>
 
-                                {/* SOMENTE SE TIVER LINK */}
                                 {project.figmaLink && (
                                     <a
                                         href={project.figmaLink}
@@ -279,6 +316,24 @@ export default function Portfolio() {
                                             src={figma}
                                             alt="Figma"
                                             style={{ cursor: "pointer", width: "30px", height: "30px" }}
+                                        />
+                                    </a>
+                                )}
+
+                                {project.siteLink && (
+                                    <a
+                                        href={project.siteLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <Globe
+                                            size={28}
+                                            style={{
+                                                cursor: "pointer",
+                                                width: "30px",
+                                                height: "30px",
+                                                color: "#fff",
+                                            }}
                                         />
                                     </a>
                                 )}
