@@ -55,7 +55,7 @@ export function Rodape() {
             </div>
             <h6 className="text-center font-normal text-white text-[5px] sm:text-[7px] md:text-sm">
                 &copy; {new Date().getFullYear()} Keilany Gabriel | Portfólio
-                <p className="text-[5px] sm:text-[8px] text-white/70 uppercase tracking-[0.2em]">
+                <p className="text-[3px] sm:text-[7px] text-white/70 uppercase tracking-[0.2em]">
                     Atualizado em 19/05/2026
                 </p>
             </h6>

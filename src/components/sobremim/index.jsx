@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.scss";
-import Fotodeperfil from "../../assets_optimized/slide3.webp";
+import Fotodeperfil from "../../assets_optimized/fotoperfil2.webp";
 import documentoPDF from './Currículo-Keilany Gabriel.pdf';
 import IconeUnicons from "../Camposdapag/icones/index";
 import Hero from "../../assets_optimized/backtop.webp";
@@ -14,12 +14,29 @@ const SobreMim = () => {
           src={Hero}
           alt="Keilany com tablet"
           loading="lazy"
-          className="w-full h-[300px] object-cover"
+          className="
+  w-full
+  h-[130px]
+  sm:h-[220px]
+  md:h-[280px]
+  lg:h-[280px]
+  object-cover
+  object-[center_55%]
+"
         />
       </div>
 
       <section
-        className="sobre-mim scroll-mt-24 relative bg-cover bg-top bg-no-repeat w-full min-h-[70vh]"
+        className="
+  sobre-mim
+  scroll-mt-24
+  relative
+  bg-cover
+  bg-no-repeat
+  w-full
+  min-h-[80vh]
+  bg-[position:30%_top]
+"
         id="sobre"
         style={{
           backgroundImage: `url(${Sobre})`,
@@ -66,71 +83,6 @@ const SobreMim = () => {
             </p>
           </div>
 
-          <div>
-            <ul className="flex flex-wrap items-center gap-y-2 gap-x-6 sm:gap-x-8 list-none">
-              <li>
-                <a
-                  href="https://github.com/keilanyg"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub"
-                  className="text-[#1f2937] hover:text-[#0f172a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0f172a] rounded transition-colors"
-                >
-                  <IconeUnicons
-                    iconClass="uil uil-github"
-                    tamanho="18px sm:20px"
-                    cor="currentColor"
-                  />
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="https://linkedin.com/in/keilany-g-900981250/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  className="text-[#1f2937] hover:text-[#0f172a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0f172a] rounded transition-colors"
-                >
-                  <IconeUnicons
-                    iconClass="uil uil-linkedin"
-                    tamanho="18px sm:20px"
-                    cor="currentColor"
-                  />
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="https://instagram.com/keilanygabriell"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  className="text-[#1f2937] hover:text-[#0f172a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0f172a] rounded transition-colors"
-                >
-                  <IconeUnicons
-                    iconClass="uil uil-instagram"
-                    tamanho="18px sm:20px"
-                    cor="currentColor"
-                  />
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="mailto:keilanydes@gmail.com"
-                  aria-label="Email"
-                  className="text-[#1f2937] hover:text-[#0f172a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0f172a] rounded transition-colors"
-                >
-                  <IconeUnicons
-                    iconClass="uil uil-envelope"
-                    tamanho="18px sm:20px"
-                    cor="currentColor"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
 
           <div className="mt-3">
             <a
