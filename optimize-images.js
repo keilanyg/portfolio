@@ -3,13 +3,13 @@
 
   - CAMINHO PARA A PASTA:
   const foldersToProcess = [
-  'src/assets',
-  'src/assets/works',
-  'src/assets/works/doelivros'
+    'src/assets',
+    'src/assets/works',
+    'src/assets/works/doelivros'
+  ];
 
   - COMANDO NO TERMINAL:
   node optimize-images.js
-];
 */
 
 import imagemin from "imagemin";
@@ -18,10 +18,12 @@ import path from "node:path";
 import fs from "node:fs";
 
 function ensureDirSync(dir) {
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
 }
 
-const foldersToProcess = ["src/assets/"];
+const foldersToProcess = ["src/assets"];
 
 async function processFolder(folder, outputRoot = "src/assets_optimized") {
   const items = fs.readdirSync(folder);
@@ -32,31 +34,60 @@ async function processFolder(folder, outputRoot = "src/assets_optimized") {
 
     if (stats.isDirectory()) {
       await processFolder(fullPath, outputRoot);
-    } else if (/\.(png|jpg|jpeg)$/i.test(item)) {
-      const relativePath = path.relative("src/assets", folder);
-      const outputFolder = path.join(outputRoot, relativePath);
-      ensureDirSync(outputFolder);
+      continue;
+    }
 
-      const baseName = path.parse(item).name;
-      const outputFile = path.join(outputFolder, `${baseName}.webp`);
+    if (!/\.(png|jpg|jpeg)$/i.test(item)) {
+      continue;
+    }
 
-      // Lê a imagem original
+    const relativePath = path.relative("src/assets", folder);
+    const outputFolder = path.join(outputRoot, relativePath);
+
+    ensureDirSync(outputFolder);
+
+    const baseName = path.parse(item).name;
+    const outputFile = path.join(outputFolder, `${baseName}.webp`);
+
+    try {
+      console.log(`Processando: ${fullPath}`);
+
       const buffer = fs.readFileSync(fullPath);
 
-      // Converte para webp
       const webpBuffer = await imagemin.buffer(buffer, {
-        plugins: [imageminWebp({ quality: 80 })],
+        plugins: [
+          imageminWebp({
+            quality: 80,
+          }),
+        ],
       });
 
-      // Salva o arquivo webp
       fs.writeFileSync(outputFile, webpBuffer);
 
-      console.log(`Convertido: ${fullPath} → ${outputFile}`);
+      console.log(`✅ Convertido: ${fullPath} → ${outputFile}`);
+    } catch (error) {
+      console.error(`❌ Erro ao converter: ${fullPath}`);
+
+      if (error?.stderr) {
+        console.error(error.stderr);
+      } else {
+        console.error(error);
+      }
+
+      // continua processando as próximas imagens
+      continue;
     }
   }
 }
 
 (async () => {
-  for (const folder of foldersToProcess) await processFolder(folder);
-  console.log("Todas as imagens foram convertidas para WEBP!");
+  try {
+    for (const folder of foldersToProcess) {
+      await processFolder(folder);
+    }
+
+    console.log("\n🎉 Todas as imagens válidas foram convertidas!");
+  } catch (error) {
+    console.error("Erro geral:", error);
+  }
 })();

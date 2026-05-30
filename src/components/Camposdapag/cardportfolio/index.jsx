@@ -33,15 +33,28 @@ import casepratica7 from "../../../assets_optimized/works/CasePratica/casePratic
 import casepratica8 from "../../../assets_optimized/works/CasePratica/casePratica(8).webp";
 
 
-import telabrasil from "../../../assets_optimized/works/TelaBrasil.webp";
 import telabrasil1 from "../../../assets/Tela Brasil.svg";
+import telabrasil2 from "../../../assets_optimized/works/TelaBrasil/Tela Brasil 2.webp";
+import telabrasil3 from "../../../assets_optimized/works/TelaBrasil/Tela Brasil 3.webp";
+import telabrasil4 from "../../../assets_optimized/works/TelaBrasil/Tela Brasil 4.webp";
+import telabrasil5 from "../../../assets_optimized/works/TelaBrasil/Tela Brasil 5.webp";
+import telabrasil6 from "../../../assets_optimized/works/TelaBrasil/Tela Brasil 6.webp";
+import telabrasil7 from "../../../assets_optimized/works/TelaBrasil/Tela Brasil 7.webp";
+import telabrasil8 from "../../../assets_optimized/works/TelaBrasil/Tela Brasil 8.webp";
+import telabrasil9 from "../../../assets_optimized/works/TelaBrasil/Tela Brasil 9.webp";
+
 
 import bazar1 from "../../../assets_optimized/works/Bazar/Bazar.webp";
 import bazar2 from "../../../assets_optimized/works/Bazar/Bazar 2.webp";
 import bazar3 from "../../../assets_optimized/works/Bazar/Bazar 3.webp";
 import bazar4 from "../../../assets_optimized/works/Bazar/Bazar 4.webp";
 
-import oncocard from "../../../assets_optimized/Oncocard.webp"
+import oncocard from "../../../assets_optimized/works/Oncocard/Oncocard.webp";
+import oncocardlogo from "../../../assets_optimized/works/Oncocard/oncocard logo.webp";
+import oncocard1 from "../../../assets_optimized/works/Oncocard/Onco 1.webp";
+import oncocard2 from "../../../assets_optimized/works/Oncocard/Onco 2.webp";
+import oncocard3 from "../../../assets_optimized/works/Oncocard/Onco 3.webp";
+import oncocard4 from "../../../assets_optimized/works/Oncocard/Onco 4.webp";
 
 const projects = [
     {
@@ -61,12 +74,13 @@ const projects = [
             "Estruturação de fluxos para facilitar o acesso aos benefícios e descontos",
             "Aplicação de boas práticas de UX/UI para melhorar a experiência digital",
         ],
-        images: [oncocard],
+        images: [oncocardlogo, oncocard, oncocard1, oncocard2, oncocard3, oncocard4],
     },
     {
         title: "Desenvolvimento de Plataforma Streaming Nacional e Inclusiva - Tela Brasil",
         year: "2024 - 2025",
-        figmaLink: false,
+        figmaLink: "https://www.figma.com/design/4mAfq44mJvR0jMqIKN0clF/Telas?node-id=332-149&t=CjciMItprno9FR7e-1",
+        siteLink: "https://telabrasil.cultura.gov.br/",
 
         short:
             "UX/UI Design (Web e Mobile)",
@@ -78,7 +92,7 @@ const projects = [
             "Criação de protótipos responsivos e inclusivos",
             "Design visual alinhado às melhores práticas de UX e acessibilidade",
         ],
-        images: [telabrasil1, telabrasil],
+        images: [telabrasil1, telabrasil2, telabrasil3, telabrasil4, telabrasil5, telabrasil6, telabrasil7, telabrasil8, telabrasil9],
     },
     {
         title: "Sistema de Gerenciamento de Documentos por meio de IA",
@@ -217,7 +231,6 @@ export default function Portfolio() {
     return (
         <section id="portfolio" className="scroll-mt-24">
             <TituloSecao subtitulo="Projetos Desenvolvidoss" tituloPrincipal="Trabalhos e Experiências" />
-
             <div className="grid">
                 {projects.map((proj, index) => (
                     <div
@@ -240,38 +253,36 @@ export default function Portfolio() {
                             <div className="card-title font-semibold">{proj.title}</div>
 
                             <div style={{ gap: "6px" }}>
-
                                 <div className="card-description font-semibold">{proj.year}</div>
-                                
                                 <div className="display: flex">
                                     {proj.figmaLink && (
-                                    <a
-                                        href={proj.figmaLink}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        onClick={(e) => e.stopPropagation()}
-                                    >
-                                        <img
-                                            src={figma}
-                                            alt="Figma"
-                                            style={{ cursor: "pointer", width: "25px", height: "25px" }}
-                                        />
-                                    </a>
-                                )}
+                                        <a
+                                            href={proj.figmaLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            onClick={(e) => e.stopPropagation()}
+                                        >
+                                            <img
+                                                src={figma}
+                                                alt="Figma"
+                                                style={{ cursor: "pointer", width: "25px", height: "25px" }}
+                                            />
+                                        </a>
+                                    )}
 
-                                {proj.siteLink && (
-                                    <a
-                                        href={proj.siteLink}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        onClick={(e) => e.stopPropagation()}
-                                    >
-                                        <Globe
-                                            size={22}
-                                            style={{ cursor: "pointer", color: "#fff" }}
-                                        />
-                                    </a>
-                                )}
+                                    {proj.siteLink && (
+                                        <a
+                                            href={proj.siteLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            onClick={(e) => e.stopPropagation()}
+                                        >
+                                            <Globe
+                                                size={22}
+                                                style={{ cursor: "pointer", color: "#fff" }}
+                                            />
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -303,9 +314,13 @@ export default function Portfolio() {
                         <div className="modal-description-container">
                             <div className="modal-title">{project.title}</div>
 
-                            <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                            <div style={{
+                                display: "flex", alignItems: "start", gap: "8px", flexDirection: "column"
+                            }}>
                                 <div className="modal-description">{project.short}</div>
 
+                                <div style={{
+                                    display: "flex"}}>
                                 {project.figmaLink && (
                                     <a
                                         href={project.figmaLink}
@@ -336,7 +351,7 @@ export default function Portfolio() {
                                             }}
                                         />
                                     </a>
-                                )}
+                                )}</div>
                             </div>
 
                             <div className="modal-description">{project.year}</div>
