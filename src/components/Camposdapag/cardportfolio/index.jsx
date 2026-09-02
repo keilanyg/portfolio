@@ -279,7 +279,7 @@ export default function Portfolio() {
                                     {proj.title}
                                 </h3>
 
-                                <p className="text-[#2E7D6B] text-sm font-medium mt-1">
+                                <p className="text-[#c6a75e] text-sm font-medium mt-1">
                                     {proj.year}
                                 </p>
 
@@ -292,7 +292,7 @@ export default function Portfolio() {
                                             onClick={(e) =>
                                                 e.stopPropagation()
                                             }
-                                            className="inline-flex items-center gap-2 text-sm text-[#1C2541]/70 hover:text-[#2E7D6B] transition-colors"
+                                            className="inline-flex items-center gap-2 text-sm text-[#1C2541]/70 hover:text-[#c6a75e] transition-colors"
                                         >
                                             <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#1C2541] text-white">
                                                 <FaFigma size={14} />
@@ -310,7 +310,7 @@ export default function Portfolio() {
                                             onClick={(e) =>
                                                 e.stopPropagation()
                                             }
-                                            className="inline-flex items-center gap-2 text-sm text-[#1C2541]/70 hover:text-[#2E7D6B] transition-colors"
+                                            className="inline-flex items-center gap-2 text-sm text-[#1C2541]/70 hover:text-[#c6a75e] transition-colors"
                                         >
                                             <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#1C2541] text-white">
                                                 <Globe size={14} />
@@ -340,7 +340,7 @@ export default function Portfolio() {
                         <button
                             onClick={closeModal}
                             aria-label="Fechar modal"
-                            className="absolute top-3 right-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-[#1C2541] text-white hover:bg-[#2E7D6B] transition-colors"
+                            className="absolute top-3 right-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-[#1C2541] text-white hover:bg-[#c6a75e] transition-colors"
                         >
                             <X size={18} />
                         </button>
@@ -389,7 +389,7 @@ export default function Portfolio() {
                             </h3>
 
                             <div className="flex items-center gap-3 mt-2">
-                                <span className="text-[#2E7D6B] text-sm font-medium">
+                                <span className="text-[#c6a75e] text-sm font-medium">
                                     {project.short}
                                 </span>
 
@@ -411,7 +411,7 @@ export default function Portfolio() {
                                         onClick={(e) =>
                                             e.stopPropagation()
                                         }
-                                        className="inline-flex items-center gap-2 text-sm text-[#1C2541]/70 hover:text-[#2E7D6B] transition-colors"
+                                        className="inline-flex items-center gap-2 text-sm text-[#1C2541]/70 hover:text-[#c6a75e] transition-colors"
                                     >
                                         <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#1C2541] text-white">
                                             <FaFigma size={14} />
@@ -429,7 +429,7 @@ export default function Portfolio() {
                                         onClick={(e) =>
                                             e.stopPropagation()
                                         }
-                                        className="inline-flex items-center gap-2 text-sm text-[#1C2541]/70 hover:text-[#2E7D6B] transition-colors"
+                                        className="inline-flex items-center gap-2 text-sm text-[#1C2541]/70 hover:text-[#c6a75e] transition-colors"
                                     >
                                         <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#1C2541] text-white">
                                             <Globe size={14} />
@@ -454,7 +454,7 @@ export default function Portfolio() {
                                         key={i}
                                         className="flex items-start gap-3 text-[#1C2541]/80 text-sm leading-relaxed"
                                     >
-                                        <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#2E7D6B] shrink-0" />
+                                        <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#c6a75e] shrink-0" />
 
                                         <span>{func}</span>
                                     </li>

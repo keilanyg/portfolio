@@ -104,9 +104,9 @@ export function Ferramentas() {
                                 role="tab"
                                 aria-selected={isActive}
                                 onClick={() => setFiltroAtivo(chave)}
-                                className={`px-4 py-2 text-sm font-medium rounded-full border transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2E7D6B] ${isActive
-                                    ? "bg-[#2E7D6B] border-[#2E7D6B] text-white"
-                                    : "bg-transparent border-white/15 text-white/60 hover:border-[#2E7D6B]/60 hover:text-white"
+                                className={`px-4 py-2 text-sm font-medium rounded-full border transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c6a75e] ${isActive
+                                    ? "bg-[#c6a75e] border-[#c6a75e] text-white"
+                                    : "bg-transparent border-white/15 text-white/60 hover:border-[#c6a75e]/60 hover:text-white"
                                     }`}
                             >
                                 {label}
@@ -120,7 +120,7 @@ export function Ferramentas() {
                     {ferramentasFiltradas.map(({ id, nome, img, alt, style }) => (
                         <div
                             key={id}
-                            className="group flex flex-col items-center justify-center gap-2 aspect-square rounded-xl bg-[#1C2541] border border-white/5 px-3 py-4 transition-all duration-150 hover:-translate-y-0.5 hover:border-[#2E7D6B]/50"
+                            className="group flex flex-col items-center justify-center gap-2 aspect-square rounded-xl bg-[#1C2541] border border-white/5 px-3 py-4 transition-all duration-150 hover:-translate-y-0.5 hover:border-[#c6a75e]/50"
                         >
                             <img
                                 src={img}

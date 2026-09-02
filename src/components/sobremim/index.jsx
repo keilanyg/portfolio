@@ -20,25 +20,25 @@ const SobreMim = () => {
         <div className="relative flex justify-center lg:justify-start">
           <div className="relative w-[260px] h-[260px] sm:w-[300px] sm:h-[300px]">
             <div
-              className="absolute -top-6 -left-6 w-24 h-24 rounded-full bg-[#2E7D6B]/70"
+              className="absolute -top-6 -left-6 w-24 h-24 rounded-full bg-[#c6a75e]/70"
               aria-hidden="true"
             />
             <div
-              className="absolute -bottom-5 -right-4 w-16 h-16 rounded-full bg-[#2E7D6B]/40"
+              className="absolute -bottom-5 -right-4 w-16 h-16 rounded-full bg-[#c6a75e]/40"
               aria-hidden="true"
             />
             <img
               src={Fotodeperfil}
               alt="Keilany Gabriel segurando um tablet"
               loading="lazy"
-              className="relative z-10 w-full h-full object-cover rounded-full ring-4 ring-[#2E7D6B]/30"
+              className="relative z-10 w-full h-full object-cover rounded-full ring-4 ring-[#c6a75e]/30"
             />
           </div>
         </div>
 
         {/* Conteúdo */}
         <div className="text-center lg:text-left">
-          <span className="inline-block rounded-full border border-[#2E7D6B]/50 px-4 py-1.5 text-xs sm:text-sm font-medium text-[#2E7D6B] mb-6">
+          <span className="inline-block rounded-full border border-[#c6a75e]/50 px-4 py-1.5 text-xs sm:text-sm font-medium text-[#c6a75e] mb-6">
             Sobre mim
           </span>
 
@@ -57,7 +57,7 @@ const SobreMim = () => {
           <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-5 bg-[#1C2541] rounded-xl border border-white/5 px-6 py-6 max-w-md mx-auto lg:mx-0">
             {info.map(({ label, value }) => (
               <div key={label} className="text-left">
-                <p className="text-[#2E7D6B] text-xs font-medium mb-1">
+                <p className="text-[#c6a75e] text-xs font-medium mb-1">
                   {label}:
                 </p>
                 <p className="text-white text-sm font-medium">{value}</p>
@@ -67,16 +67,10 @@ const SobreMim = () => {
 
           <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4">
             <a
-              href="#contact"
-              className="inline-flex items-center gap-2 rounded-full bg-[#2E7D6B] px-7 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#256257] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[#10162B] focus-visible:ring-[#2E7D6B]"
-            >
-              Fale comigo
-            </a>
-            <a
               href={documentoPDF}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-7 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:border-[#2E7D6B] hover:text-[#2E7D6B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[#10162B] focus-visible:ring-[#2E7D6B]"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-7 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:border-[#c6a75e] hover:text-[#c6a75e] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[#10162B] focus-visible:ring-[#c6a75e]"
             >
               Baixar currículo
             </a>

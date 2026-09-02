@@ -61,7 +61,7 @@ export default function Servicos() {
                   type="button"
                   onClick={() => setActiveId(id)}
                   aria-current={isActive}
-                  className={`flex items-center gap-3 rounded-md px-4 py-3 text-left transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2E7D6B] ${
+                  className={`flex items-center gap-3 rounded-md px-4 py-3 text-left transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c6a75e] ${
                     isActive
                       ? "bg-[#1C2541] text-white"
                       : "text-[#1C2541]/70 hover:bg-[#1C2541]/5"
@@ -85,7 +85,7 @@ export default function Servicos() {
               <h3 className="text-[#1C2541] text-2xl font-semibold">
                 {active.title}
               </h3>
-              <p className="text-[#2E7D6B] text-sm font-medium mt-1">
+              <p className="text-[#c6a75e] text-sm font-medium mt-1">
                 {active.level}
               </p>
             </div>
@@ -96,7 +96,7 @@ export default function Servicos() {
                   key={idx}
                   className="flex items-start text-start gap-3 text-[#1C2541]/80 text-sm leading-relaxed"
                 >
-                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#2E7D6B] shrink-0" />
+                  <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#c6a75e] shrink-0" />
                   <span>{detail}</span>
                 </li>
               ))}
