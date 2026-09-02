@@ -48,15 +48,6 @@ const Qualificacoes = () => {
                 </span> Abr. 2026 - Atualidade
               </p>
             </div>
-             <div className="texto">
-              <h4>Setor Público</h4>
-              <p className="descricao">Assistente de Suporte Técnico</p>
-              <p className="periodo">
-                <span role="img" aria-label="Calendário">
-                  <IconeUnicons iconClass="uil uil-calendar-alt" />
-                </span> Mar.2026 - Atualidade
-              </p>
-            </div>
                 <div className="texto">
               <h4>Plataforma de Streaming Nacional - Tela Brasil</h4>
               <p className="descricao">UX/UI Designer</p>

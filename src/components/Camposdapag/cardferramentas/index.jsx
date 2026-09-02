@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import TituloSecao from "../tituloSubtitulo/index";
 
 import html from "../../../assets_optimized/ferramentas/html.webp";
@@ -72,131 +72,64 @@ const filtros = [
 
 export function Ferramentas() {
     const [filtroAtivo, setFiltroAtivo] = useState("design");
-    const [colunas, setColunas] = useState(6);
-    const [isMobile, setIsMobile] = useState(false);
 
     const ferramentasFiltradas = ferramentas.filter(
         (f) => f.categoria === filtroAtivo
     );
 
-    useEffect(() => {
-        const handleResize = () => {
-            const mobile = window.innerWidth <= 768;
-            setIsMobile(mobile);
-
-            if (mobile) {
-                setColunas(3);
-            } else {
-                setColunas(6);
-            }
-        };
-
-        handleResize();
-        window.addEventListener("resize", handleResize);
-
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
-    const cardSize = isMobile ? 90 : 110;
-
     return (
-        <section className="page-section scroll-mt-24" id="ferramentas">
-            <div style={{ maxWidth: "1200px", width: "90%", margin: "0 auto" }}>
-                
-                <TituloSecao
-                    tituloPrincipal="O que uso para entregar resultados"
-                    subtitulo="Ferramentas"
-                />
-
-                {/* Filtros */}
-                <div style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    gap: 8,
-                    flexWrap: "wrap",
-                    marginBottom: 12,
-                    marginTop: "10px"
-                }}>
-                    {filtros.map(({ chave, label }) => (
-                        <button
-                            key={chave}
-                            onClick={() => setFiltroAtivo(chave)}
-                            style={{
-                                backgroundColor: filtroAtivo === chave ? "#102A43" : "white",
-                                color: filtroAtivo === chave ? "white" : "#102A43",
-                                border: "1.5px solid #2c2f34",
-                                padding: "0.25rem 0.75rem",
-                                fontSize: 14,
-                                borderRadius: 6,
-                                cursor: "pointer",
-                                fontWeight: filtroAtivo === chave ? "600" : "400",
-                                transition: "all 0.3s ease",
-                                minWidth: 100
-                            }}
-                        >
-                            {label}
-                        </button>
-                    ))}
+        <section
+            id="ferramentas"
+            className="scroll-mt-24 w-full bg-[#10162B] py-20 px-6 sm:px-10 lg:px-16"
+        >
+            <div className="max-w-5xl mx-auto">
+                <div className="titulo-ferramentas">
+                    <TituloSecao
+                        tituloPrincipal="O que uso para entregar resultados"
+                        subtitulo="Ferramentas"
+                    />
                 </div>
 
-                {/* Cards */}
+                {/* Filtros */}
                 <div
-                    style={{
-                        display: "grid",
-                        gridTemplateColumns: `repeat(${colunas}, ${cardSize}px)`,
-                        justifyContent: "center",
-                        gap: 8
-                    }}
+                    role="tablist"
+                    aria-label="Categorias de ferramentas"
+                    className="flex flex-wrap justify-center gap-2 mt-10 mb-10"
                 >
+                    {filtros.map(({ chave, label }) => {
+                        const isActive = filtroAtivo === chave;
+                        return (
+                            <button
+                                key={chave}
+                                role="tab"
+                                aria-selected={isActive}
+                                onClick={() => setFiltroAtivo(chave)}
+                                className={`px-4 py-2 text-sm font-medium rounded-full border transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2E7D6B] ${isActive
+                                    ? "bg-[#2E7D6B] border-[#2E7D6B] text-white"
+                                    : "bg-transparent border-white/15 text-white/60 hover:border-[#2E7D6B]/60 hover:text-white"
+                                    }`}
+                            >
+                                {label}
+                            </button>
+                        );
+                    })}
+                </div>
+
+                {/* Grid de ferramentas */}
+                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-4">
                     {ferramentasFiltradas.map(({ id, nome, img, alt, style }) => (
                         <div
                             key={id}
-                            style={{
-                                width: `${cardSize}px`,
-                                height: `${cardSize + 10}px`,
-                                backgroundColor: "#102A43",
-                                borderRadius: "0.5rem",
-                                boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-                                textAlign: "center",
-                                transition: "transform 0.2s ease"
-                            }}
-                            onMouseEnter={(e) =>
-                                (e.currentTarget.style.transform = "scale(1.05)")
-                            }
-                            onMouseLeave={(e) =>
-                                (e.currentTarget.style.transform = "scale(1)")
-                            }
+                            className="group flex flex-col items-center justify-center gap-2 aspect-square rounded-xl bg-[#1C2541] border border-white/5 px-3 py-4 transition-all duration-150 hover:-translate-y-0.5 hover:border-[#2E7D6B]/50"
                         >
-                            <div
-                                style={{
-                                    height: cardSize - 20,
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    padding: "1rem"
-                                }}
-                            >
-                                <img
-                                    src={img}
-                                    alt={alt}
-                                    style={{
-                                        maxWidth: "100%",
-                                        maxHeight: "100%",
-                                        objectFit: "contain",
-                                        ...style
-                                    }}
-                                    loading="lazy"
-                                />
-                            </div>
-
-                            <h3
-                                style={{
-                                    fontSize: "0.9rem",
-                                    fontWeight: 600,
-                                    color: "#ffffff",
-                                    margin: 0
-                                }}
-                            >
+                            <img
+                                src={img}
+                                alt={alt}
+                                loading="lazy"
+                                style={style}
+                                className="max-h-8 sm:max-h-9 w-auto object-contain"
+                            />
+                            <h3 className="text-white text-xs sm:text-sm font-medium text-center leading-tight">
                                 {nome}
                             </h3>
                         </div>

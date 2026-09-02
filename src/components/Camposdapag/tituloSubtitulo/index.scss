@@ -1,10 +1,8 @@
 .subtitulo {
- 
   text-align: center;
   font-weight: 500;
   font-size: 1.6rem;
   color: #102A43;
-  font-size: bold;
 }
 
 .titulo-principal {
@@ -14,33 +12,49 @@
   font-size: 1.3rem;
 }
 
+.titulo-ferramentas .subtitulo,
+.titulo-ferramentas .titulo-principal {
+  color: #FFFFFF;
+}
+
 .estilizacaodotitulo {
   margin-top: 15px;
 }
 
+/* Título claro */
+.titulo-claro {
+  .subtitulo,
+  .titulo-principal {
+    color: #FFFFFF;
+  }
+}
+
 /* Responsividade */
-@media (max-width: 1024px) { /* tablets grandes */
+@media (max-width: 1024px) {
   .subtitulo {
     font-size: 1rem;
   }
+
   .titulo-principal {
     font-size: 1.8rem;
   }
 }
 
-@media (max-width: 768px) { /* tablets e tablets pequenos */
+@media (max-width: 768px) {
   .subtitulo {
     font-size: 1rem;
   }
+
   .titulo-principal {
     font-size: 1.6rem;
   }
 }
 
-@media (max-width: 480px) { /* celulares */
+@media (max-width: 480px) {
   .subtitulo {
     font-size: 1rem;
   }
+
   .titulo-principal {
     font-size: 1.4rem;
   }
