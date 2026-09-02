@@ -3,6 +3,8 @@ import TituloSecao from "../tituloSubtitulo/index";
 import { Globe, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { FaFigma } from "react-icons/fa";
 
+import portolaticinioslogo from "../../../assets_optimized/logo-porto.webp";
+
 import prontuario2 from "../../../assets_optimized/works/Prontuario/Group 2.webp";
 import prontuario3 from "../../../assets_optimized/works/Prontuario/Group 3.webp";
 import prontuario4 from "../../../assets_optimized/works/Prontuario/Group 4.webp";
@@ -41,6 +43,25 @@ import oncocard3 from "../../../assets_optimized/works/Oncocard/Onco 3.webp";
 import oncocard4 from "../../../assets_optimized/works/Oncocard/Onco 4.webp";
 
 const projects = [
+    {
+        title: "Desenvolvimento de Site Institucional - Porto Laticínios",
+        year: "2026",
+        figmaLink:
+            "https://www.figma.com/design/1pEx9D7IBeRh55SzIokNTV/Untitled?node-id=0-1&t=hs8WX0qrz4xWf0Wz-1",
+        siteLink: "https://portolaticinios.com.br/",
+        short: "UX/UI Design e Desenvolvimento Front-end",
+        long:
+            "Atuei como UX/UI Designer e Desenvolvedora Front-end no desenvolvimento do site da Porto Laticínios, criando uma experiência digital para apresentar a marca, seus produtos e sua produção de forma clara, moderna e estratégica. O projeto foi pensado para fortalecer a presença digital da empresa, facilitar a navegação entre os produtos e aproximar clientes do contato comercial, com uma interface responsiva, intuitiva e alinhada à identidade da marca.", descriptionStrong: "Entregas:",
+        functionalities: [
+            "Criação de uma interface responsiva e alinhada à identidade visual da marca",
+            "Desenvolvimento front-end com foco em performance, usabilidade e experiência mobile",
+            "Estruturação de páginas e seções para apresentação dos produtos e diferenciais da empresa",
+            "Criação de pontos de conversão para facilitar o contato e a realização de pedidos",
+        ],
+        images: [
+            portolaticinioslogo,
+        ],
+    },
     {
         title: "Desenvolvimento de Plataforma de Benefícios em Saúde - OncoCard",
         year: "2026",
@@ -328,7 +349,7 @@ export default function Portfolio() {
 
             {modalActive && (
                 <div
-                    className="fixed inset-0 z-50 bg-[#1C2541]/90 backdrop-blur-sm flex items-center justify-center p-4 sm:p-8"
+                    className="fixed inset-0 z-50 bg-[#1C2541]/90 backdrop-blur-sm flex items-start justify-center p-4 sm:p-8"
                     role="dialog"
                     aria-modal="true"
                     onClick={closeModal}
@@ -349,9 +370,8 @@ export default function Portfolio() {
                         <div className="relative bg-[#1C2541]/5 flex items-center justify-center min-h-[260px] max-h-[45vh] md:max-h-[90vh]">
                             <img
                                 src={project.images[currentImageIndex]}
-                                alt={`${project.title} — imagem ${
-                                    currentImageIndex + 1
-                                } de ${project.images.length}`}
+                                alt={`${project.title} — imagem ${currentImageIndex + 1
+                                    } de ${project.images.length}`}
                                 loading="lazy"
                                 className="w-full h-full object-contain"
                             />
@@ -402,7 +422,7 @@ export default function Portfolio() {
                                 </span>
                             </div>
 
-                            <div className="flex items-center gap-3 mt-3">
+                            <div className="flex items-start gap-3 mt-3">
                                 {project.figmaLink && (
                                     <a
                                         href={project.figmaLink}
@@ -440,15 +460,15 @@ export default function Portfolio() {
                                 )}
                             </div>
 
-                            <p className="text-[#1C2541]/80 text-sm leading-relaxed mt-5">
+                            <p className="text-[#1C2541]/80 text-sm text-start leading-relaxed mt-5">
                                 {project.long}
                             </p>
 
-                            <p className="text-[#1C2541] text-sm font-semibold mt-6">
+                            <p className="text-[#1C2541] text-sm font-semibold mt-6 text-start">
                                 {project.descriptionStrong}
                             </p>
 
-                            <ul className="mt-3 space-y-2.5">
+                            <ul className="mt-3 space-y-2.5 text-start">
                                 {project.functionalities.map((func, i) => (
                                     <li
                                         key={i}

@@ -1,21 +1,27 @@
 /*
   COMANDO PARA OTIMIZAR IMAGENS
 
-  - CAMINHO PARA A PASTA:
-  const foldersToProcess = [
-    'src/assets',
-    'src/assets/works',
-    'src/assets/works/doelivros'
-  ];
+  Pastas processadas:
+  - src/assets
+  - src/assets/works
+  - src/assets/works/doelivros
 
-  - COMANDO NO TERMINAL:
+  Comando:
   node optimize-images.js
 */
 
-import imagemin from "imagemin";
-import imageminWebp from "imagemin-webp";
+import sharp from "sharp";
 import path from "node:path";
 import fs from "node:fs";
+
+const SOURCE_ROOT = "src/assets";
+const OUTPUT_ROOT = "src/assets_optimized";
+
+const foldersToProcess = [
+  "src/assets",
+  // "src/assets/works",
+  // "src/assets/works/doelivros",
+];
 
 function ensureDirSync(dir) {
   if (!fs.existsSync(dir)) {
@@ -23,71 +29,90 @@ function ensureDirSync(dir) {
   }
 }
 
-const foldersToProcess = ["src/assets"];
-
-async function processFolder(folder, outputRoot = "src/assets_optimized") {
+async function processFolder(folder) {
   const items = fs.readdirSync(folder);
 
   for (const item of items) {
     const fullPath = path.join(folder, item);
-    const stats = fs.statSync(fullPath);
 
-    if (stats.isDirectory()) {
-      await processFolder(fullPath, outputRoot);
+    let stats;
+
+    try {
+      stats = fs.statSync(fullPath);
+    } catch {
       continue;
     }
 
+    // Se for pasta, processa recursivamente
+    if (stats.isDirectory()) {
+      await processFolder(fullPath);
+      continue;
+    }
+
+    // Só processa PNG, JPG e JPEG
     if (!/\.(png|jpg|jpeg)$/i.test(item)) {
       continue;
     }
 
-    const relativePath = path.relative("src/assets", folder);
-    const outputFolder = path.join(outputRoot, relativePath);
+    // Caminho relativo em relação a src/assets
+    const relativePath = path.relative(SOURCE_ROOT, folder);
+
+    // Pasta de saída
+    const outputFolder = path.join(
+      OUTPUT_ROOT,
+      relativePath
+    );
 
     ensureDirSync(outputFolder);
 
+    // Nome sem extensão
     const baseName = path.parse(item).name;
-    const outputFile = path.join(outputFolder, `${baseName}.webp`);
+
+    // Arquivo final
+    const outputFile = path.join(
+      outputFolder,
+      `${baseName}.webp`
+    );
 
     try {
-      console.log(`Processando: ${fullPath}`);
+      console.log(`\nProcessando: ${fullPath}`);
 
-      const buffer = fs.readFileSync(fullPath);
+      await sharp(fullPath)
+        .webp({
+          quality: 80,
+          effort: 6,
+        })
+        .toFile(outputFile);
 
-      const webpBuffer = await imagemin.buffer(buffer, {
-        plugins: [
-          imageminWebp({
-            quality: 80,
-          }),
-        ],
-      });
-
-      fs.writeFileSync(outputFile, webpBuffer);
-
-      console.log(`✅ Convertido: ${fullPath} → ${outputFile}`);
+      console.log(
+        `✅ Convertido: ${fullPath} → ${outputFile}`
+      );
     } catch (error) {
       console.error(`❌ Erro ao converter: ${fullPath}`);
-
-      if (error?.stderr) {
-        console.error(error.stderr);
-      } else {
-        console.error(error);
-      }
-
-      // continua processando as próximas imagens
-      continue;
+      console.error(error.message);
     }
   }
 }
 
-(async () => {
+async function main() {
   try {
+    console.log("🚀 Iniciando otimização de imagens...\n");
+
     for (const folder of foldersToProcess) {
+      if (!fs.existsSync(folder)) {
+        console.warn(`⚠️ Pasta não encontrada: ${folder}`);
+        continue;
+      }
+
       await processFolder(folder);
     }
 
-    console.log("\n🎉 Todas as imagens válidas foram convertidas!");
+    console.log("\n🎉 Otimização concluída!");
+    console.log(`📁 Arquivos salvos em: ${OUTPUT_ROOT}`);
   } catch (error) {
-    console.error("Erro geral:", error);
+    console.error("\n❌ Erro geral:");
+    console.error(error);
   }
-})();
+}
+
+main();
