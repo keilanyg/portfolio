@@ -3,6 +3,7 @@ import {
   Instagram,
   Linkedin,
   Mail,
+  MessageCircle,
   Phone,
 } from "lucide-react";
 
@@ -34,27 +35,6 @@ const socials = [
 ];
 
 export function Footer() {
-  const handleDownloadCV = async () => {
-    try {
-      const response = await fetch(curriculo);
-      const blob = await response.blob();
-      const url = URL.createObjectURL(blob);
-
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = "curriculo-keilany-gabriel.pdf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-
-      URL.revokeObjectURL(url);
-    } catch (error) {
-      // Fallback: se der erro (ex: navegadores muito restritivos),
-      // abre o PDF em nova aba para o usuário salvar manualmente
-      window.open(curriculo, "_blank", "noopener,noreferrer");
-    }
-  };
-
   return (
     <footer
       id="contato"
@@ -147,9 +127,11 @@ export function Footer() {
               })}
             </div>
 
-            <button
-              type="button"
-              onClick={handleDownloadCV}
+            <a
+              href={curriculo}
+              download="curriculo-keilany-gabriel.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="
     mt-7
     inline-flex
@@ -167,7 +149,7 @@ export function Footer() {
   "
             >
               Baixar currículo
-            </button>
+            </a>
           </div>
 
           {/* COLUNA 4 — CONTATO */}
@@ -185,12 +167,15 @@ export function Footer() {
               identidade visual e parcerias de longo prazo.
             </p>
 
-            <ul className="mt-6 space-y-3 text-sm text-muted-foreground">
+            <ul className="mt-6 space-y-4 text-sm text-muted-foreground">
               <li className="flex items-start gap-3">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-
                 <a
                   href="mailto:keilanydes@gmail.com"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.location.href = "mailto:keilanydes@gmail.com";
+                  }}
                   className="break-all transition-colors hover:text-primary"
                 >
                   keilanydes@gmail.com
@@ -198,14 +183,19 @@ export function Footer() {
               </li>
 
               <li className="flex items-start gap-3">
-                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                  <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                    <a
+                      href="https://wa.me/5583981610350"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                      }}
+                      className="break-all transition-colors hover:text-primary"
 
-                <a
-                  href="tel:+5583981610350"
-                  className="transition-colors hover:text-primary"
-                >
-                  +55 (83) 98161-0350
-                </a>
+                    >
+                      +55 (83) 98161-0350
+                    </a>
               </li>
             </ul>
           </div>
