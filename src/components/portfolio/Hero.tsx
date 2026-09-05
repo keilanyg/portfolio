@@ -94,7 +94,8 @@ export function Hero() {
           <div className="mt-7 flex flex-col gap-2.5 sm:flex-row sm:items-center">
             <a
               href={curriculo}
-              download="curriculo-keilany-gabriel.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
               className="
                 inline-flex

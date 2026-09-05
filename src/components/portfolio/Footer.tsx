@@ -130,7 +130,8 @@ export function Footer() {
 
             <a
               href={curriculo}
-              download="curriculo-keilany-gabriel.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
               className="
     mt-7
