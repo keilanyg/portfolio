@@ -1,20 +1,14 @@
-name: Deploy Portfolio to GitHub Pages
+name: Deploy Portfolio
 
 on:
   push:
     branches:
       - main
 
-  workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
-concurrency:
-  group: github-pages
-  cancel-in-progress: true
 
 jobs:
   build:
@@ -24,10 +18,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: Install dependencies
@@ -36,34 +30,23 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Verify build
-        run: |
-          echo "Conteúdo de dist/client:"
-          ls -la dist/client
-          echo ""
-          echo "Verificando index.html:"
-          test -f dist/client/index.html
-
       - name: Prepare GitHub Pages
         run: |
-          cp dist/client/index.html dist/client/404.html
+          cp dist/client/_shell.html dist/client/index.html
+          touch dist/client/.nojekyll
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: dist/client
 
   deploy:
-    needs: build
-
-    runs-on: ubuntu-latest
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    needs: build
 
     steps:
       - name: Deploy to GitHub Pages
