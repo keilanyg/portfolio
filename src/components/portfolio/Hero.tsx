@@ -94,8 +94,6 @@ export function Hero() {
             <a
               href={curriculo}
               download="curriculo-keilany-gabriel.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
               className="
                 inline-flex
                 items-center

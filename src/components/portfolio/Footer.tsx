@@ -130,8 +130,6 @@ export function Footer() {
             <a
               href={curriculo}
               download="curriculo-keilany-gabriel.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
               className="
     mt-7
     inline-flex
@@ -167,6 +165,7 @@ export function Footer() {
               identidade visual e parcerias de longo prazo.
             </p>
 
+
             <ul className="mt-6 space-y-4 text-sm text-muted-foreground">
               <li className="flex items-start gap-3">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
@@ -183,19 +182,19 @@ export function Footer() {
               </li>
 
               <li className="flex items-start gap-3">
-                  <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                    <a
-                      href="https://wa.me/5583981610350"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                      }}
-                      className="break-all transition-colors hover:text-primary"
+                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                <a
+                  href="https://wa.me/5583981610350"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                  }}
+                  className="break-all transition-colors hover:text-primary"
 
-                    >
-                      +55 (83) 98161-0350
-                    </a>
+                >
+                  +55 (83) 98161-0350
+                </a>
               </li>
             </ul>
           </div>
@@ -230,4 +229,4 @@ export function Footer() {
       </div>
     </footer>
   );
-}
+}    
