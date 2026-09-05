@@ -8,7 +8,7 @@ import {
 
 import { navLinks } from "@/lib/portfolio-data";
 import logo from "@/assets/logo3.webp";
-import curriculo from "@/assets/Currículo-Keilany Gabriel.pdf";
+import curriculo from "@/../public/curriculo-keilany-gabriel.pdf";
 
 const socials = [
   {
@@ -34,6 +34,27 @@ const socials = [
 ];
 
 export function Footer() {
+  const handleDownloadCV = async () => {
+    try {
+      const response = await fetch(curriculo);
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "curriculo-keilany-gabriel.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      // Fallback: se der erro (ex: navegadores muito restritivos),
+      // abre o PDF em nova aba para o usuário salvar manualmente
+      window.open(curriculo, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <footer
       id="contato"
@@ -126,9 +147,9 @@ export function Footer() {
               })}
             </div>
 
-            <a
-              href={curriculo}
-              download="curriculo-keilany-gabriel.pdf"
+            <button
+              type="button"
+              onClick={handleDownloadCV}
               className="
     mt-7
     inline-flex
@@ -146,7 +167,7 @@ export function Footer() {
   "
             >
               Baixar currículo
-            </a>
+            </button>
           </div>
 
           {/* COLUNA 4 — CONTATO */}

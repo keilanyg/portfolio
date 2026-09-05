@@ -1,10 +1,30 @@
 import { ArrowDown, Download, Sparkles } from "lucide-react";
 import profile from "@/assets/perfil.webp";
 import { Reveal } from "./Reveal";
-import curriculo from "@/assets/Currículo-Keilany Gabriel.pdf";
-
+import curriculo from "@/../public/curriculo-keilany-gabriel.pdf";
 
 export function Hero() {
+  const handleDownloadCV = async () => {
+    try {
+      const response = await fetch(curriculo);
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "curriculo-keilany-gabriel.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      // Fallback: se der erro (ex: navegadores muito restritivos),
+      // abre o PDF em nova aba para o usuário salvar manualmente
+      window.open(curriculo, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <section
       id="sobre"
@@ -92,9 +112,9 @@ export function Hero() {
 
           {/* BOTÕES */}
           <div className="mt-7 flex flex-col gap-2.5 sm:flex-row sm:items-center">
-            <a
-              href={curriculo}
-              download="curriculo-keilany-gabriel.pdf"
+            <button
+              type="button"
+              onClick={handleDownloadCV}
               className="
                 inline-flex
                 items-center
@@ -114,7 +134,7 @@ export function Hero() {
             >
               <Download className="h-3.5 w-3.5" />
               Baixar currículo
-            </a>
+            </button>
 
             <a
               href="#projetos"
