@@ -1,7 +1,8 @@
 import { ArrowDown, Download, Sparkles } from "lucide-react";
 import profile from "@/assets/perfil.webp";
 import { Reveal } from "./Reveal";
-import curriculo from "@/../public/curriculo-keilany-gabriel.pdf";
+
+const curriculo = `${import.meta.env.BASE_URL}curriculo-keilany-gabriel.pdf`;
 
 export function Hero() {
   return (

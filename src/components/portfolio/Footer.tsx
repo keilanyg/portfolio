@@ -9,7 +9,8 @@ import {
 
 import { navLinks } from "@/lib/portfolio-data";
 import logo from "@/assets/logo3.webp";
-import curriculo from "@/../public/curriculo-keilany-gabriel.pdf";
+
+const curriculo = `${import.meta.env.BASE_URL}curriculo-keilany-gabriel.pdf`;
 
 const socials = [
   {
