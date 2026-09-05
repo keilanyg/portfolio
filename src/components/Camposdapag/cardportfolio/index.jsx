@@ -1,6 +1,13 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import TituloSecao from "../tituloSubtitulo/index";
-import { Globe, X, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+    Globe,
+    X,
+    ChevronLeft,
+    ChevronRight,
+} from "lucide-react";
 import { FaFigma } from "react-icons/fa";
 
 import portolaticinioslogo from "../../../assets_optimized/logo-porto.webp";
@@ -50,18 +57,17 @@ const projects = [
             "https://www.figma.com/design/1pEx9D7IBeRh55SzIokNTV/Untitled?node-id=0-1&t=hs8WX0qrz4xWf0Wz-1",
         siteLink: "https://portolaticinios.com.br/",
         short: "UX/UI Design e Desenvolvimento Front-end",
-        long:
-            "Atuei como UX/UI Designer e Desenvolvedora Front-end no desenvolvimento do site da Porto Laticínios, criando uma experiência digital para apresentar a marca, seus produtos e sua produção de forma clara, moderna e estratégica. O projeto foi pensado para fortalecer a presença digital da empresa, facilitar a navegação entre os produtos e aproximar clientes do contato comercial, com uma interface responsiva, intuitiva e alinhada à identidade da marca.", descriptionStrong: "Entregas:",
+        long: "Atuei como UX/UI Designer e Desenvolvedora Front-end no desenvolvimento do site da Porto Laticínios, criando uma experiência digital para apresentar a marca, seus produtos e sua produção de forma clara, moderna e estratégica. O projeto foi pensado para fortalecer a presença digital da empresa, facilitar a navegação entre os produtos e aproximar clientes do contato comercial, com uma interface responsiva, intuitiva e alinhada à identidade da marca.",
+        descriptionStrong: "Entregas:",
         functionalities: [
             "Criação de uma interface responsiva e alinhada à identidade visual da marca",
             "Desenvolvimento front-end com foco em performance, usabilidade e experiência mobile",
             "Estruturação de páginas e seções para apresentação dos produtos e diferenciais da empresa",
             "Criação de pontos de conversão para facilitar o contato e a realização de pedidos",
         ],
-        images: [
-            portolaticinioslogo,
-        ],
+        images: [portolaticinioslogo],
     },
+
     {
         title: "Desenvolvimento de Plataforma de Benefícios em Saúde - OncoCard",
         year: "2026",
@@ -69,8 +75,7 @@ const projects = [
             "https://www.figma.com/design/4mAfq44mJvR0jMqIKN0clF/Telas?node-id=327-149&t=0Yr7iauEizAhaNj8-1",
         siteLink: "https://oncocard.com.br/",
         short: "UX/UI Design e Desenvolvimento Front-end",
-        long:
-            "Atuei como UX/UI Designer e Desenvolvedora Front-end na OncoCard, uma plataforma de cartão de descontos voltada para a área da saúde. O projeto foi desenvolvido com foco em proporcionar uma experiência simples, acessível e intuitiva para usuários que buscam benefícios, descontos e praticidade no acesso a serviços e parceiros da área médica.",
+        long: "Atuei como UX/UI Designer e Desenvolvedora Front-end na OncoCard, uma plataforma de cartão de descontos voltada para a área da saúde. O projeto foi desenvolvido com foco em proporcionar uma experiência simples, acessível e intuitiva para usuários que buscam benefícios, descontos e praticidade no acesso a serviços e parceiros da área médica.",
         descriptionStrong: "Entregas:",
         functionalities: [
             "Criação de interfaces responsivas e centradas no usuário",
@@ -87,6 +92,7 @@ const projects = [
             oncocard4,
         ],
     },
+
     {
         title:
             "Desenvolvimento de Plataforma Streaming Nacional e Inclusiva - Tela Brasil",
@@ -95,8 +101,7 @@ const projects = [
             "https://www.figma.com/design/4mAfq44mJvR0jMqIKN0clF/Telas?node-id=332-149&t=CjciMItprno9FR7e-1",
         siteLink: "https://telabrasil.cultura.gov.br/",
         short: "UX/UI Design (Web e Mobile)",
-        long:
-            "Atuei como UX/UI Designer na plataforma de streaming, a Tela Brasil, com lançamento previsto em nível nacional, o objetivo é desenvolver plataformas que sejam inclusivas, com acesso ao cinema brasileiro, priorizando escolas, bibliotecas e instituições de ensino, garantindo uma experiência intuitiva e fluida para todos os usuários.",
+        long: "Atuei como UX/UI Designer na plataforma de streaming, a Tela Brasil, com lançamento previsto em nível nacional, o objetivo é desenvolver plataformas que sejam inclusivas, com acesso ao cinema brasileiro, priorizando escolas, bibliotecas e instituições de ensino, garantindo uma experiência intuitiva e fluida para todos os usuários.",
         descriptionStrong: "Entregas:",
         functionalities: [
             "Pesquisa e análise focadas em acessibilidade",
@@ -115,14 +120,14 @@ const projects = [
             telabrasil9,
         ],
     },
+
     {
         title: "Sistema de Gerenciamento de Documentos por meio de IA",
         year: "2025",
         figmaLink:
             "https://www.figma.com/design/WyL8DyTZCvGC2EzSev0nni/Case-pr%C3%A1tica?node-id=0-1&t=sYJeLk5CxFkKp0cB-1",
         short: "UX/UI Design (Web)",
-        long:
-            "Pensado para equipes do setor de energia e infraestrutura que recebem grande volume de documentos operacionais e técnicos. A solução centraliza ingestão, aplica IA para leitura, classificação e extração de documentos e informações, e coloca o humano no centro da validação e tomada de decisão — reduzindo tempo operacional e minimizando risco.",
+        long: "Pensado para equipes do setor de energia e infraestrutura que recebem grande volume de documentos operacionais e técnicos. A solução centraliza ingestão, aplica IA para leitura, classificação e extração de documentos e informações, e coloca o humano no centro da validação e tomada de decisão — reduzindo tempo operacional e minimizando risco.",
         descriptionStrong: "Entregas:",
         functionalities: [
             "Pesquisa UX: impactos e necessidades do usuário;",
@@ -143,14 +148,14 @@ const projects = [
             casepratica6,
         ],
     },
+
     {
         title: "DoeLivros - Plataforma de Doação de Livros Usados",
         year: "2025",
         figmaLink:
             "https://www.figma.com/design/dXHfTRilfLLNMyOipJYOwp/DoeLeitura?node-id=0-1&t=SHvrGgtbH3t3aUHg-1",
         short: "UX/UI Design (Mobile)",
-        long:
-            "Esse projeto foi desenvolvido como trabalho final do curso online “Especialização do projeto UX/UI: da pesquisa à acessibilidade”, ministrado pela Domestika. DoeLivros é uma plataforma online acessível que liga pessoas interessadas em fazer livros usados a quem precisa, promovendo a leitura e o reaproveitamento. O projeto foi desenvolvido visando o processo completo de UX/UI, priorizando a simplicidade e o impacto social.",
+        long: "Esse projeto foi desenvolvido como trabalho final do curso online “Especialização do projeto UX/UI: da pesquisa à acessibilidade”, ministrado pela Domestika. DoeLivros é uma plataforma online acessível que liga pessoas interessadas em fazer livros usados a quem precisa, promovendo a leitura e o reaproveitamento. O projeto foi desenvolvido visando o processo completo de UX/UI, priorizando a simplicidade e o impacto social.",
         descriptionStrong: "Entregas:",
         functionalities: [
             "Pesquisa UX: entrevistas, questionários e comparação com plataformas semelhantes;",
@@ -168,14 +173,14 @@ const projects = [
             doelivros5,
         ],
     },
+
     {
         title: "Sistema de Gerenciamento de Prontuário do Paciente",
         year: "2023",
         figmaLink:
             "https://www.figma.com/design/4mAfq44mJvR0jMqIKN0clF/Telas?node-id=202-8&t=RDQZPzOzlbKq7Sjl-1",
         short: "UX UI Design e Implementação com React Native",
-        long:
-            "Desenvolvido como projeto acadêmico, o Prontuário Mobile oferece uma solução prática para profissionais da saúde gerenciarem informações de pacientes. Permite cadastro e acompanhamento de dados pessoais e histórico clínico, com funcionalidades como login seguro, gerenciamento de usuários, painel de controle, listagem e cadastro de pacientes, inserção de itens e visualização detalhada do perfil de cada paciente. O design prioriza usabilidade e acessibilidade para otimizar a rotina médica.",
+        long: "Desenvolvido como projeto acadêmico, o Prontuário Mobile oferece uma solução prática para profissionais da saúde gerenciarem informações de pacientes. Permite cadastro e acompanhamento de dados pessoais e histórico clínico, com funcionalidades como login seguro, gerenciamento de usuários, painel de controle, listagem e cadastro de pacientes, inserção de itens e visualização detalhada do perfil de cada paciente. O design prioriza usabilidade e acessibilidade para otimizar a rotina médica.",
         descriptionStrong: "Funcionalidades:",
         functionalities: [
             "Login",
@@ -185,7 +190,12 @@ const projects = [
             "Cadastro de itens",
             "Perfil do paciente",
         ],
-        images: [prontuario2, prontuario3, prontuario4, prontuario5],
+        images: [
+            prontuario2,
+            prontuario3,
+            prontuario4,
+            prontuario5,
+        ],
     },
 ];
 
@@ -264,47 +274,49 @@ export default function Portfolio() {
     return (
         <section
             id="portfolio"
-            className="scroll-mt-24 w-full py-20 px-6 sm:px-10 lg:px-16"
+            className="scroll-mt-24 w-full px-6 py-20 sm:px-10 lg:px-16"
         >
-            <div className="max-w-6xl mx-auto">
+            <div className="mx-auto max-w-6xl">
                 <TituloSecao
                     subtitulo="Projetos Desenvolvidos"
                     tituloPrincipal="Trabalhos e Experiências"
                 />
 
-                <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+                {/* Projetos */}
+                <div className="mt-12 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
                     {projects.map((proj, index) => (
                         <article
                             key={index}
-                            className="group cursor-pointer border border-[#1C2541]/10 rounded-md p-4 transition-shadow duration-300 hover:shadow-lg hover:shadow-[#1C2541]/20"
+                            className="group cursor-pointer rounded-md border border-[#1C2541]/10 p-4 transition-shadow duration-300 hover:shadow-lg hover:shadow-[#1C2541]/20"
                             onClick={() => openModal(index)}
                             role="button"
                             tabIndex={0}
                             onKeyDown={(e) => {
                                 if (e.key === "Enter" || e.key === " ") {
+                                    e.preventDefault();
                                     openModal(index);
                                 }
                             }}
                         >
-                            <div className="overflow-hidden bg-[#1C2541]/5 aspect-[4/3]">
+                            <div className="aspect-[4/3] overflow-hidden bg-[#1C2541]/5">
                                 <img
                                     src={proj.images[0]}
                                     alt={proj.title}
                                     loading="lazy"
-                                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                                 />
                             </div>
 
                             <div className="mt-4">
-                                <h3 className="text-[#1C2541] text-base font-semibold leading-snug line-clamp-2">
+                                <h3 className="line-clamp-2 text-base font-semibold leading-snug text-[#1C2541]">
                                     {proj.title}
                                 </h3>
 
-                                <p className="text-[#c6a75e] text-sm font-medium mt-1">
+                                <p className="mt-1 text-sm font-medium text-[#c6a75e]">
                                     {proj.year}
                                 </p>
 
-                                <div className="flex items-center gap-4 mt-3">
+                                <div className="mt-3 flex flex-wrap items-center gap-4">
                                     {proj.figmaLink && (
                                         <a
                                             href={proj.figmaLink}
@@ -313,9 +325,9 @@ export default function Portfolio() {
                                             onClick={(e) =>
                                                 e.stopPropagation()
                                             }
-                                            className="inline-flex items-center gap-2 text-sm text-[#1C2541]/70 hover:text-[#c6a75e] transition-colors"
+                                            className="inline-flex items-center gap-2 text-sm text-[#1C2541]/70 transition-colors hover:text-[#c6a75e]"
                                         >
-                                            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#1C2541] text-white">
+                                            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#1C2541] text-white">
                                                 <FaFigma size={14} />
                                             </span>
 
@@ -331,9 +343,9 @@ export default function Portfolio() {
                                             onClick={(e) =>
                                                 e.stopPropagation()
                                             }
-                                            className="inline-flex items-center gap-2 text-sm text-[#1C2541]/70 hover:text-[#c6a75e] transition-colors"
+                                            className="inline-flex items-center gap-2 text-sm text-[#1C2541]/70 transition-colors hover:text-[#c6a75e]"
                                         >
-                                            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#1C2541] text-white">
+                                            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#1C2541] text-white">
                                                 <Globe size={14} />
                                             </span>
 
@@ -347,82 +359,126 @@ export default function Portfolio() {
                 </div>
             </div>
 
+            {/* Modal */}
             {modalActive && (
                 <div
-                    className="fixed inset-0 z-50 bg-[#1C2541]/90 backdrop-blur-sm flex items-start justify-center p-4 sm:p-8"
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-[#1C2541]/90 p-4 backdrop-blur-sm sm:p-8"
                     role="dialog"
                     aria-modal="true"
+                    aria-label={project.title}
                     onClick={closeModal}
                 >
                     <div
-                        className="relative w-full max-w-5xl max-h-[90vh] bg-[#F7F5F1] grid grid-cols-1 md:grid-cols-[1.3fr_1fr] overflow-hidden"
+                        className="relative grid max-h-[90vh] w-full max-w-5xl gap-8 overflow-y-auto rounded-3xl bg-[#F7F5F1] p-5 shadow-2xl sm:p-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-12 lg:p-10"
                         onClick={(e) => e.stopPropagation()}
                     >
+                        {/* Fechar */}
                         <button
+                            type="button"
                             onClick={closeModal}
                             aria-label="Fechar modal"
-                            className="absolute top-3 right-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-[#1C2541] text-white hover:bg-[#c6a75e] transition-colors"
+                            className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-[#1C2541] text-white transition-colors hover:bg-[#c6a75e]"
                         >
                             <X size={18} />
                         </button>
 
                         {/* Imagem */}
-                        <div className="relative bg-[#1C2541]/5 flex items-center justify-center min-h-[260px] max-h-[45vh] md:max-h-[90vh]">
+                        <div className="relative flex min-h-[260px] max-h-[45vh] items-center justify-center overflow-hidden rounded-2xl bg-[#1C2541]/5 lg:max-h-[70vh]">
                             <img
                                 src={project.images[currentImageIndex]}
-                                alt={`${project.title} — imagem ${currentImageIndex + 1
-                                    } de ${project.images.length}`}
+                                alt={`${project.title} — imagem ${
+                                    currentImageIndex + 1
+                                } de ${project.images.length}`}
                                 loading="lazy"
-                                className="w-full h-full object-contain"
+                                className="h-full w-full object-contain"
                             />
 
                             {project.images.length > 1 && (
                                 <>
+                                    {/* Imagem anterior */}
                                     <button
+                                        type="button"
                                         onClick={prevImage}
                                         aria-label="Imagem anterior"
-                                        className="absolute left-2 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 hover:bg-white text-[#1C2541] shadow-sm"
+                                        className="absolute left-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-[#1C2541] shadow-sm transition-colors hover:bg-white"
                                     >
                                         <ChevronLeft size={18} />
                                     </button>
 
+                                    {/* Próxima imagem */}
                                     <button
+                                        type="button"
                                         onClick={nextImage}
                                         aria-label="Próxima imagem"
-                                        className="absolute right-2 top-1/2 -translate-y-1/2 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 hover:bg-white text-[#1C2541] shadow-sm"
+                                        className="absolute right-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-[#1C2541] shadow-sm transition-colors hover:bg-white"
                                     >
                                         <ChevronRight size={18} />
                                     </button>
 
-                                    <span className="absolute bottom-3 left-1/2 -translate-x-1/2 text-xs font-medium text-white bg-[#1C2541]/70 px-2.5 py-1 rounded-full">
-                                        {currentImageIndex + 1} /{" "}
-                                        {project.images.length}
-                                    </span>
+                                    {/* Indicadores */}
+                                    <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-2">
+                                        {project.images.map((_, i) => (
+                                            <button
+                                                key={i}
+                                                type="button"
+                                                aria-label={`Ir para imagem ${
+                                                    i + 1
+                                                }`}
+                                                aria-current={
+                                                    currentImageIndex === i
+                                                        ? "true"
+                                                        : undefined
+                                                }
+                                                onClick={() =>
+                                                    setCurrentImageIndex(i)
+                                                }
+                                                className={`h-1.5 rounded-full transition-all ${
+                                                    currentImageIndex === i
+                                                        ? "w-8 bg-[#c6a75e]"
+                                                        : "w-3 bg-white/60"
+                                                }`}
+                                            />
+                                        ))}
+                                    </div>
                                 </>
                             )}
                         </div>
 
                         {/* Conteúdo */}
-                        <div className="p-6 sm:p-8 overflow-y-auto">
-                            <h3 className="text-[#1C2541] text-xl font-semibold leading-snug">
+                        <div>
+                            <p className="text-xs font-semibold uppercase tracking-wide text-[#c6a75e]">
+                                {project.short} · {project.year}
+                            </p>
+
+                            <h3 className="mt-3 text-2xl font-semibold leading-snug text-[#1C2541] sm:text-3xl lg:text-4xl">
                                 {project.title}
                             </h3>
 
-                            <div className="flex items-center gap-3 mt-2">
-                                <span className="text-[#c6a75e] text-sm font-medium">
-                                    {project.short}
-                                </span>
+                            <p className="mt-4 text-sm leading-relaxed text-[#1C2541]/70 sm:text-base">
+                                {project.long}
+                            </p>
 
-                                <span className="text-[#1C2541]/40 text-sm">
-                                    ·
-                                </span>
+                            <p className="mt-6 text-sm font-semibold text-[#1C2541]">
+                                {project.descriptionStrong}
+                            </p>
 
-                                <span className="text-[#1C2541]/60 text-sm">
-                                    {project.year}
-                                </span>
-                            </div>
+                            <ul className="mt-3 flex flex-col gap-2.5 text-start">
+                                {project.functionalities.map(
+                                    (func, i) => (
+                                        <li
+                                            key={i}
+                                            className="flex items-start gap-3 text-sm leading-relaxed text-[#1C2541]/80"
+                                        >
+                                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c6a75e]" />
 
-                            <div className="flex items-start gap-3 mt-3">
+                                            <span>{func}</span>
+                                        </li>
+                                    )
+                                )}
+                            </ul>
+
+                            {/* Links */}
+                            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                                 {project.figmaLink && (
                                     <a
                                         href={project.figmaLink}
@@ -431,13 +487,10 @@ export default function Portfolio() {
                                         onClick={(e) =>
                                             e.stopPropagation()
                                         }
-                                        className="inline-flex items-center gap-2 text-sm text-[#1C2541]/70 hover:text-[#c6a75e] transition-colors"
+                                        className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1C2541] px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
                                     >
-                                        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#1C2541] text-white">
-                                            <FaFigma size={14} />
-                                        </span>
-
-                                        Figma
+                                        <FaFigma size={14} />
+                                        Ver Figma
                                     </a>
                                 )}
 
@@ -449,37 +502,13 @@ export default function Portfolio() {
                                         onClick={(e) =>
                                             e.stopPropagation()
                                         }
-                                        className="inline-flex items-center gap-2 text-sm text-[#1C2541]/70 hover:text-[#c6a75e] transition-colors"
+                                        className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1C2541]/20 px-6 py-3 text-sm font-semibold text-[#1C2541] transition-colors hover:border-[#c6a75e] hover:text-[#c6a75e]"
                                     >
-                                        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#1C2541] text-white">
-                                            <Globe size={14} />
-                                        </span>
-
-                                        Site
+                                        <Globe size={14} />
+                                        Ver o Site
                                     </a>
                                 )}
                             </div>
-
-                            <p className="text-[#1C2541]/80 text-sm text-start leading-relaxed mt-5">
-                                {project.long}
-                            </p>
-
-                            <p className="text-[#1C2541] text-sm font-semibold mt-6 text-start">
-                                {project.descriptionStrong}
-                            </p>
-
-                            <ul className="mt-3 space-y-2.5 text-start">
-                                {project.functionalities.map((func, i) => (
-                                    <li
-                                        key={i}
-                                        className="flex items-start gap-3 text-[#1C2541]/80 text-sm leading-relaxed"
-                                    >
-                                        <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#c6a75e] shrink-0" />
-
-                                        <span>{func}</span>
-                                    </li>
-                                ))}
-                            </ul>
                         </div>
                     </div>
                 </div>
