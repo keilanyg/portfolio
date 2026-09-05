@@ -94,6 +94,7 @@ export function Hero() {
             <a
               href={curriculo}
               download="curriculo-keilany-gabriel.pdf"
+              onClick={(e) => e.stopPropagation()}
               className="
                 inline-flex
                 items-center

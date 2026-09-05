@@ -130,6 +130,7 @@ export function Footer() {
             <a
               href={curriculo}
               download="curriculo-keilany-gabriel.pdf"
+              onClick={(e) => e.stopPropagation()}
               className="
     mt-7
     inline-flex
@@ -229,4 +230,4 @@ export function Footer() {
       </div>
     </footer>
   );
-}    
+}
