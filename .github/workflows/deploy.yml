@@ -27,7 +27,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 20
           cache: npm
 
       - name: Install dependencies
@@ -35,6 +35,14 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Verify build
+        run: |
+          echo "Conteúdo de dist/client:"
+          ls -la dist/client
+          echo ""
+          echo "Verificando index.html:"
+          test -f dist/client/index.html
 
       - name: Prepare GitHub Pages
         run: |
@@ -44,18 +52,18 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: ./dist/client
+          path: dist/client
 
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
 
     runs-on: ubuntu-latest
 
-    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Deploy to GitHub Pages
