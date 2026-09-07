@@ -6,7 +6,15 @@ import path from "node:path";
 
 export default defineConfig({
   plugins: [
-    tanstackStart(),
+    tanstackStart({
+      spa: {
+        enabled: true,
+        prerender: {
+          outputPath: "/_shell.html",
+          crawlLinks: true,
+        },
+      },
+    }),
     react(),
     tailwindcss(),
   ],
