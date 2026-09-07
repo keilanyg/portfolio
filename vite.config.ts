@@ -1,19 +1,19 @@
 import { defineConfig } from "vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
-import viteReact from "@vitejs/plugin-react";
+import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
+import path from "node:path";
+
 export default defineConfig({
-  base: "/portfolio-keilany/",
-  server: {
-    port: 5173,
-    host: "localhost",
-  },
-  resolve: {
-    tsconfigPaths: true,
-  },
   plugins: [
     tanstackStart(),
-    viteReact(),
+    react(),
     tailwindcss(),
   ],
+
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 });
