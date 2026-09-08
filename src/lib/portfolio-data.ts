@@ -1,6 +1,7 @@
 import logoonco from "../assets/Logos/OncoCard.png";
 import logoporto from "../assets/Logos/Porto Laticinio.png";
 import logotelabrasil from "../assets/Logos/Tela Brasil.png";
+import logoOncogru from "../assets/Logos/OncoGru.png";
 
 import html from "../assets/ferramentas/html.webp";
 import css from "../assets/ferramentas/css.webp";
@@ -52,6 +53,19 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    title: "ONCOGRU",
+    category: "UX/UI Design · Desenvolvimento WordPress",
+    year: "2026",
+    description:
+      "Desenvolvimento do site institucional da ONCOGRU, Centro de Oncologia, Hematologia e Quimioterapia. O projeto envolveu a criação da experiência UX/UI e o desenvolvimento em WordPress, com foco em uma navegação clara, acolhedora e acessível para facilitar o acesso às especialidades, tratamentos e canais de agendamento.",
+    tags: ["UX/UI Design", "WordPress", "Responsividade", "Design para Saúde"],
+    images: [
+      { src: logoOncogru, alt: "Logo ONCOGRU" },
+    ],
+    figma: "https://www.figma.com/design/ykwGyokHr5XGvqQIKl629X/OncoGru?node-id=2205-455&t=XHB2gkgWc5GJyCQB-1",
+    site: "https://oncogru.com.br/",
+  },
   {
     title: "Porto Laticínios",
     category: "UX/UI Design · Desenvolvimento Web",
