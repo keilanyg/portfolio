@@ -55,11 +55,11 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "ONCOGRU",
-    category: "UX/UI Design · Desenvolvimento WordPress",
+    category: "Redesign · UX/UI Design ·  WordPress",
     year: "2026",
     description:
-      "Desenvolvimento do site institucional da ONCOGRU, Centro de Oncologia, Hematologia e Quimioterapia. O projeto envolveu a criação da experiência UX/UI e o desenvolvimento em WordPress, com foco em uma navegação clara, acolhedora e acessível para facilitar o acesso às especialidades, tratamentos e canais de agendamento.",
-    tags: ["UX/UI Design", "WordPress", "Responsividade", "Design para Saúde"],
+      "Redesign do site institucional da ONCOGRU, Centro de Oncologia, Hematologia e Quimioterapia. O projeto envolveu a reformulação da experiência digital, arquitetura visual e interface, além do desenvolvimento em WordPress, criando uma navegação mais moderna, clara e acolhedora para facilitar o acesso às especialidades, tratamentos e canais de agendamento.",
+    tags: ["Redesign", "UX/UI Design", "WordPress", "Design para Saúde"],
     images: [
       { src: logoOncogru, alt: "Logo ONCOGRU" },
     ],
