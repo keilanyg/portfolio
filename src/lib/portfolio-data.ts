@@ -174,9 +174,9 @@ export const experience = [
   {
     period: "Abr. 2026 — Atualmente",
     title: "UX/UI Designer com atuação em Front-end",
-    place: "OncoCard",
+    place: "OncoCard - HematoCard - OncoGru",
     detail:
-      "Aprimorei interfaces e desenvolvi melhorias para sites e sistemas web de vendas e controle.",
+      "Atuando no desenvolvimento e evolução dos sites e sistemas da empresa, incluindo a criação completa de um dos sites, redesign de interfaces, desenvolvimento de novas páginas e implementação de melhorias contínuas. Responsável pela manutenção, atualização e gestão dos projetos digitais."
   },
   {
     period: "Jan. 2024 — Jun. 2025",
