@@ -37,14 +37,16 @@ function ProjectGallery({ project }: { project: Project }) {
         <CarouselContent>
           {project.images.map((image) => (
             <CarouselItem key={image.src}>
-              <img
-                src={image.src}
-                alt={image.alt}
-                width={1400}
-                height={900}
-                loading="lazy"
-                className="aspect-[16/10] w-full rounded-xl border border-border object-cover sm:aspect-[16/9] lg:aspect-[4/3]"
-              />
+              <div className="flex aspect-[16/10] w-full items-center justify-center overflow-hidden rounded-xl border border-border bg-muted/30 sm:aspect-[16/9] lg:aspect-[4/3]">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  width={1400}
+                  height={900}
+                  loading="lazy"
+                  className="h-full w-full object-contain"
+                />
+              </div>
             </CarouselItem>
           ))}
         </CarouselContent>
@@ -90,14 +92,16 @@ function ProjectCard({
         className="block w-full text-left"
         aria-label={`Abrir detalhes do projeto ${project.title}`}
       >
-        <img
-          src={firstImage?.src}
-          alt={firstImage?.alt ?? project.title}
-          width={1400}
-          height={900}
-          loading="lazy"
-          className="aspect-[16/10] w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-        />
+        <div className="flex aspect-[16/10] w-full items-center justify-center overflow-hidden bg-muted/30">
+          <img
+            src={firstImage?.src}
+            alt={firstImage?.alt ?? project.title}
+            width={1400}
+            height={900}
+            loading="lazy"
+            className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+          />
+        </div>
       </button>
 
       <div className="flex flex-1 flex-col p-4 sm:p-5 lg:p-6">
@@ -112,28 +116,34 @@ function ProjectCard({
           {project.title}
         </button>
 
-        <div className="mt-4 flex flex-wrap gap-2 sm:mt-5 sm:gap-3">
-          <a
-            href={project.figma}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-3.5 py-2 text-xs font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5 sm:px-4"
-          >
-            <Figma className="h-4 w-4" />
-            Ver Figma
-          </a>
-          <a
-            href={project.site}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="inline-flex items-center gap-2 rounded-full border border-border px-3.5 py-2 text-xs font-semibold text-foreground transition-colors hover:border-primary hover:text-primary sm:px-4"
-          >
-            <ExternalLink className="h-4 w-4" />
-            Ver site
-          </a>
-        </div>
+        {(project.figma || project.site) && (
+          <div className="mt-4 flex flex-wrap gap-2 sm:mt-5 sm:gap-3">
+            {project.figma && (
+              <a
+                href={project.figma}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-3.5 py-2 text-xs font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5 sm:px-4"
+              >
+                <Figma className="h-4 w-4" />
+                Ver Figma
+              </a>
+            )}
+            {project.site && (
+              <a
+                href={project.site}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="inline-flex items-center gap-2 rounded-full border border-border px-3.5 py-2 text-xs font-semibold text-foreground transition-colors hover:border-primary hover:text-primary sm:px-4"
+              >
+                <ExternalLink className="h-4 w-4" />
+                Ver site
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </article>
   );
@@ -167,26 +177,32 @@ function ProjectModalContent({ project }: { project: Project }) {
           ))}
         </ul>
 
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <a
-            href={project.figma}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
-          >
-            <Figma className="h-4 w-4" />
-            Ver Figma
-          </a>
-          <a
-            href={project.site}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
-          >
-            <ExternalLink className="h-4 w-4" />
-            Ver site
-          </a>
-        </div>
+        {(project.figma || project.site) && (
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            {project.figma && (
+              <a
+                href={project.figma}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
+              >
+                <Figma className="h-4 w-4" />
+                Ver Figma
+              </a>
+            )}
+            {project.site && (
+              <a
+                href={project.site}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
+              >
+                <ExternalLink className="h-4 w-4" />
+                Ver site
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

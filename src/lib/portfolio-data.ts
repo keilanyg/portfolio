@@ -1,7 +1,16 @@
-import logoonco from "../assets/Logos/OncoCard.png";
+import logoonco from "../assets/Logos/OncoCard.webp";
 import logoporto from "../assets/Logos/Porto Laticinio.png";
 import logotelabrasil from "../assets/Logos/Tela Brasil.png";
 import logoOncogru from "../assets/Logos/OncoGru.png";
+import logoHematoCard from "../assets/Logos/Logo-HematoCard.png";
+
+import hematoCard1 from "../assets/works/HematoCard/HematoCard - Cuidado acessível e digno para todos1.jpg";
+import hematoCard2 from "../assets/works/HematoCard/HematoCard - Cuidado acessível e digno para todos2.jpg";
+import hematoCard3 from "../assets/works/HematoCard/HematoCard - Cuidado acessível e digno para todos3.jpg";
+import hematoCard4 from "../assets/works/HematoCard/HematoCard - Cuidado acessível e digno para todos4.jpg";
+import hematoCard5 from "../assets/works/HematoCard/HematoCard - Cuidado acessível e digno para todos5.jpg";
+import hematoCard6 from "../assets/works/HematoCard/HematoCard - Cuidado acessível e digno para todos6.jpg";
+import hematoCard7 from "../assets/works/HematoCard/HematoCard - Cuidado acessível e digno para todos7.jpg";
 
 import html from "../assets/ferramentas/html.webp";
 import css from "../assets/ferramentas/css.webp";
@@ -48,11 +57,70 @@ export type Project = {
   description: string;
   tags: string[];
   images: { src: string; alt: string }[];
-  figma: string;
-  site: string;
+  figma?: string; // ✅ opcional
+  site?: string;  // ✅ opcional
 };
 
 export const projects: Project[] = [
+  {
+    title: "HematoCard",
+    category: "UX/UI Design · Desenvolvimento Web · EM DESENVOLVIMENTO",
+    year: "2026",
+    description:
+      "Desenvolvimento da plataforma HematoCard, um cartão de benefícios voltado à área da saúde. O projeto uniu UX/UI Design e desenvolvimento front-end para criar uma experiência digital simples e intuitiva, facilitando o acesso dos usuários a benefícios, descontos e serviços parceiros.",
+    tags: [
+      "EM DESENVOLVIMENTO",
+      "AINDA NÃO LANÇADO",
+      "Responsividade",
+    ],
+    images: [
+      {
+        src: logoHematoCard,
+        alt: "Logo HematoCard",
+      },
+      {
+        src: hematoCard1,
+        alt: "Tela do HematoCard - Cuidado acessível e digno para todos",
+      },
+      {
+        src: hematoCard2,
+        alt: "Tela do HematoCard",
+      },
+      {
+        src: hematoCard3,
+        alt: "Tela do HematoCard",
+      },
+      {
+        src: hematoCard4,
+        alt: "Tela do HematoCard",
+      },
+      {
+        src: hematoCard5,
+        alt: "Tela do HematoCard",
+      },
+      {
+        src: hematoCard6,
+        alt: "Tela do HematoCard",
+      },
+      {
+        src: hematoCard7,
+        alt: "Tela do HematoCard",
+      },
+    ],
+  },
+  {
+    title: "OncoCard",
+    category: "UX/UI Design · Desenvolvimento Web",
+    year: "2026",
+    description:
+      "Desenvolvimento da plataforma OncoCard, um cartão de benefícios voltado à área da saúde. O projeto uniu UX/UI Design e desenvolvimento front-end para criar uma experiência digital simples e intuitiva, facilitando o acesso dos usuários a benefícios, descontos e serviços parceiros.",
+    tags: ["EM MANUTENÇÃO", "UX/UI Design", "Front-end", "Usabilidade", "Responsividade"],
+    images: [
+      { src: logoonco, alt: "Logo" },
+    ],
+    figma: "https://www.figma.com/design/4mAfq44mJvR0jMqIKN0clF/Telas?node-id=327-149&t=0Yr7iauEizAhaNj8-1",
+    site: "https://oncocard.com.br/",
+  },
   {
     title: "ONCOGRU",
     category: "Redesign · UX/UI Design ·  WordPress",
@@ -78,19 +146,6 @@ export const projects: Project[] = [
     ],
     figma: "https://www.figma.com/design/1pEx9D7IBeRh55SzIokNTV/Untitled?node-id=0-1&t=hs8WX0qrz4xWf0Wz-1",
     site: "https://portolaticinios.com.br/",
-  },
-  {
-    title: "OncoCard",
-    category: "UX/UI Design · Desenvolvimento Web",
-    year: "2026",
-    description:
-      "Desenvolvimento da plataforma OncoCard, um cartão de benefícios voltado à área da saúde. O projeto uniu UX/UI Design e desenvolvimento front-end para criar uma experiência digital simples e intuitiva, facilitando o acesso dos usuários a benefícios, descontos e serviços parceiros.",
-    tags: ["UX/UI Design", "Front-end", "Usabilidade", "Responsividade"],
-    images: [
-      { src: logoonco, alt: "Logo" },
-    ],
-    figma: "https://www.figma.com/design/4mAfq44mJvR0jMqIKN0clF/Telas?node-id=327-149&t=0Yr7iauEizAhaNj8-1",
-    site: "https://oncocard.com.br/",
   },
   {
     title: "Tela Brasil",
