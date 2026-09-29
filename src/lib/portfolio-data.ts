@@ -64,14 +64,12 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "HematoCard",
-    category: "UX/UI Design · Desenvolvimento Web · EM DESENVOLVIMENTO",
+    category: "UX/UI Design · Desenvolvimento Web",
     year: "2026",
     description:
       "Desenvolvimento da plataforma HematoCard, um cartão de benefícios voltado à área da saúde. O projeto uniu UX/UI Design e desenvolvimento front-end para criar uma experiência digital simples e intuitiva, facilitando o acesso dos usuários a benefícios, descontos e serviços parceiros.",
     tags: [
-      "EM DESENVOLVIMENTO",
-      "AINDA NÃO LANÇADO",
-      "Responsividade",
+      "UX/UI Design", "Front-end", "Usabilidade", "Responsividade",
     ],
     images: [
       {
@@ -107,10 +105,12 @@ export const projects: Project[] = [
         alt: "Tela do HematoCard",
       },
     ],
+    figma: "https://www.figma.com/design/8tyE0bTBxfmx61EX7USUAn/HematoCard?node-id=0-1&t=uyCQhVbBxFMIBb2O-1",
+    site: "https://hematocard.com.br/",
   },
   {
     title: "OncoCard",
-    category: "UX/UI Design · Desenvolvimento Web",
+    category: "EM MANUTENÇÃO",
     year: "2026",
     description:
       "Desenvolvimento da plataforma OncoCard, um cartão de benefícios voltado à área da saúde. O projeto uniu UX/UI Design e desenvolvimento front-end para criar uma experiência digital simples e intuitiva, facilitando o acesso dos usuários a benefícios, descontos e serviços parceiros.",
